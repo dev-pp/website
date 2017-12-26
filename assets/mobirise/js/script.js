@@ -419,51 +419,34 @@
 
 })(jQuery);
 
-let pageScroll = 0;
-let $heroContent = document.querySelectorAll('.mbr-hero-content')[0];
 let $body = document.body;
 
 let adjustLayoutDueScrollPosition = function () {
     let currentScroll = Math.round(document.documentElement.scrollTop);
-    let heroTextOpacity = parseFloat($heroContent.style.opacity);
     let heroHeight = document.querySelectorAll('.mbr-box__magnet')[0].offsetHeight;
 
-    if (pageScroll > (heroHeight - 80)) {
+    if (currentScroll > (heroHeight - 80)) {
         // hide header navbar
         $body.classList.add('hide-header');
     }
 
-    if (pageScroll < heroHeight - 80) {
+    if (currentScroll < heroHeight - 80) {
         // show header
         $body.classList.remove('hide-header');
     }
 
-    if (pageScroll > heroHeight) {
+    if (currentScroll > heroHeight) {
         // fix navbar
         $body.classList.add('fixed-navbar');
     }
 
-    if (pageScroll < heroHeight) {
+    if (currentScroll < heroHeight) {
         // unfix navbar
         $body.classList.remove('fixed-navbar');
     }
-
-    if (pageScroll < currentScroll && heroTextOpacity > 0) {
-        // scrolling down
-        $heroContent.style.opacity = heroTextOpacity - 0.02;
-    } else if (pageScroll > currentScroll && heroTextOpacity <= 1) {
-        // scrolling up
-        $heroContent.style.opacity = heroTextOpacity + 0.011;
-    }
-
-    pageScroll = currentScroll;
 }
 
-setInterval(() => {
-    if (pageScroll < 10) {
-        // reached the top
-        $heroContent.style.opacity = 1;
-    }
-}, 5);
-
-window.onscroll = adjustLayoutDueScrollPosition;
+$(window).scroll(function(i){
+    $('#hero-content').css({'opacity':( 230-$(window).scrollTop() )/100});
+    adjustLayoutDueScrollPosition();
+})
