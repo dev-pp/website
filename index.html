@@ -12,6 +12,7 @@
         <title>DEV-PP</title>
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P:subset=latin" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&subset=latin">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/socicon/css/socicon.min.css">
         <link rel="stylesheet" href="assets/animate.css/animate.min.css">
@@ -20,6 +21,7 @@
         <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
         <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
         <link rel="stylesheet" href="assets/mobirise/css/custom.css">
+        <link rel="stylesheet" href="assets/icons/icons.css">
     </head>
 
     <body>
@@ -43,7 +45,7 @@
                             <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
                                 <div class="mbr-navbar__column">
                                     <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                                        <li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-lg" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a></li>
+                                        <li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-lg btn-custom" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -99,9 +101,11 @@
                         <li><a href="#members">Membros</a></li>
                         <li><a href="#meetups">Meetups</a></li>
                         <li><a href="#photos">Fotos</a></li>
+                        <li><a href="#material">Material</a></li>
+                        <li><a href="#artigos">Artigos</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
-                    <a class="mbr-buttons__btn btn btn-md pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
+                    <a class="mbr-buttons__btn btn btn-md btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
                 </div>
                 <!-- </div> -->
             </nav>
@@ -118,7 +122,7 @@
 
             <div class="mbr-section__container container mbr-section__container--middle">
                 <div class="row">
-                    <div class="mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="content-panel mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                         <p>Make your own website in a few clicks! Mobirise helps you cut down development time by providing
                             you with a flexible website editor with a drag and drop interface. MobiRise Website Builder creates
                             responsive, retina and mobile friendly websites in a few clicks. Mobirise is one of the easiest
@@ -129,7 +133,7 @@
             </div>
         </section>
 
-        <section class="mbr-section members" id="membros">
+        <section class="mbr-section content members" id="membros">
             <div class="mbr-section__container container mbr-section__container--middle">
                 <div class="mbr-header mbr-header--wysiwyg row">
                     <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
@@ -140,7 +144,7 @@
 
             <div class="mbr-section__container container mbr-section__container--middle">
                 <div class="row">
-                    <div class="mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="content-panel mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                         <p>Somos 85 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores,
                             criativos, artistas, inovadores, empreendedores....
                         </p>
@@ -199,7 +203,7 @@
             </div>
         </section>
 
-        <section class="mbr-section members call-to-action">
+        <section class="mbr-section call-to-action">
             <div class="container row">
                 <div class="mbr-article mbr-article--wysiwyg col-sm-6">
                     <img src="./assets/images/IMG-20171221-WA0014.jpg" class="img-responsive" alt="">
@@ -209,36 +213,104 @@
                         pessoas incríveis, aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na sua carreia,
                         evolua e fortaleça a comunidade e a região!
                     </p>
-                    <p class="btn-inverse">
-                        <a class="mbr-buttons__btn btn btn-md" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
+                    <p>
+                        <a class="mbr-buttons__btn btn btn-md btn-custom" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="mbr-section" id="meetups">
+        <section class="mbr-section content" id="meetups">
             <div class="mbr-section__container container mbr-section__container--middle">
-                <div class="mbr-header mbr-header--wysiwyg row">
-                    <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <h3 class="mbr-header__text">MEETUPS</h3>
+                <div class="content-header">
+                    <div class="mbr-header mbr-header--wysiwyg row">
+                        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                            <h3 class="mbr-header__text">MEETUPS</h3>
+                        </div>
+                    </div>
+                    <div class="content-btn-group mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <!-- Split button -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default">Filtrar</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="active" href="#">Agendados</a></li>
+                                <li><a href="#">Passados</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mbr-section__container container mbr-section__container--middle">
+            <div class="content-container mbr-section__container container mbr-section__container--middle">
                 <div class="row">
-                    <div class="mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                        <p>Make your own website in a few clicks! Mobirise helps you cut down development time by providing
-                            you with a flexible website editor with a drag and drop interface. MobiRise Website Builder creates
-                            responsive, retina and mobile friendly websites in a few clicks. Mobirise is one of the easiest
-                            website development tools available today. It also gives you the freedom to develop as many websites
-                            as you like given the fact that it is a desktop app.</p>
+                    <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 content-panel meetup-panel mbr-article mbr-article--wysiwyg">
+                        <div class="data">
+                            <div class="data-info">
+                                <span class="day">20</span>
+                                <span class="month">Dez</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="small">20 de Dezembro de 2017, 19:45</div>
+                            <h3>Bate Papo Sobre Tecnologia 2</h3>
+                            <p>
+                                Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade
+                                de aprendizado e networking.
+                            </p>
+                            <div class="place">
+                                <div>
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="name">For Space</h4>
+                                    <adress class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</adress>
+                                </div>
+                            </div>
+                            <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="content-panel meetup-panel mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <div class="data">
+                            <div class="data-info">
+                                <span class="day">20</span>
+                                <span class="month">Dez</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="small">20 de Dezembro de 2017, 19:45</div>
+                            <h3>Bate Papo Sobre Tecnologia 2</h3>
+                            <p>
+                                Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade
+                                de aprendizado e networking.
+                            </p>
+                            <div class="place">
+                                <div>
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="name">For Space</h4>
+                                    <adress class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</adress>
+                                </div>
+                            </div>
+                            <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mbr-section" id="photos">
+        <section class="mbr-section content photos" id="photos">
             <div class="mbr-section__container container mbr-section__container--middle">
                 <div class="mbr-header mbr-header--wysiwyg row">
                     <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
@@ -389,25 +461,114 @@
             </div>
         </section>
 
-        <section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-r" data-rv-view="51" style="background-color: rgb(239, 239, 239);">
+        <section class="mbr-section content" id="material">
+            <div class="mbr-section__container container mbr-section__container--middle">
+                <div class="content-header">
+                    <div class="mbr-header mbr-header--wysiwyg row">
+                        <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                            <h3 class="mbr-header__text">MATERIAL</h3>
+                        </div>
+                    </div>
+                    <div class="content-btn-group mbr-article mbr-article--wysiwyg col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <!-- Split button -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default">Filtrar</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="active" href="#">Evento 1</a></li>
+                                <li><a href="#">Evento 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container mbr-section__container container mbr-section__container--middle">
+                <div class="material-container mbr-article">
+                    <div class="material-item">
+                        <div class="thumbnail content-panel">
+                            <div class="palestrante">
+                                <div class="animation-overlay">
+                                    <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+                                </div>
+                                <div class="info">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                                    </svg> Felipe Blini <br>
+                                    <svg class="icon icon-calendar">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                                    </svg> 13/12/2017
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h3>Banco de Dados Realtime com Firebase</h3>
+                                <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+                                <p>
+                                    <a href="#" class="btn btn-default" role="button">
+                                        <svg class="icon icon-room">
+                                            <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                                        </svg> Slides
+                                    </a>
+                                    <a href="#" class="btn btn-default" role="button">
+                                        <svg class="icon icon-room">
+                                            <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                                        </svg> Fonte
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="material-item">
+                        <div class="thumbnail content-panel">
+                            <img src="..." alt="...">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>...</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                                        role="button">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="material-item">
+                        <div class="thumbnail content-panel">
+                            <img src="..." alt="...">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>...</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                                        role="button">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mbr-section content mbr-section--relative mbr-section--fixed-size" id="form2-r" data-rv-view="51">
             <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" data-form-type="formoid">
                                 <div class="mbr-header mbr-header--center mbr-header--std-padding">
-                                    <h2 class="mbr-header__text">FIQUE SABENDO SOBRE TUDO!</h2>
+                                    <h2 class="mbr-header__text">FIQUE LIGADO(A)</h2>
+                                    <small>Newsletter semanal sobre tecnologia com links da semana, artigos e informações sobre os meetups e eventos</small>
                                 </div>
                                 <div data-form-alert="true">
                                     <div class="hide" data-form-alert-success="true">Obrigado, agora você vai ficar ligado em tudo que acontece</div>
                                 </div>
-                                <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="FIQUE SABENDO SOBRE TUDO!">
+                                <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="FIQUE LIGADO(A)">
                                     <input type="hidden" value="4GA49eLIbi3kDfKl1K0n0eKKySDrexvWgW8qyqcTXnt+5ifrxyxUuzonIAO0Jp/wOhXSynKpRsv4Qh7H2nbN1ZMi7nYruZmSPkRy+Br6QicnhIUErIeRQ4SsyR6hSlCm"
                                         data-form-email="true">
                                     <div class="mbr-form__left">
                                         <input type="email" class="form-control" name="email" required="" placeholder="Digite o seu endereço de e-mail..." data-form-field="Email">
                                     </div>
-                                    <div class="mbr-form__right mbr-buttons mbr-buttons--no-offset mbr-buttons--right"><button type="submit" class="mbr-buttons__btn btn btn-lg btn-danger">SUBSCRIBE</button></div>
+                                    <div class="mbr-form__right mbr-buttons mbr-buttons--no-offset mbr-buttons--right"><button type="submit" class="mbr-buttons__btn btn btn-lg btn-danger">ASSINE</button></div>
                                 </form>
                             </div>
                         </div>
@@ -416,7 +577,8 @@
             </div>
         </section>
 
-        <section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="social-buttons2-q" data-rv-view="57" style="background-color: rgb(240, 240, 240);">
+        <section class="mbr-section content mbr-section--relative mbr-section--fixed-size" id="social-buttons2-q" data-rv-view="57"
+            style="background-color: rgb(240, 240, 240);">
             <div class="mbr-section__container container">
                 <div class="mbr-header mbr-header--inline row" style="padding-top: 54.4px; padding-bottom: 54.4px;">
                     <div class="mbr-social-icons mbr-social-icons--style-1 col-sm-8"><a class="mbr-social-icons__icon socicon-bg-twitter" title="Twitter" target="_blank" href="https://twitter.com/mobirise"><i class="socicon socicon-twitter"></i></a>                        <a class="mbr-social-icons__icon socicon-bg-facebook" title="Facebook" target="_blank" href="https://www.facebook.com/pages/Mobirise/1616226671953247"><i class="socicon socicon-facebook"></i></a>                        <a class="mbr-social-icons__icon socicon-bg-youtube" title="YouTube" target="_blank" href="http://www.youtube.com/channel/UCt_tncVAetpK5JeM8L-8jyw"><i class="socicon socicon-youtube"></i></a>                        <a class="mbr-social-icons__icon socicon-bg-instagram" title="Instagram" target="_blank" href="https://instagram.com/mobirise/"><i class="socicon socicon-instagram"></i></a>                        </div>

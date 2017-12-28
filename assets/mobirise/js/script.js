@@ -421,7 +421,7 @@
 
 let $body = document.body;
 
-let adjustLayoutDueScrollPosition = function () {
+let toggleFixedNavbarPosition = function () {
     let currentScroll = Math.round(document.documentElement.scrollTop);
     let heroHeight = document.querySelectorAll('.mbr-box__magnet')[0].offsetHeight;
 
@@ -435,12 +435,12 @@ let adjustLayoutDueScrollPosition = function () {
         $body.classList.remove('hide-header');
     }
 
-    if (currentScroll > heroHeight) {
+    if (currentScroll > heroHeight - 80) {
         // fix navbar
         $body.classList.add('fixed-navbar');
     }
 
-    if (currentScroll < heroHeight) {
+    if (currentScroll < heroHeight - 80) {
         // unfix navbar
         $body.classList.remove('fixed-navbar');
     }
@@ -448,5 +448,5 @@ let adjustLayoutDueScrollPosition = function () {
 
 $(window).scroll(function(i){
     $('#hero-content').css({'opacity':( 230-$(window).scrollTop() )/100});
-    adjustLayoutDueScrollPosition();
+    toggleFixedNavbarPosition();
 })
