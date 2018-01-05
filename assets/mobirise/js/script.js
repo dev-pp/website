@@ -1,4 +1,5 @@
 (function ($) {
+    console.log('script.js rodando');
 
     $.extend($.easing, {
         easeInOutCubic: function (x, t, b, c, d) {
@@ -418,35 +419,3 @@
     });
 
 })(jQuery);
-
-let $body = document.body;
-
-let toggleFixedNavbarPosition = function () {
-    let currentScroll = Math.round(document.documentElement.scrollTop);
-    let heroHeight = document.querySelectorAll('.mbr-box__magnet')[0].offsetHeight;
-
-    if (currentScroll > (heroHeight - 80)) {
-        // hide header navbar
-        $body.classList.add('hide-header');
-    }
-
-    if (currentScroll < heroHeight - 80) {
-        // show header
-        $body.classList.remove('hide-header');
-    }
-
-    if (currentScroll > heroHeight - 80) {
-        // fix navbar
-        $body.classList.add('fixed-navbar');
-    }
-
-    if (currentScroll < heroHeight - 80) {
-        // unfix navbar
-        $body.classList.remove('fixed-navbar');
-    }
-}
-
-$(window).scroll(function(i){
-    $('#hero-content').css({'opacity':( 230-$(window).scrollTop() )/100});
-    toggleFixedNavbarPosition();
-})
