@@ -7,11 +7,19 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --config webpack.config.dev.js --open"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  },
   "devDependencies": {
+    "css-loader": "0.28.8",
+    "file-loader": "1.1.6",
     "html-webpack-plugin": "2.30.1",
+    "image-webpack-loader": "3.4.2",
+    "node-sass": "4.7.2",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.1",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.9.7"
   }

@@ -1,4 +1,5 @@
-console.log('hero.js rodando');
+import '../mobirise/css/custom.scss';
+import '../../components/hero/index';
 
 let $body = document.body;
 
