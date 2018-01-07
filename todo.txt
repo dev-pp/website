@@ -4,6 +4,8 @@
 - componentizar com Vue.js
 - inserir google analytics
 - inserir sessão apoio ✔
-- importar bootstrap por funcionalidade
+- parallax com suporte pra mobile ✔
+- importar bootstrap por funcionalidade ✔
 - colocar palestrantes
 - migrar para bootstrap 4
+- arrumar seta no firefox

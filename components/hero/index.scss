@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+// Materialize Parallax
+@import "~materialize-css/sass/components/color";
+@import "~materialize-css/sass/components/variables";
+@import "~materialize-css/sass/components/global";
+@import "~materialize-css/sass/components/typography";
+
 section.intro {
   display: table;
   width: 100%;
@@ -13,11 +21,12 @@ section.intro {
     vertical-align: middle;
     padding: 41px 0;
 
-    // background-image: url('./vista-da-catedral-praa-9-de-julho-presidente-prudente-sp-2000x1500.jpg');
-    // background-attachment: fixed !important;
-    // background-position: 50% 0;
-    // background-repeat: no-repeat;
-    // background-size: cover !important;
+    .parallax-container {
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
 
     h1 {
       width: 500px;
