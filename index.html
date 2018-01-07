@@ -11,12 +11,12 @@
         <title>DEV PP</title>
 
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+        <link rel="stylesheet" href="assets/icons/icons.css">
 
-        <link rel="stylesheet" href="assets/animate.css/animate.min.css">
         <link rel="stylesheet" href="assets/mobirise/css/style.css">
         <link rel="stylesheet" href="assets/mobirise-slider/style.css">
         <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
-        <link rel="stylesheet" href="assets/icons/icons.css">
     </head>
 
     <body>
@@ -26,40 +26,20 @@
         </script>
         <!-- /Google Analytics -->
 
-        <section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--sticky mbr-navbar--transparent" id="menu-1t"
-            data-rv-view="0">
-            <div class="mbr-navbar__section mbr-section">
-                <div class="mbr-section__container container">
-                    <div class="mbr-navbar__container">
-                        <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
-                            <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                                <span class="mbr-brand__name"><a class="mbr-brand__name text-white">DEVPP</a></span>
-                            </span>
-                        </div>
-                        <div class="mbr-navbar__column mbr-navbar__menu">
-                            <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
-                                <div class="mbr-navbar__column">
-                                    <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                                        <li class="mbr-navbar__item"><a class="btn btn-lg btn-custom" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="header">
+            <a class="logo" href="#">DEVPP - Comunidade de Desenvolvedores de Presidente Prudente e Região</a>
+            <a class="btn btn-lg btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
         </section>
 
-        <section class="intro mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-parallax-background"
-            id="header4-u" data-rv-view="2">
-            <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center mbr-after-navbar">
-                <div class="intro-overlay mbr-overlay"></div>
-                <div id="hero-content-wrapper" class="mbr-box__container mbr-section__container container">
+        <section class="intro">
+            <div class="content-box">
+                <div class="intro-overlay"></div>
+                <div id="hero-content-fadein-scroll" class="mbr-box__container mbr-section__container container">
                     <div class="mbr-box mbr-box--stretched">
                         <div class="mbr-box__magnet mbr-box__magnet--center-center">
                             <div id="hero-content" class="row">
                                 <div class="col-sm-10 col-sm-offset-1 intro-content">
-                                    <div class="animated fadeInUp">
+                                    <div class="reveal-bottom reveal-distance-70px reveal-duration-800">
                                         <h1 class="intro__text">DEVPP</h1>
                                         <h2 class="intro__subtext">Comunidade de Desenvolvedores de Presidente Prudente e Região</h2>
                                     </div>
@@ -68,19 +48,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="mbr-arrow mbr-arrow--floating text-center">
-                    <div class="mbr-section__container container">
-                        <a class="mbr-arrow__link" href="#msg-box2-12">
-                            <svg class="icon icon-arrow-down">
-                                <use xlink:href="./components/hero/icons.svg#icon-keyboard_arrow_down"></use>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="arrow mbr-arrow--floating">
+                    <a class="mbr-arrow__link" href="#about">
+                        <svg class="icon icon-arrow-down">
+                            <use xlink:href="./components/hero/icons.svg#icon-keyboard_arrow_down"></use>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="navbar">
+        <section id="navbar" class="custom-navbar">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -90,7 +68,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     </div>
-                    <div class="collapse navbar-collapse custom-navbar btn-inverse" id="myNavbar">
+                    <div class="collapse navbar-collapse custom-navbar-nav" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li><a href="#sobre">Sobre</a></li>
                             <li><a href="#members">Membros</a></li>
@@ -110,7 +88,7 @@
             <div class="col-xs-12">
                 <h3 class="">SOBRE</h3>
 
-                <div class="content-panel">
+                <div class="content-panel reveal">
                     <p>
                         Make your own website in a few clicks! Mobirise helps you cut down development time by providing you with a flexible website
                         editor with a drag and drop interface. MobiRise Website Builder creates responsive, retina and mobile
@@ -126,7 +104,7 @@
             <div class="col-xs-12">
                 <h3>MEMBROS</h3>
 
-                <div class="content-panel">
+                <div class="content-panel reveal">
                     <p>Somos 85 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores, criativos,
                         artistas, inovadores, empreendedores....
                     </p>
@@ -187,10 +165,10 @@
 
         <section class="call-to-action dark-bg">
             <div class="container">
-                <div class="col-sm-6">
+                <div class="col-sm-6 reveal-left reveal-duration-800 reveal-overflow ">
                     <img src="./assets/images/IMG-20171221-WA0014.jpg" class="img-responsive" alt="">
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 reveal-right">
                     <p>Faça parte da nossa comunidade, participe dos meetups, compartilhe conhecimento, faça networking com
                         pessoas incríveis, aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na sua carreia,
                         evolua e fortaleça a comunidade e a região!
@@ -208,13 +186,13 @@
                     </div>
 
                     <div class="content-btn-group">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default">Filtrar</button>
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group filter">
+                            <button type="button" class="btn btn-info">Filtrar</button>
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu left-bs-dropdow">
+                            <ul class="dropdown-menu bs-dropdow">
                                 <li><a class="active" href="#">Agendados</a></li>
                                 <li><a href="#">Passados</a></li>
                             </ul>
@@ -222,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="content-panel meetup-panel">
+                <div class="content-panel meetup-panel reveal">
                     <div class="data">
                         <div class="data-info">
                             <span class="day">20</span>
@@ -251,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="content-panel meetup-panel">
+                <div class="content-panel meetup-panel reveal">
                     <div class="data">
                         <div class="data-info">
                             <span class="day">20</span>
@@ -282,7 +260,7 @@
             </div>
         </section>
 
-        <section class="fotos" id="photos">
+        <section id="photos" class="fotos">
             <div class="container">
                 <div class="col-xs-12">
                     <div class="content-header-with-options">
@@ -291,13 +269,13 @@
                         </div>
 
                         <div class="content-btn-group">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default">Filtrar</button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="btn-group filter">
+                                <button type="button" class="btn btn-info">Filtrar</button>
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                                <ul class="dropdown-menu left-bs-dropdow">
+                                <ul class="dropdown-menu bs-dropdow">
                                     <li><a class="active" href="#">13/12/2017</a></li>
                                     <li><a href="#">20/12/2017</a></li>
                                 </ul>
@@ -308,9 +286,9 @@
             </div>
 
             <div class="mbr-gallery mbr-section--no-padding">
-                <div class="mbr-gallery-layout-default">
+                <div class="gallery-container">
                     <div class="row mbr-gallery-row no-gutter">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
                             <a href="#lb-gallery1-w" data-slide-to="0" data-toggle="modal">
                                     <img src="assets/images/slide1-small.jpg" alt="">
                                     <span class="icon">
@@ -320,7 +298,7 @@
                                     </span>
                                 </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
                             <a href="#lb-gallery1-w" data-slide-to="1" data-toggle="modal">
                                     <img src="assets/images/slide2-small.jpg" alt="">
                                     <span class="icon">
@@ -330,7 +308,7 @@
                                     </span>
                                 </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
                             <a href="#lb-gallery1-w" data-slide-to="2" data-toggle="modal">
                                     <img src="assets/images/slide3-small.jpg" alt="">
                                     <span class="icon">
@@ -340,7 +318,7 @@
                                     </span>
                                 </a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
                             <a href="#lb-gallery1-w" data-slide-to="3" data-toggle="modal">
                                     <img src="assets/images/slide4-small.jpg" alt="">
                                     <span class="icon">
@@ -435,13 +413,13 @@
                     </div>
 
                     <div class="content-btn-group">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default">Filtrar</button>
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group filter">
+                            <button type="button" class="btn btn-info">Filtrar</button>
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu left-bs-dropdow">
+                            <ul class="dropdown-menu bs-dropdow">
                                 <li><a class="active" href="#">13/12/2017</a></li>
                                 <li><a href="#">20/12/2017</a></li>
                             </ul>
@@ -451,7 +429,7 @@
 
                 <div class="material-item-wrapper row">
                     <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel">
+                        <div class="material-item content-panel reveal-sequence">
                             <div class="palestrante">
                                 <div class="animation-overlay">
                                     <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
@@ -485,7 +463,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel">
+                        <div class="material-item content-panel reveal-sequence">
                             <div class="palestrante">
                                 <div class="animation-overlay">
                                     <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
@@ -519,7 +497,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel">
+                        <div class="material-item content-panel reveal-sequence">
                             <div class="palestrante">
                                 <div class="animation-overlay">
                                     <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
@@ -553,7 +531,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel">
+                        <div class="material-item content-panel reveal-sequence">
                             <div class="palestrante">
                                 <div class="animation-overlay">
                                     <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
@@ -587,7 +565,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel">
+                        <div class="material-item content-panel reveal-sequence">
                             <div class="palestrante">
                                 <div class="animation-overlay">
                                     <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
@@ -627,7 +605,7 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2" data-form-type="formoid">
-                            <div class="">
+                            <div class="reveal">
                                 <h3>SEJA UM(A) PALESTRANTE!</h3>
                             </div>
                             <button class="btn btn-lg btn-custom">Aplicar palestra</button>
@@ -637,7 +615,7 @@
             </div>
         </section>
 
-        <section id="newsletters" class="newsletters">
+        <section id="newsletters" class="newsletters reveal">
             <div class="container">
                 <h3>FIQUE LIGADO(A)</h3>
                 <p>
@@ -660,7 +638,7 @@
             <div class="col-xs-12">
                 <h3 class="">APOIO</h3>
                 <ul>
-                    <li>
+                    <li class="reveal-sequence">
                         <a target="_blank" href="http://forspace.com">
                             <img src="./assets/images/forspace.png" alt="">
                         </a>
@@ -672,7 +650,7 @@
         <section class="contact dark-bg" id="contact">
             <div class="container">
                 <div class="footer">
-                    <div>
+                    <div class="reveal-sequence">
                         <p>
                             <span class="logo-rodape">DEV PP - Comunidade de Desenvolvedores de Presidente Prudente e Região</span>
                         </p>
@@ -682,7 +660,7 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.6302787405098!2d-51.40932405065853!3d-22.140067985335364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45f0110115d%3A0xf1609421dc209826!2sR.+Nicolau+Cacciatori%2C+489+-+Jardim+dos+Pioneiros%2C+Pres.+Prudente+-+SP%2C+19050-340!5e0!3m2!1sen!2sbr!4v1515196116965"
                             width="250" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <div >
+                    <div class="reveal-sequence">
                         <p>
                             <strong>CONTATO</strong>
                             <br>Email: contato@devpp.com.br
@@ -714,13 +692,13 @@
                             </div>
                         </p>
                     </div>
-                    <div >
+                    <div class="reveal-sequence">
                         <p>
                             <strong>LINKS</strong>
                             <ul>
                                 <li><a target="_blank" href="http://www.inovaprudente.com.br/">Inova Prudente</a></li>
                                 <li><a target="_blank" href="http://www.presidenteprudente.sp.gov.br/site/index.xhtml">Prefeitura de Presidente Prudente</a></li>
-                                <li><a target="_blank" href="http://www.presidenteprudente.sp.gov.br/site/index.xhtml">Prefeitura de Presidente Prudente</a></li>
+                                <li><a target="_blank" href="http://www.forspace.com.br/">For Space Coworking</a></li>
                             </ul>
                         </p>
                     </div>
@@ -729,13 +707,15 @@
         </section>
 
 
-        <script src="assets/web/assets/jquery/jquery.min.js"></script>
-
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
+        <script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="node_modules/bootstrap/js/dropdown.js"></script>
+        <script src="assets/parallax.js-1.5.0/parallax.js-1.5.0/parallax.min.js"></script>
 
         <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
         <script src="assets/smooth-scroll/smooth-scroll.js"></script>
-        <script src="assets/jarallax/jarallax.js"></script>
+
         <script src="assets/masonry/masonry.pkgd.min.js"></script>
         <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
         <!--[if lte IE 9]>
@@ -746,7 +726,6 @@
         <script src="assets/formoid/formoid.min.js"></script>
 
         <script src="assets/mobirise/js/script.js"></script>
-        <script src="assets/scripts/hero.js"></script>
 
         <script type="text/javascript" src="dist/bundle.js"></script>
     </body>

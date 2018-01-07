@@ -10,7 +10,11 @@
     "dev": "webpack-dev-server --config webpack.config.dev.js --open"
   },
   "dependencies": {
-    "bootstrap": "3.3.7"
+    "animate.css-js": "0.0.9",
+    "bootstrap": "3.3.7",
+    "jarallax": "1.9.3",
+    "jquery": "3.2.1",
+    "scrollreveal": "3.3.6"
   },
   "devDependencies": {
     "css-loader": "0.28.8",

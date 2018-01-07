@@ -1,0 +1,113 @@
+section.intro {
+  display: table;
+  width: 100%;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+
+  .content-box {
+    display: table-cell;
+    float: none;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 41px 0;
+
+    // background-image: url('./vista-da-catedral-praa-9-de-julho-presidente-prudente-sp-2000x1500.jpg');
+    // background-attachment: fixed !important;
+    // background-position: 50% 0;
+    // background-repeat: no-repeat;
+    // background-size: cover !important;
+
+    h1 {
+      width: 500px;
+      height: 170px;
+      text-indent: -9999px;
+      background-image: url('./logo-hero.png');
+      background-size: cover;
+      margin: -60px auto 0;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 26px;
+    }
+    @media(max-width: 670px) {
+      h1 {
+        width: 400px;
+        height: 136px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+    @media(max-width: 550px) {
+      h1 {
+        background-image: url('./logo-hero-m.png');
+
+        width: 300px;
+        height: 102px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+    @media(max-width: 443px) {
+      h1 {
+        width: 200px;
+        height: 68px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+    @media(max-width: 328px) {
+      h1 {
+        background-image: url('./logo-hero-m.png');
+
+        width: 100px;
+        height: 34px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+    }
+
+    .intro-overlay {
+      background: rgba(34, 34, 34, .4);
+      position: absolute;
+      z-index: 1;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+    }
+
+    .arrow {
+      bottom: 71px;
+      left: 0;
+      line-height: 1px;
+      padding: 0 20px;
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+
+      .icon-arrow-down {
+        fill: #fff;
+        width: 66px;
+        height: 66px;
+      }
+    }
+  }
+}
+
+.mobile {
+  section.intro {
+    &.content-box {
+      background-attachment: scroll !important;
+    }
+  }
+}
