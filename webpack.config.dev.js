@@ -44,6 +44,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPuglin({
       template: 'index.html'
+    }),
+    // expose $ and jQuery to global scope.
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ]
 }

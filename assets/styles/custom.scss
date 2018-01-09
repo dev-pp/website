@@ -6,15 +6,10 @@
 
 // Reset and dependencies
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-//@import "~bootstrap-sass/assets/stylesheets/bootstrap/print";
-//@import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 
 // Core CSS
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/type";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/code";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/grid";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/tables";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/forms";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
@@ -25,35 +20,15 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/navs";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/navbar";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/pagination";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/pager";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/labels";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/badges";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/alerts";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/media";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/list-group";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/panels";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/wells";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/close";
 
 // Components w/ JavaScript
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/modals";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/popovers";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/carousel";
 
-// Utility classes
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/utilities";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
-
+@import "../vendors/mobirise-gallery/mobirise-slider/style.css";
+@import "../vendors/mobirise-gallery/style.css";
 
 @import '../icons/icons.css';
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
 
 body {
@@ -69,6 +44,18 @@ body {
   background: #dba1a0;
 }
 
+.dark-bg {
+  background-color: rgb(60, 60, 60);
+}
+
+.pull-right {
+  float: right;
+}
+
+.white-text {
+  color: #fff;
+}
+
 h3,
 h4 {
   font-weight: bold;
@@ -77,7 +64,7 @@ h4 {
 }
 
 h3 {
-  font-size: 1.8rem !important;
+  font-size: 2.5rem !important;
   letter-spacing: 6px;
   margin: 40px 0 20px;
 }
@@ -88,7 +75,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   letter-spacing: 1px;
 }
 
@@ -111,10 +98,6 @@ h4 {
   color: #fff !important;
   border-color: #D9534F !important;
   background: rgba(0, 0, 0, .3);
-}
-
-.dark-bg {
-  background-color: rgb(60, 60, 60);
 }
 
 section.header {
@@ -271,32 +254,29 @@ a.btn-see-more:hover .icon.button-arrow-right {
   fill: #335E85;
 }
 
-.call-to-action {
-  color: #fff !important;
+.faca-parte {
   padding-top: 80px;
   padding-bottom: 80px;
   margin: 30px 0;
 }
 
-.call-to-action img {
+.faca-parte img {
   border-radius: 6px;
 }
 
-.call-to-action p {
+.faca-parte p {
   margin-top: 35px;
-  color: #fff;
 }
 
-.call-to-action a.btn {
+.faca-parte a.btn {
   width: 100%;
-  color: #fff;
 }
 @media(min-width: 861px) {
-  .call-to-action p {
+  .faca-parte p {
     margin-top: 0;
   }
 
-  .call-to-action a.btn {
+  .faca-parte a.btn {
     width: auto;
   }
 }
@@ -396,6 +376,7 @@ a.btn-see-more:hover .icon.button-arrow-right {
 
   .dropdown-menu {
     color: red;
+
     &.bs-dropdow {
       left: -71px;
       top: 31px;
@@ -580,14 +561,44 @@ a.btn-see-more:hover .icon.button-arrow-right {
 }
 
 .palestre {
-  background-image: url('../images/mbr-1620x1080.jpg');
-  color: #fff;
   margin-top: 30px;
-  padding: 20px;
   text-align: center;
   text-shadow: 3px 3px 3px #000;
   padding-top: 40.8px;
   padding-bottom: 40.8px;
+
+  .parallax-container {
+    height: 300px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    .parallax {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .palestre-content {
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin: 20px 0;
+      text-shadow: none;
+      color: white
+    }
+
+    span {
+      background-color: rgba(0, 0, 0, .6)
+    }
+  }
 }
 
 section.newsletters {

@@ -9,13 +9,6 @@
         <meta name="description" content="Comunidade de Desenvolvedores de Presidente Prudente e Região">
 
         <title>DEV PP</title>
-
-        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-
-        <link rel="stylesheet" href="assets/mobirise/css/style.css">
-        <link rel="stylesheet" href="assets/mobirise-slider/style.css">
-        <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
-
     </head>
 
     <body>
@@ -26,7 +19,7 @@
         <!-- /Google Analytics -->
 
         <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <p class="chromeframe">Você está usando um navegador <strong>ultrapassado</strong>. Por favor considere <a href="http://browsehappy.com/">atualizar o seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ativar o Google Chrome Frame</a> para acessar este site e melhorar a sua experência.</p>
         <![endif]-->
 
         <section class="header">
@@ -40,24 +33,20 @@
                 <div class="parallax-container">
                     <div class="parallax"><img src="./components/hero/vista-da-catedral-praa-9-de-julho-presidente-prudente-sp-2000x1500.jpg"></div>
                 </div>
-                <div id="hero-content" class="mbr-box__container mbr-section__container container">
-                    <div class="mbr-box mbr-box--stretched">
-                        <div class="mbr-box__magnet mbr-box__magnet--center-center">
-                            <div id="hero-content" class="row">
-                                <div class="col-sm-10 col-sm-offset-1 intro-content">
-                                    <div class="reveal-bottom reveal-distance-70px reveal-duration-800">
-                                        <h1 class="intro__text">DEVPP</h1>
-                                        <h2 class="intro__subtext">Comunidade de Desenvolvedores de Presidente Prudente e Região</h2>
-                                    </div>
-                                </div>
+                <div class="hero-content container">
+                    <div id="hero-content" class="row">
+                        <div class="col-sm-10 col-sm-offset-1 intro-content">
+                            <div class="reveal-bottom reveal-distance-70px reveal-duration-800">
+                                <h1>DEVPP</h1>
+                                <h2>Comunidade de Desenvolvedores de Presidente Prudente e Região</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="arrow mbr-arrow--floating">
-                    <a class="mbr-arrow__link" href="#about">
+                <div class="arrow arrow-floating">
+                    <a href="#about">
                         <svg class="icon icon-arrow-down">
-                            <use xlink:href="./components/hero/icons.svg#icon-keyboard_arrow_down"></use>
+                            <use xlink:href="./components/hero/arrow.svg#icon-keyboard_arrow_down"></use>
                         </svg>
                     </a>
                 </div>
@@ -169,12 +158,12 @@
             </div>
         </section>
 
-        <section class="call-to-action dark-bg">
+        <section class="faca-parte dark-bg">
             <div class="container">
                 <div class="col-sm-6 reveal-left reveal-duration-800 reveal-overflow ">
                     <img src="./assets/images/IMG-20171221-WA0014.jpg" class="img-responsive" alt="">
                 </div>
-                <div class="col-sm-6 reveal-right">
+                <div class="col-sm-6 reveal-right white-text">
                     <p>Faça parte da nossa comunidade, participe dos meetups, compartilhe conhecimento, faça networking com
                         pessoas incríveis, aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na sua carreia,
                         evolua e fortaleça a comunidade e a região!
@@ -412,210 +401,217 @@
         </section>
 
         <section class="material container" id="material">
-            <div class="col-sm-12">
-                <div class="content-header-with-options">
-                    <div>
-                        <h3>MATERIAL</h3>
-                    </div>
+            <div class="content-header-with-options">
+                <div>
+                    <h3>MATERIAL</h3>
+                </div>
 
-                    <div class="content-btn-group">
-                        <div class="btn-group filter">
-                            <button type="button" class="btn btn-info">Filtrar</button>
-                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="content-btn-group">
+                    <div class="btn-group filter">
+                        <button type="button" class="btn btn-info">Filtrar</button>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu bs-dropdow">
-                                <li><a class="active" href="#">13/12/2017</a></li>
-                                <li><a href="#">20/12/2017</a></li>
-                            </ul>
+                        <ul class="dropdown-menu bs-dropdow">
+                            <li><a class="active" href="#">13/12/2017</a></li>
+                            <li><a href="#">20/12/2017</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material-item-wrapper row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="material-item content-panel reveal-sequence">
+                        <div class="palestrante">
+                            <div class="animation-overlay">
+                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+                            </div>
+                            <div class="info">
+                                <svg class="icon icon-room">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                                </svg> Felipe Blini <br>
+                                <svg class="icon icon-calendar">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                                </svg> 13/12/2017
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h4>Banco de Dados Realtime com Firebase</h4>
+                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+                            <p>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                                    </svg> Slides
+                                </a>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                                    </svg> Fonte
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="material-item-wrapper row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel reveal-sequence">
-                            <div class="palestrante">
-                                <div class="animation-overlay">
-                                    <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                                </div>
-                                <div class="info">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg> Felipe Blini <br>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg> 13/12/2017
-                                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="material-item content-panel reveal-sequence">
+                        <div class="palestrante">
+                            <div class="animation-overlay">
+                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
                             </div>
-                            <div class="caption">
-                                <h4>Banco de Dados Realtime com Firebase</h4>
-                                <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                                <p>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                        </svg> Slides
-                                    </a>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                        </svg> Fonte
-                                    </a>
-                                </p>
+                            <div class="info">
+                                <svg class="icon icon-room">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                                </svg> Felipe Blini <br>
+                                <svg class="icon icon-calendar">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                                </svg> 13/12/2017
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel reveal-sequence">
-                            <div class="palestrante">
-                                <div class="animation-overlay">
-                                    <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                                </div>
-                                <div class="info">
+                        <div class="caption">
+                            <h4>Banco de Dados Realtime com Firebase</h4>
+                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+                            <p>
+                                <a href="#" class="btn btn-default" role="button">
                                     <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg> Felipe Blini <br>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg> 13/12/2017
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h4>Banco de Dados Realtime com Firebase</h4>
-                                <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                                <p>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                        </svg> Slides
-                                    </a>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                        </svg> Fonte
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel reveal-sequence">
-                            <div class="palestrante">
-                                <div class="animation-overlay">
-                                    <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                                </div>
-                                <div class="info">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                                    </svg> Slides
+                                </a>
+                                <a href="#" class="btn btn-default" role="button">
                                     <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg> Felipe Blini <br>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg> 13/12/2017
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h4>Banco de Dados Realtime com Firebase</h4>
-                                <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                                <p>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                        </svg> Slides
-                                    </a>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                        </svg> Fonte
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel reveal-sequence">
-                            <div class="palestrante">
-                                <div class="animation-overlay">
-                                    <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                                </div>
-                                <div class="info">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg> Felipe Blini <br>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg> 13/12/2017
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h4>Banco de Dados Realtime com Firebase</h4>
-                                <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                                <p>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                        </svg> Slides
-                                    </a>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                        </svg> Fonte
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="material-item content-panel reveal-sequence">
-                            <div class="palestrante">
-                                <div class="animation-overlay">
-                                    <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                                </div>
-                                <div class="info">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg> Felipe Blini <br>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg> 13/12/2017
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <h4>Banco de Dados Realtime com Firebase</h4>
-                                <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                                <p>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                        </svg> Slides
-                                    </a>
-                                    <a href="#" class="btn btn-default" role="button">
-                                        <svg class="icon icon-room">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                        </svg> Fonte
-                                    </a>
-                                </p>
-                            </div>
+                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                                    </svg> Fonte
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="material-item content-panel reveal-sequence">
+                        <div class="palestrante">
+                            <div class="animation-overlay">
+                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+                            </div>
+                            <div class="info">
+                                <svg class="icon icon-room">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                                </svg> Felipe Blini <br>
+                                <svg class="icon icon-calendar">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                                </svg> 13/12/2017
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h4>Banco de Dados Realtime com Firebase</h4>
+                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+                            <p>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                                    </svg> Slides
+                                </a>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                                    </svg> Fonte
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="material-item content-panel reveal-sequence">
+                        <div class="palestrante">
+                            <div class="animation-overlay">
+                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+                            </div>
+                            <div class="info">
+                                <svg class="icon icon-room">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                                </svg> Felipe Blini <br>
+                                <svg class="icon icon-calendar">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                                </svg> 13/12/2017
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h4>Banco de Dados Realtime com Firebase</h4>
+                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+                            <p>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                                    </svg> Slides
+                                </a>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                                    </svg> Fonte
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="material-item content-panel reveal-sequence">
+                        <div class="palestrante">
+                            <div class="animation-overlay">
+                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+                            </div>
+                            <div class="info">
+                                <svg class="icon icon-room">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                                </svg> Felipe Blini <br>
+                                <svg class="icon icon-calendar">
+                                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                                </svg> 13/12/2017
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <h4>Banco de Dados Realtime com Firebase</h4>
+                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+                            <p>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                                    </svg> Slides
+                                </a>
+                                <a href="#" class="btn btn-default" role="button">
+                                    <svg class="icon icon-room">
+                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                                    </svg> Fonte
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="palestre" class="palestre mbr-parallax-background">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2" data-form-type="formoid">
-                            <div class="reveal">
-                                <h3>SEJA UM(A) PALESTRANTE!</h3>
-                            </div>
-                            <button class="btn btn-lg btn-custom">Aplicar palestra</button>
+        <section id="palestre" class="palestre">
+            <div class="parallax-container">
+                <div class="parallax"><img src="./assets/images/mbr-1620x1080.jpg"></div>
+            </div>
+            <div class="palestre-content container white-text">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="reveal">
+                            <h3>SEJA UM(A) PALESTRANTE!</h3>
+                            <p>
+                                <span>
+                                    Você não precisa ser um especialista para compartilhar o seu conhecimento,
+                                    na verdade compartilhando o seu conhecimento você se torna um especisla.
+                                </span>
+                            </p>
+
                         </div>
+                        <button class="btn btn-lg btn-custom">Aplicar palestra</button>
                     </div>
                 </div>
             </div>
@@ -642,7 +638,7 @@
 
         <section id="sponsor" class="container sponsor">
             <div class="col-xs-12">
-                <h3 class="">APOIO</h3>
+                <h3>APOIO</h3>
                 <ul>
                     <li class="reveal-sequence">
                         <a target="_blank" href="http://forspace.com">
@@ -712,22 +708,9 @@
             </div>
         </section>
 
-
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
-        <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="node_modules/materialize-css/js/parallax.js"></script>
-
         <!--[if lte IE 9]>
-            <script src="assets/jquery-placeholder/jquery.placeholder.min.js"></script>
+            <script src="node_modules/jquery-placeholder/jquery.placeholder.js"></script>
         <![endif]-->
-        <!-- <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script> -->
-        <!-- <script src="assets/mobirise-gallery/script.js"></script> -->
-        <script src="assets/formoid/formoid.min.js"></script>
-
-        <script src="assets/mobirise/js/script.js"></script>
 
         <script type="text/javascript" src="dist/bundle.js"></script>
     </body>

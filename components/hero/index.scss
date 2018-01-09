@@ -28,6 +28,11 @@ section.intro {
       width: 100%;
     }
 
+    .hero-content {
+      position: relative;
+      z-index: 7;
+    }
+
     h1 {
       width: 500px;
       height: 170px;
@@ -108,6 +113,61 @@ section.intro {
         fill: #fff;
         width: 66px;
         height: 66px;
+      }
+
+      &.arrow-floating a {
+        display: block;
+        -webkit-animation: floating-arrow 1.6s infinite ease-in-out 0s;
+        -o-animation: floating-arrow 1.6s infinite ease-in-out 0s;
+        animation: floating-arrow 1.6s infinite ease-in-out 0s;
+      }
+      @-webkit-keyframes floating-arrow {
+        from {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        65% {
+          -webkit-transform: translateY(11px);
+          transform: translateY(11px);
+        }
+
+        to {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+      @-o-keyframes floating-arrow {
+        from {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        65% {
+          -webkit-transform: translateY(11px);
+          transform: translateY(11px);
+        }
+
+        to {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+      @keyframes floating-arrow {
+        from {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        65% {
+          -webkit-transform: translateY(11px);
+          transform: translateY(11px);
+        }
+
+        to {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
       }
     }
   }

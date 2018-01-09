@@ -9,3 +9,4 @@
 - colocar palestrantes
 - migrar para bootstrap 4
 - arrumar seta no firefox
+- scroll animation
