@@ -568,35 +568,49 @@ a.btn-see-more:hover .icon.button-arrow-right {
   padding-bottom: 40.8px;
 
   .parallax-container {
-    height: 300px;
+    height: 218px;
     position: absolute;
     width: 100%;
     z-index: 1;
 
     .parallax {
       img {
-        width: 100%;
+        width: 150%;
+
+        @media(min-width:555px) {
+           width: 100%;
+        }
       }
     }
   }
 
   .palestre-content {
-    margin-top: 20px;
+    height: 218px;
+    margin-top: 0;
     position: relative;
     z-index: 2;
+    // border: solid 6px orange;
+    display: flex;
+    justify-content: center;
 
-    h3 {
-      margin: 0;
-    }
+    >div {
+      @media(min-width:388px) {
+        padding-top: 20px;
+      }
 
-    p {
-      margin: 20px 0;
-      text-shadow: none;
-      color: white
-    }
+      @media(min-width:410px) {
+        padding-top: 0;
+        margin-top: -5px;
+      }
 
-    span {
-      background-color: rgba(0, 0, 0, .6)
+      @media(min-width:515px) {
+        padding-top: 10px;
+        margin-top: 0;
+      }
+
+      @media(min-width:768px) {
+        padding-top: 15px;
+      }
     }
   }
 }
