@@ -24,10 +24,8 @@
 // Components w/ JavaScript
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/modals";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/carousel";
-
 @import "../vendors/mobirise-gallery/mobirise-slider/style.css";
 @import "../vendors/mobirise-gallery/style.css";
-
 @import '../icons/icons.css';
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
 
@@ -560,15 +558,15 @@ a.btn-see-more:hover .icon.button-arrow-right {
   height: 10px;
 }
 
-.palestre {
+$palestre-width: 218px;
+
+section.palestre {
   margin-top: 30px;
   text-align: center;
   text-shadow: 3px 3px 3px #000;
-  padding-top: 40.8px;
-  padding-bottom: 40.8px;
 
   .parallax-container {
-    height: 218px;
+    height: $palestre-width;
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -576,40 +574,29 @@ a.btn-see-more:hover .icon.button-arrow-right {
     .parallax {
       img {
         width: 150%;
-
         @media(min-width:555px) {
-           width: 100%;
+          width: 100%;
         }
       }
     }
   }
 
-  .palestre-content {
-    height: 218px;
-    margin-top: 0;
-    position: relative;
-    z-index: 2;
-    // border: solid 6px orange;
+  .palestre-content-wrapper {
+    height: $palestre-width;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 
-    >div {
-      @media(min-width:388px) {
-        padding-top: 20px;
-      }
+    .palestre-content {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      padding: 0 20px;
 
-      @media(min-width:410px) {
-        padding-top: 0;
-        margin-top: -5px;
-      }
-
-      @media(min-width:515px) {
-        padding-top: 10px;
-        margin-top: 0;
-      }
-
-      @media(min-width:768px) {
-        padding-top: 15px;
+      h3 {
+        margin: 0 0 20px;
       }
     }
   }
