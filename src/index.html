@@ -1,735 +1,708 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-        <meta name="description" content="Comunidade de Desenvolvedores de Presidente Prudente e Região">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Comunidade de Desenvolvedores de Presidente Prudente e Região">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-        <link rel="manifest" href="./manifest.json">
-        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="theme-color" content="#E81035">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#E81035">
 
-        <title>DEV PP</title>
-    </head>
+    <title>DEV PP</title>
+  </head>
 
-    <body>
-        <!-- Google Analytics -->
-        <script>
-            console.log('insert Analytics here')
-        </script>
-        <!-- /Google Analytics -->
+  <body>
+    <!-- Google Analytics -->
+    <script>
+      console.log('insert Analytics here')
+    </script>
+    <!-- /Google Analytics -->
 
-        <!--[if lt IE 7]>
-            <p class="chromeframe">Você está usando um navegador <strong>ultrapassado</strong>. Por favor considere <a href="http://browsehappy.com/">atualizar o seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ativar o Google Chrome Frame</a> para acessar este site e melhorar a sua experência.</p>
-        <![endif]-->
+    <!--[if lt IE 7]>
+        <p class="chromeframe">Você está usando um navegador <strong>ultrapassado</strong>. Por favor considere <a href="http://browsehappy.com/">atualizar o seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ativar o Google Chrome Frame</a> para acessar este site e melhorar a sua experência.</p>
+    <![endif]-->
 
-        <section class="header">
-            <a class="logo" href="#">DEVPP - Comunidade de Desenvolvedores de Presidente Prudente e Região</a>
-            <a class="btn btn-lg btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
-        </section>
+    <section class="header">
+      <a class="logo" href="#">DEVPP - Comunidade de Desenvolvedores de Presidente Prudente e Região</a>
+      <a class="btn btn-lg btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
+    </section>
 
-        <section class="intro">
-            <div class="content-box">
-                <div class="intro-overlay"></div>
-                <div class="parallax-container">
-                    <div class="parallax">
-                        <img src="./components/hero/hero-background-vista-da-catedral-praa-9-de-julho-presidente-prudente-sp-2000x1500.jpg">
-                    </div>
-                </div>
-                <div class="hero-content container">
-                    <div id="hero-content" class="row">
-                        <div class="col-sm-10 col-sm-offset-1 intro-content">
-                            <div class="reveal-bottom reveal-distance-70px reveal-duration-800">
-                                <h1>DEVPP</h1>
-                                <h2>Comunidade de Desenvolvedores de Presidente Prudente e Região</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="arrow arrow-floating">
-                    <a href="#about">
-                        <svg class="icon icon-arrow-down">
-                            <use xlink:href="./components/hero/hero-icons.svg#icon-keyboard_arrow_down"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <div id="app"></div>
 
-        <section id="navbar" class="custom-navbar">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <section id="navbar" class="custom-navbar">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    </div>
-                    <div class="collapse navbar-collapse custom-navbar-nav" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#about">Sobre</a></li>
-                            <li><a href="#members">Membros</a></li>
-                            <li><a href="#meetups">Meetups</a></li>
-                            <li><a href="#photos">Fotos</a></li>
-                            <li><a href="#material">Material</a></li>
-                            <!-- <li><a href="#articles">Artigos</a></li> -->
-                            <li><a href="#contact">Contato</a></li>
-                        </ul>
-                        <a class="btn btn-md btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
-                    </div>
-                </div>
-            </nav>
-        </section>
+          </div>
+          <div class="collapse navbar-collapse custom-navbar-nav" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#members">Membros</a></li>
+              <li><a href="#meetups">Meetups</a></li>
+              <li><a href="#photos">Fotos</a></li>
+              <li><a href="#material">Material</a></li>
+              <!-- <li><a href="#articles">Artigos</a></li> -->
+              <li><a href="#contact">Contato</a></li>
+            </ul>
+            <a class="btn btn-md btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
+          </div>
+        </div>
+      </nav>
+    </section>
 
-        <section id="about" class="container about">
-            <div class="col-xs-12">
-                <h3 class="">SOBRE</h3>
+    <section id="about" class="container about">
+      <div class="col-xs-12">
+        <h3 class="">SOBRE</h3>
 
-                <div class="content-panel reveal">
-                    <p>
-                        Make your own website in a few clicks! Mobirise helps you cut down development time by providing you with a flexible website
-                        editor with a drag and drop interface. MobiRise Website Builder creates responsive, retina and mobile
-                        friendly websites in a few clicks. Mobirise is one of the easiest website development tools available
-                        today. It also gives you the freedom to develop as many websites as you like given the fact that
-                        it is a desktop app.
-                    </p>
-                </div>
+        <div class="content-panel reveal">
+          <p>
+            Make your own website in a few clicks! Mobirise helps you cut down development time by providing you with a flexible website
+            editor with a drag and drop interface. MobiRise Website Builder creates responsive, retina and mobile friendly
+            websites in a few clicks. Mobirise is one of the easiest website development tools available today. It also gives
+            you the freedom to develop as many websites as you like given the fact that it is a desktop app.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="members" class="container members">
+      <div class="col-xs-12">
+        <h3>MEMBROS</h3>
+
+        <div class="content-panel reveal">
+          <p>Somos 85 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores, criativos, artistas,
+            inovadores, empreendedores....
+          </p>
+
+          <ul class="faces">
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/8/5/b/f/member_273034239.jpeg" alt="">
+            </li>
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
+            </li>
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/e/4/e/8/member_248818600.jpeg" alt="">
+            </li>
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/2/f/9/3/member_273192179.jpeg" alt="">
+            </li>
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/2/7/a/6/member_273190150.jpeg" alt="">
+            </li>
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
+            </li>
+            <li class="member-face">
+              <img src="https://secure.meetupstatic.com/photos/member/2/f/9/3/member_273192179.jpeg" alt="">
+            </li>
+            <li>
+              <ul class="small-faces">
+                <li class="member-face-sm">
+                  <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
+                </li>
+                <li class="member-face-sm">
+                  <img src="https://secure.meetupstatic.com/photos/member/2/7/a/6/member_273190150.jpeg" alt="">
+                </li>
+                <li class="member-face-sm">
+                  <img src="https://secure.meetupstatic.com/photos/member/2/f/9/3/member_273192179.jpeg" alt="">
+                </li>
+                <li class="member-face-sm">
+                  <img src="https://secure.meetupstatic.com/photos/member/8/5/b/f/member_273034239.jpeg" alt="">
+                </li>
+                <li class="member-face-sm">
+                  <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
+                </li>
+                <li class="member-see-all">
+                  <a class="btn-see-more" href="https://meetup.com/dev-pp/members">
+                      Veja todos
+                      <svg class="icon button-arrow-right">
+                          <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_right"></use>
+                      </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="faca-parte dark-bg">
+      <div class="container">
+        <div class="col-sm-6 reveal-left reveal-duration-800 reveal-overflow ">
+          <img src="./assets/images/IMG-20171221-WA0014.jpg" class="img-responsive" alt="">
+        </div>
+        <div class="col-sm-6 reveal-right white-text">
+          <p>Faça parte da nossa comunidade, participe dos meetups, compartilhe conhecimento, faça networking com pessoas incríveis,
+            aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na sua carreia, evolua e fortaleça a comunidade
+            e a região!
+          </p>
+          <a class="btn btn-md btn-custom" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="meetups" class="container meetups">
+      <div class="col-xs-12">
+        <div class="content-header-with-options">
+          <div>
+            <h3>MEETUPS</h3>
+          </div>
+
+          <div class="content-btn-group">
+            <div class="btn-group filter">
+              <button type="button" class="btn btn-default">Filtrar</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu bs-dropdow">
+                <li><a class="active" href="#">Agendados</a></li>
+                <li><a href="#">Passados</a></li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <section id="members" class="container members">
-            <div class="col-xs-12">
-                <h3>MEMBROS</h3>
-
-                <div class="content-panel reveal">
-                    <p>Somos 85 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores, criativos,
-                        artistas, inovadores, empreendedores....
-                    </p>
-
-                    <ul class="faces">
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/8/5/b/f/member_273034239.jpeg" alt="">
-                        </li>
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
-                        </li>
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/e/4/e/8/member_248818600.jpeg" alt="">
-                        </li>
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/2/f/9/3/member_273192179.jpeg" alt="">
-                        </li>
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/2/7/a/6/member_273190150.jpeg" alt="">
-                        </li>
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
-                        </li>
-                        <li class="member-face">
-                            <img src="https://secure.meetupstatic.com/photos/member/2/f/9/3/member_273192179.jpeg" alt="">
-                        </li>
-                        <li>
-                            <ul class="small-faces">
-                                <li class="member-face-sm">
-                                    <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
-                                </li>
-                                <li class="member-face-sm">
-                                    <img src="https://secure.meetupstatic.com/photos/member/2/7/a/6/member_273190150.jpeg" alt="">
-                                </li>
-                                <li class="member-face-sm">
-                                    <img src="https://secure.meetupstatic.com/photos/member/2/f/9/3/member_273192179.jpeg" alt="">
-                                </li>
-                                <li class="member-face-sm">
-                                    <img src="https://secure.meetupstatic.com/photos/member/8/5/b/f/member_273034239.jpeg" alt="">
-                                </li>
-                                <li class="member-face-sm">
-                                    <img src="https://secure.meetupstatic.com/photos/member/9/0/3/4/highres_273036916.jpeg" alt="">
-                                </li>
-                                <li class="member-see-all">
-                                    <a class="btn-see-more" href="https://meetup.com/dev-pp/members">
-                                            Veja todos
-                                            <svg class="icon button-arrow-right">
-                                                <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_right"></use>
-                                            </svg>
-                                        </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+        <div class="content-panel meetup-panel reveal">
+          <div class="data">
+            <div class="data-info">
+              <span class="day">20</span>
+              <span class="month">Dez</span>
             </div>
-        </section>
-
-        <section class="faca-parte dark-bg">
-            <div class="container">
-                <div class="col-sm-6 reveal-left reveal-duration-800 reveal-overflow ">
-                    <img src="./assets/images/IMG-20171221-WA0014.jpg" class="img-responsive" alt="">
-                </div>
-                <div class="col-sm-6 reveal-right white-text">
-                    <p>Faça parte da nossa comunidade, participe dos meetups, compartilhe conhecimento, faça networking com
-                        pessoas incríveis, aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na sua carreia,
-                        evolua e fortaleça a comunidade e a região!
-                    </p>
-                    <a class="btn btn-md btn-custom" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
-                </div>
+          </div>
+          <div class="info">
+            <div class="small">20 de Dezembro de 2017, 19:45</div>
+            <h4>Bate Papo Sobre Tecnologia 2</h4>
+            <p>
+              Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade
+              de aprendizado e networking.
+            </p>
+            <div class="place">
+              <div>
+                <svg class="icon icon-room">
+                  <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
+                </svg>
+              </div>
+              <div>
+                <h4 class="name">For Space</h4>
+                <adress class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</adress>
+              </div>
             </div>
-        </section>
+            <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+          </div>
+        </div>
 
-        <section id="meetups" class="container meetups">
-            <div class="col-xs-12">
-                <div class="content-header-with-options">
-                    <div>
-                        <h3>MEETUPS</h3>
-                    </div>
-
-                    <div class="content-btn-group">
-                        <div class="btn-group filter">
-                            <button type="button" class="btn btn-default">Filtrar</button>
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu bs-dropdow">
-                                <li><a class="active" href="#">Agendados</a></li>
-                                <li><a href="#">Passados</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-panel meetup-panel reveal">
-                    <div class="data">
-                        <div class="data-info">
-                            <span class="day">20</span>
-                            <span class="month">Dez</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <div class="small">20 de Dezembro de 2017, 19:45</div>
-                        <h4>Bate Papo Sobre Tecnologia 2</h4>
-                        <p>
-                            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade
-                            de aprendizado e networking.
-                        </p>
-                        <div class="place">
-                            <div>
-                                <svg class="icon icon-room">
-                                    <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="name">For Space</h4>
-                                <adress class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</adress>
-                            </div>
-                        </div>
-                        <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-                    </div>
-                </div>
-
-                <div class="content-panel meetup-panel reveal">
-                    <div class="data">
-                        <div class="data-info">
-                            <span class="day">20</span>
-                            <span class="month">Dez</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <div class="small">20 de Dezembro de 2017, 19:45</div>
-                        <h4>Bate Papo Sobre Tecnologia 2</h4>
-                        <p>
-                            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade
-                            de aprendizado e networking.
-                        </p>
-                        <div class="place">
-                            <div>
-                                <svg class="icon icon-room">
-                                    <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="name">For Space</h4>
-                                <adress class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</adress>
-                            </div>
-                        </div>
-                        <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-                    </div>
-                </div>
+        <div class="content-panel meetup-panel reveal">
+          <div class="data">
+            <div class="data-info">
+              <span class="day">20</span>
+              <span class="month">Dez</span>
             </div>
-        </section>
+          </div>
+          <div class="info">
+            <div class="small">20 de Dezembro de 2017, 19:45</div>
+            <h4>Bate Papo Sobre Tecnologia 2</h4>
+            <p>
+              Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade
+              de aprendizado e networking.
+            </p>
+            <div class="place">
+              <div>
+                <svg class="icon icon-room">
+                  <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
+                </svg>
+              </div>
+              <div>
+                <h4 class="name">For Space</h4>
+                <adress class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</adress>
+              </div>
+            </div>
+            <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="photos" class="fotos">
-            <div class="container">
-                <div class="col-xs-12">
-                    <div class="content-header-with-options">
-                        <div>
-                            <h3>FOTOS</h3>
-                        </div>
-
-                        <div class="content-btn-group">
-                            <div class="btn-group filter">
-                                <button type="button" class="btn btn-default">Filtrar</button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                                <ul class="dropdown-menu bs-dropdow">
-                                    <li><a class="active" href="#">13/12/2017</a></li>
-                                    <li><a href="#">20/12/2017</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="photos" class="fotos">
+      <div class="container">
+        <div class="col-xs-12">
+          <div class="content-header-with-options">
+            <div>
+              <h3>FOTOS</h3>
             </div>
 
-            <div class="mbr-gallery mbr-section--no-padding">
-                <div class="gallery-container">
-                    <div class="row mbr-gallery-row no-gutter">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
-                            <a href="#lb-gallery1-w" data-slide-to="0" data-toggle="modal">
-                                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515629002/slide8-small_h0t1xq.jpg" alt="">
-                                    <span class="icon">
-                                        <svg class="icon-gallery">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
-                            <a href="#lb-gallery1-w" data-slide-to="1" data-toggle="modal">
-                                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7-small_sfbvie.jpg" alt="">
-                                    <span class="icon">
-                                        <svg class="icon-gallery">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
-                            <a href="#lb-gallery1-w" data-slide-to="2" data-toggle="modal">
-                                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515629002/slide6_small_mkrxli.jpg" alt="">
-                                    <span class="icon">
-                                        <svg class="icon-gallery">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
-                            <a href="#lb-gallery1-w" data-slide-to="3" data-toggle="modal">
-                                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7-small_sfbvie.jpg" alt="">
-                                    <span class="icon">
-                                        <svg class="icon-gallery">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
-                                        </svg>
-                                    </span>
-                                </a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false"
-                    id="lb-gallery1-w">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <ol class="carousel-indicators">
-                                    <li data-app-prevent-settings="" data-target="#lb-gallery1-w" class=" active" data-slide-to="0"></li>
-                                    <li data-app-prevent-settings="" data-target="#lb-gallery1-w" data-slide-to="1"></li>
-                                    <li data-app-prevent-settings="" data-target="#lb-gallery1-w" data-slide-to="2"></li>
-                                    <li data-app-prevent-settings="" data-target="#lb-gallery1-w" data-slide-to="3"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" role="button" data-slide="prev" href="#lb-gallery1-w">
-                                    <span class="icon" aria-hidden="true">
-                                        <svg class="icon-gallery arrow">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_left"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" role="button" data-slide="next" href="#lb-gallery1-w">
-                                    <span class="icon" aria-hidden="true">
-                                        <svg class="icon-gallery arrow">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_right"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-
-                                <a class="close" href="#" role="button" data-dismiss="modal">
-                                    <span class="icon" aria-hidden="true">
-                                        <svg class="icon-gallery cancel">
-                                            <use xlink:href="./assets/icons/icons.svg#icon-cancel"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="sr-only">Close</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="material container" id="material">
-            <header class="content-header-with-options">
-                <div>
-                    <h3>MATERIAL</h3>
-                </div>
-
-                <div class="content-btn-group">
-                    <div class="btn-group filter">
-                        <button type="button" class="btn btn-default">Filtrar</button>
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                        <ul class="dropdown-menu bs-dropdow">
-                            <li><a class="active" href="#">13/12/2017</a></li>
-                            <li><a href="#">20/12/2017</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-
-            <div class="material-item-wrapper row">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="material-item content-panel reveal-sequence">
-                        <div class="palestrante">
-                            <div class="overflow"></div>
-                            <div class="foto">
-                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                            </div>
-                            <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
-                                <div>
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg>
-                                    <span>Felipe Blini</span>
-                                </div>
-                                <div>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg>
-                                    <span>13/12/2017</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caption">
-                            <h4>Banco de Dados Realtime com Firebase</h4>
-                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                            <p>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                    </svg> Slides
-                                </a>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                    </svg> Fonte
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="material-item content-panel reveal-sequence">
-                        <div class="palestrante">
-                            <div class="overflow"></div>
-                            <div class="foto">
-                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                            </div>
-                            <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
-                                <div>
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg>
-                                    <span>Felipe Blini</span>
-                                </div>
-                                <div>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg>
-                                    <span>13/12/2017</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caption">
-                            <h4>Banco de Dados Realtime com Firebase</h4>
-                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                            <p>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                    </svg> Slides
-                                </a>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                    </svg> Fonte
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="material-item content-panel reveal-sequence">
-                        <div class="palestrante">
-                            <div class="overflow"></div>
-                            <div class="foto">
-                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                            </div>
-                            <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
-                                <div>
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg>
-                                    <span>Felipe Blini</span>
-                                </div>
-                                <div>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg>
-                                    <span>13/12/2017</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caption">
-                            <h4>Banco de Dados Realtime com Firebase</h4>
-                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                            <p>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                    </svg> Slides
-                                </a>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                    </svg> Fonte
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="material-item content-panel reveal-sequence">
-                        <div class="palestrante">
-                            <div class="overflow"></div>
-                            <div class="foto">
-                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                            </div>
-                            <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
-                                <div>
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg>
-                                    <span>Felipe Blini</span>
-                                </div>
-                                <div>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg>
-                                    <span>13/12/2017</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caption">
-                            <h4>Banco de Dados Realtime com Firebase</h4>
-                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                            <p>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                    </svg> Slides
-                                </a>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                    </svg> Fonte
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="material-item content-panel reveal-sequence">
-                        <div class="palestrante">
-                            <div class="overflow"></div>
-                            <div class="foto">
-                                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
-                            </div>
-                            <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
-                                <div>
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
-                                    </svg>
-                                    <span>Felipe Blini</span>
-                                </div>
-                                <div>
-                                    <svg class="icon icon-calendar">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
-                                    </svg>
-                                    <span>13/12/2017</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caption">
-                            <h4>Banco de Dados Realtime com Firebase</h4>
-                            <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
-                            <p>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
-                                    </svg> Slides
-                                </a>
-                                <a href="#" class="btn btn-default" role="button">
-                                    <svg class="icon icon-room">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-                                    </svg> Fonte
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="palestre" class="palestre">
-            <div class="parallax-container">
-                <div class="parallax"><img src="./assets/images/mbr-1620x1080.jpg"></div>
-            </div>
-            <div class="palestre-content-wrapper">
-                <div class="palestre-content white-text">
-                    <div class="reveal">
-                        <h3>SEJA UM(A) PALESTRANTE!</h3>
-                        <button class="btn btn-lg btn-custom">Aplicar palestra</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="newsletters" class="newsletters reveal">
-            <div class="container">
-                <h3>FIQUE LIGADO(A)</h3>
-                <p>
-                    Fique ligado(a) nas últimas novidades sobre <strong>tecnologias front e back-end, mercado, oportunidades
-                    de trabalho e os eventos da Dev-pp, eventos em Presidente Prudente e região e no
-                    Brasil todo</strong> através de uma newsletter semanal com links da semana.
-                </p>
-                <div class="form">
-                    <div>
-                        <input type="text" class="form-control input-lg" placeholder="Digite o seu endereço de e-mail...">
-                    </div>
-                    <div>
-                        <button class="btn btn-lg btn-custom">INSCREVER</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sponsor" class="container sponsor">
-            <div class="col-xs-12">
-                <h3>APOIO</h3>
-                <ul>
-                    <li class="reveal-sequence">
-                        <a target="_blank" href="http://forspace.com">
-                            <img src="./assets/images/forspace.png" alt="">
-                        </a>
-                    </li>
+            <div class="content-btn-group">
+              <div class="btn-group filter">
+                <button type="button" class="btn btn-default">Filtrar</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu bs-dropdow">
+                  <li><a class="active" href="#">13/12/2017</a></li>
+                  <li><a href="#">20/12/2017</a></li>
                 </ul>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
 
-        <section class="contact dark-bg" id="contact">
-            <div class="container">
-                <div class="footer">
-                    <div class="reveal-sequence">
-                        <p>
-                            <span class="logo-rodape">DEV PP - Comunidade de Desenvolvedores de Presidente Prudente e Região</span>
-                        </p>
-                        <p>
-                            <strong>ENDEREÇO</strong><br> Rua Nicolau Cacciatori, 489<br> Presidente Prudente- SP
-                        </p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.6302787405098!2d-51.40932405065853!3d-22.140067985335364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45f0110115d%3A0xf1609421dc209826!2sR.+Nicolau+Cacciatori%2C+489+-+Jardim+dos+Pioneiros%2C+Pres.+Prudente+-+SP%2C+19050-340!5e0!3m2!1sen!2sbr!4v1515196116965"
-                            width="250" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                    <div class="reveal-sequence">
-                        <p>
-                            <strong>CONTATO</strong>
-                            <br>Email: contato@devpp.com.br
-                            <br>Telefone: +1 (0) 000 0000 001
-                            <br>Whatsapp: +1 (0) 000 0000 002
-                            <div class="social-icons">
-                                <strong>SOCIAL</strong>
-                                <br>
-                                <a class="sicon facebook" title="Facebook" target="_blank" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-facebook"></use>
-                                    </svg>
-                                </a>
-                                <a class="sicon youtube" title="YouTube" target="_blank" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-youtube"></use>
-                                    </svg>
-                                </a>
-                                <a class="sicon instagram" title="Instagram" target="_blank" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                                <a class="sicon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
-                                    <svg class="icon">
-                                        <use xlink:href="./assets/icons/icons.svg#icon-meetup"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </p>
-                    </div>
-                    <div class="reveal-sequence">
-                        <p>
-                            <strong>LINKS</strong>
-                            <ul>
-                                <li><a target="_blank" href="http://www.inovaprudente.com.br/">Inova Prudente</a></li>
-                                <li><a target="_blank" href="http://www.presidenteprudente.sp.gov.br/site/index.xhtml">Prefeitura de Presidente Prudente</a></li>
-                                <li><a target="_blank" href="http://www.forspace.com.br/">For Space Coworking</a></li>
-                            </ul>
-                        </p>
-                    </div>
+      <div class="mbr-gallery mbr-section--no-padding">
+        <div class="gallery-container">
+          <div class="row mbr-gallery-row no-gutter">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
+              <a href="#lb-gallery1-w" data-slide-to="0" data-toggle="modal">
+                  <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515629002/slide8-small_h0t1xq.jpg" alt="">
+                  <span class="icon">
+                      <svg class="icon-gallery">
+                          <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
+                      </svg>
+                  </span>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
+              <a href="#lb-gallery1-w" data-slide-to="1" data-toggle="modal">
+                  <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7-small_sfbvie.jpg" alt="">
+                  <span class="icon">
+                      <svg class="icon-gallery">
+                          <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
+                      </svg>
+                  </span>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
+              <a href="#lb-gallery1-w" data-slide-to="2" data-toggle="modal">
+                  <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515629002/slide6_small_mkrxli.jpg" alt="">
+                  <span class="icon">
+                      <svg class="icon-gallery">
+                          <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
+                      </svg>
+                  </span>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item reveal-sequence">
+              <a href="#lb-gallery1-w" data-slide-to="3" data-toggle="modal">
+                  <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7-small_sfbvie.jpg" alt="">
+                  <span class="icon">
+                      <svg class="icon-gallery">
+                          <use xlink:href="./assets/icons/icons.svg#icon-loupe"></use>
+                      </svg>
+                  </span>
+              </a>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false"
+          id="lb-gallery1-w">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <ol class="carousel-indicators">
+                  <li data-app-prevent-settings="" data-target="#lb-gallery1-w" class=" active" data-slide-to="0"></li>
+                  <li data-app-prevent-settings="" data-target="#lb-gallery1-w" data-slide-to="1"></li>
+                  <li data-app-prevent-settings="" data-target="#lb-gallery1-w" data-slide-to="2"></li>
+                  <li data-app-prevent-settings="" data-target="#lb-gallery1-w" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515628999/slide7_sfbvie.jpg" alt="">
+                  </div>
                 </div>
+                <a class="left carousel-control" role="button" data-slide="prev" href="#lb-gallery1-w">
+                    <span class="icon" aria-hidden="true">
+                        <svg class="icon-gallery arrow">
+                            <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_left"></use>
+                        </svg>
+                    </span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" role="button" data-slide="next" href="#lb-gallery1-w">
+                    <span class="icon" aria-hidden="true">
+                        <svg class="icon-gallery arrow">
+                            <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_right"></use>
+                        </svg>
+                    </span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+                <a class="close" href="#" role="button" data-dismiss="modal">
+                    <span class="icon" aria-hidden="true">
+                        <svg class="icon-gallery cancel">
+                            <use xlink:href="./assets/icons/icons.svg#icon-cancel"></use>
+                        </svg>
+                    </span>
+                    <span class="sr-only">Close</span>
+                </a>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!--[if lte IE 9]>
-            <script src="node_modules/jquery-placeholder/jquery.placeholder.js"></script>
-        <![endif]-->
+    <section class="material container" id="material">
+      <header class="content-header-with-options">
+        <div>
+          <h3>MATERIAL</h3>
+        </div>
 
-    </body>
+        <div class="content-btn-group">
+          <div class="btn-group filter">
+            <button type="button" class="btn btn-default">Filtrar</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu bs-dropdow">
+              <li><a class="active" href="#">13/12/2017</a></li>
+              <li><a href="#">20/12/2017</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="material-item-wrapper row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="material-item content-panel reveal-sequence">
+            <div class="palestrante">
+              <div class="overflow"></div>
+              <div class="foto">
+                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+              </div>
+              <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
+                <div>
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                  </svg>
+                  <span>Felipe Blini</span>
+                </div>
+                <div>
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                  </svg>
+                  <span>13/12/2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+              <h4>Banco de Dados Realtime com Firebase</h4>
+              <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+              <p>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                  </svg> Slides
+                </a>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                  </svg> Fonte
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="material-item content-panel reveal-sequence">
+            <div class="palestrante">
+              <div class="overflow"></div>
+              <div class="foto">
+                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+              </div>
+              <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
+                <div>
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                  </svg>
+                  <span>Felipe Blini</span>
+                </div>
+                <div>
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                  </svg>
+                  <span>13/12/2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+              <h4>Banco de Dados Realtime com Firebase</h4>
+              <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+              <p>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                  </svg> Slides
+                </a>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                  </svg> Fonte
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="material-item content-panel reveal-sequence">
+            <div class="palestrante">
+              <div class="overflow"></div>
+              <div class="foto">
+                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+              </div>
+              <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
+                <div>
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                  </svg>
+                  <span>Felipe Blini</span>
+                </div>
+                <div>
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                  </svg>
+                  <span>13/12/2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+              <h4>Banco de Dados Realtime com Firebase</h4>
+              <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+              <p>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                  </svg> Slides
+                </a>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                  </svg> Fonte
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="material-item content-panel reveal-sequence">
+            <div class="palestrante">
+              <div class="overflow"></div>
+              <div class="foto">
+                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+              </div>
+              <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
+                <div>
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                  </svg>
+                  <span>Felipe Blini</span>
+                </div>
+                <div>
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                  </svg>
+                  <span>13/12/2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+              <h4>Banco de Dados Realtime com Firebase</h4>
+              <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+              <p>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                  </svg> Slides
+                </a>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                  </svg> Fonte
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="material-item content-panel reveal-sequence">
+            <div class="palestrante">
+              <div class="overflow"></div>
+              <div class="foto">
+                <img src="./assets/images/felipeblini.jpg" alt="" class="pull-left">
+              </div>
+              <div class="info reveal-overflow reveal-left reveal-delay reveal-no-opacity reveal-no-scale">
+                <div>
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-mic"></use>
+                  </svg>
+                  <span>Felipe Blini</span>
+                </div>
+                <div>
+                  <svg class="icon icon-calendar">
+                    <use xlink:href="./assets/icons/icons.svg#icon-calendar"></use>
+                  </svg>
+                  <span>13/12/2017</span>
+                </div>
+              </div>
+            </div>
+            <div class="caption">
+              <h4>Banco de Dados Realtime com Firebase</h4>
+              <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
+              <p>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-presentation"></use>
+                  </svg> Slides
+                </a>
+                <a href="#" class="btn btn-default" role="button">
+                  <svg class="icon icon-room">
+                    <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+                  </svg> Fonte
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="palestre" class="palestre">
+      <div class="parallax-container">
+        <div class="parallax"><img src="./assets/images/mbr-1620x1080.jpg"></div>
+      </div>
+      <div class="palestre-content-wrapper">
+        <div class="palestre-content white-text">
+          <div class="reveal">
+            <h3>SEJA UM(A) PALESTRANTE!</h3>
+            <button class="btn btn-lg btn-custom">Aplicar palestra</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletters" class="newsletters reveal">
+      <div class="container">
+        <h3>FIQUE LIGADO(A)</h3>
+        <p>
+          Fique ligado(a) nas últimas novidades sobre <strong>tecnologias front e back-end, mercado, oportunidades
+              de trabalho e os eventos da Dev-pp, eventos em Presidente Prudente e região e no
+              Brasil todo</strong> através de uma newsletter semanal com links da semana.
+        </p>
+        <div class="form">
+          <div>
+            <input type="text" class="form-control input-lg" placeholder="Digite o seu endereço de e-mail...">
+          </div>
+          <div>
+            <button class="btn btn-lg btn-custom">INSCREVER</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsor" class="container sponsor">
+      <div class="col-xs-12">
+        <h3>APOIO</h3>
+        <ul>
+          <li class="reveal-sequence">
+            <a target="_blank" href="http://forspace.com">
+                <img src="./assets/images/forspace.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact dark-bg" id="contact">
+      <div class="container">
+        <div class="footer">
+          <div class="reveal-sequence">
+            <p>
+              <span class="logo-rodape">DEV PP - Comunidade de Desenvolvedores de Presidente Prudente e Região</span>
+            </p>
+            <p>
+              <strong>ENDEREÇO</strong><br> Rua Nicolau Cacciatori, 489<br> Presidente Prudente- SP
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.6302787405098!2d-51.40932405065853!3d-22.140067985335364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45f0110115d%3A0xf1609421dc209826!2sR.+Nicolau+Cacciatori%2C+489+-+Jardim+dos+Pioneiros%2C+Pres.+Prudente+-+SP%2C+19050-340!5e0!3m2!1sen!2sbr!4v1515196116965"
+              width="250" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="reveal-sequence">
+            <p>
+              <strong>CONTATO</strong>
+              <br>Email: contato@devpp.com.br
+              <br>Telefone: +1 (0) 000 0000 001
+              <br>Whatsapp: +1 (0) 000 0000 002
+              <div class="social-icons">
+                <strong>SOCIAL</strong>
+                <br>
+                <a class="sicon facebook" title="Facebook" target="_blank" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./assets/icons/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+                <a class="sicon youtube" title="YouTube" target="_blank" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./assets/icons/icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+                <a class="sicon instagram" title="Instagram" target="_blank" href="#">
+                  <svg class="icon">
+                    <use xlink:href="./assets/icons/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+                <a class="sicon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
+                  <svg class="icon">
+                    <use xlink:href="./assets/icons/icons.svg#icon-meetup"></use>
+                  </svg>
+                </a>
+              </div>
+            </p>
+          </div>
+          <div class="reveal-sequence">
+            <p>
+              <strong>LINKS</strong>
+              <ul>
+                <li><a target="_blank" href="http://www.inovaprudente.com.br/">Inova Prudente</a></li>
+                <li><a target="_blank" href="http://www.presidenteprudente.sp.gov.br/site/index.xhtml">Prefeitura de Presidente Prudente</a></li>
+                <li><a target="_blank" href="http://www.forspace.com.br/">For Space Coworking</a></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--[if lte IE 9]>
+        <script src="node_modules/jquery-placeholder/jquery.placeholder.js"></script>
+    <![endif]-->
+
+  </body>
 
 </html>

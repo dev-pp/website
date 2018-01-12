@@ -14,20 +14,13 @@
 ✔ css classes duplicadas
 ✔ palestrante animation overlay
 ✔ dropdown filtrar
+◻ arrumar parallax palestre
 ◻ componentizar com Vue.js
 ◻ inserir google analytics
 ◻ destacar e colocar palestrantes no proximo meetup
 
-verificar https://github.com/webpack-contrib/html-loader
+verificar
 https://www.npmjs.com/package/web-components-loader
 https://vuejs.org/v2/guide/single-file-components.html
 https://vue-loader.vuejs.org/en/
-https://github.com/thegc/html-webpack-inline-svg-plugin
 https://github.com/vuejs/vue-loader/issues/14
-
-- image loader problem
-https://stackoverflow.com/questions/41544777/how-to-bundle-images-using-webpack
-
-- sprite svg loader
-https://github.com/kisenka/svg-sprite-loader/tree/master/examples/browser-sprite
-

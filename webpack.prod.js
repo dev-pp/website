@@ -11,6 +11,14 @@ const prodConfig = merge(common, {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'hidden-source-map',
+  vue: {
+    html: {
+      loader: 'html-loader',
+          options: {
+            attrs: ['use:xlink:href', 'img:src']
+          }
+    }
+  },
   module: {
     rules: [
       {
@@ -21,10 +29,6 @@ const prodConfig = merge(common, {
             attrs: ['use:xlink:href', 'img:src']
           }
         }
-      },
-      {
-        test: /\.svg$/,
-        use: 'file-loader'
       },
     ]
   },
