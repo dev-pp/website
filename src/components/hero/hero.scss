@@ -1,10 +1,21 @@
 @charset "UTF-8";
 
-// Materialize Parallax
+/* =========================================
+ =========================================
+ ======== MATERIALIZE PARALLAX ===========
+ =========================================
+ ========================================= */
+
 @import "~materialize-css/sass/components/color";
 @import "~materialize-css/sass/components/variables";
 @import "~materialize-css/sass/components/global";
 @import "~materialize-css/sass/components/typography";
+
+/* =========================================
+ =========================================
+ ======== HERO.CSS =======================
+ =========================================
+ ========================================= */
 
 section.intro {
   display: table;

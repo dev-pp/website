@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* =========================================
+ =========================================
+ ======== BOOTSTRAP.CSS =======================
+ =========================================
+ ========================================= */
+
 // Core variables and mixins
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
@@ -24,9 +30,21 @@
 // Components w/ JavaScript
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/modals";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+/* =========================================
+ =========================================
+ ======== GALLERY.CSS =======================
+ =========================================
+ ========================================= */
 @import "../vendors/mobirise-gallery/mobirise-slider/style.css";
 @import "../vendors/mobirise-gallery/style.css";
-@import '../icons/icons.css';
+
+/* =========================================
+=========================================
+======== APP.CSS =======================
+=========================================
+=========================================*/
+@import "../icons/icons.css";
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
 
 body {
@@ -121,12 +139,16 @@ section.header {
 
     width: 142px;
     height: 48px;
-    background-image: url('../images/logo-hero-p.png');
+    background-image: url('../images/logo-p.png');
     background-size: contain;
     background-repeat: no-repeat;
     text-indent: -9999px;
     position: relative;
     top: -5px;
+
+    &:hover {
+      transform: perspective(96px) rotateX(65deg);
+    }
   }
   @media(max-width: 530px) {
     .logo {
@@ -179,6 +201,27 @@ section.custom-navbar {
       border-right: none;
       border-left: none;
       border-top: none;
+      @media(max-width: 768px) {
+        .navbar-collapse {
+          overflow: hidden;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            li {
+              display: flex;
+              justify-content: center;
+            }
+          }
+
+          .btn {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
 
     .nav > li > a {
@@ -373,11 +416,14 @@ a.btn-see-more:hover .icon.button-arrow-right {
   align-items: center;
 
   .dropdown-menu {
-    color: red;
+    position: relative;
 
     &.bs-dropdow {
-      left: -71px;
-      top: 31px;
+      // left: -71px;
+      // top: 31px;
+      position: absolute;
+      position: absolute;
+    left: -74px;
     }
   }
 
@@ -388,6 +434,7 @@ a.btn-see-more:hover .icon.button-arrow-right {
   }
 
   .content-btn-group {
+
     a {
       text-decoration: none;
     }
@@ -502,60 +549,98 @@ a.btn-see-more:hover .icon.button-arrow-right {
   margin-top: 11px;
 }
 
-.material-item-wrapper {
-  margin-top: -35px;
-}
+section.material {
+  .material-item-wrapper {
+    margin-top: -35px;
 
-.material-item-wrapper .material-item {
-  margin-top: 35px;
-}
+    .material-item {
+      margin-top: 35px;
 
-.material-item .palestrante {
-  height: 88px;
-  padding: 10px;
-  overflow: hidden;
-}
+      .palestrante {
+        display: flex;
+        overflow: hidden;
+        padding: 10px;
 
-.material-item .palestrante .animation-overlay {
-  float: left;
-  background: #fff;
-  margin-left: -10px;
-  position: relative;
-  width: 30px;
-}
+        .overflow {
+          width: 47px;
+          position: absolute;
+          height: 80px;
+          left: 19px;
+          background: #fff;
+          z-index: 2;
+          @media(max-width: 305px) {
+            display: none;
+          }
+        }
 
-.material-item .palestrante img {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  margin-right: 15px;
-  border: solid 3px white;
-  position: relative;
-}
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: solid 3px white;
+          position: relative;
+          z-index: 2;
+          @media(max-width: 305px) {
+            display: none;
+          }
+        }
 
-.material-item .palestrante .info {
-  padding-left: 33px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  padding: 8px 21px 7px 39px;
-  font-size: 14px;
-  margin-top: 6px;
-  background-color: #efefef;
-  z-index: 2;
-  float: left;
-  margin-left: -200px;
+        .info {
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+          padding: 8px 0 8px 70px;
+          flex: 2;
+          margin-left: -60px;
+          position: relative;
+          z-index: 1;
+          font-size: 14px;
+          height: 70px;
+          top: 7px;
+          background-color: #efefef;
 
-  -webkit-transition: all .15s ease 0s;
-  -o-transition: all .15s ease 0s;
-  transition: all .15s ease 0s;
-}
+          div {
+            span {
+              position: relative;
+              top: -2px;
+              left: 4px;
+            }
+          }
+          @media(max-width: 305px) {
+            padding: 8px 8px 8px 16px;
+            font-size: 12px;
+            height: 40px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            margin-left: 0;
 
-.material-item:focus .palestrante .info {
-  margin-left: 20px;
-}
+            img {
+              display: none;
+            }
 
-.material-item a .icon {
-  height: 10px;
+            div {
+              float: left;
+
+              span {
+                position: inherit;
+                top: 0;
+                left: 0;
+              }
+            }
+
+            div:nth-child(1) {
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+
+      a {
+        .icon {
+          height: 10px;
+        }
+      }
+    }
+  }
 }
 
 $palestre-width: 218px;
@@ -701,7 +786,7 @@ section.newsletters {
   background: #fff;
 }
 
-.contact {
+section.contact {
   margin-top: 60px;
 
   .footer {
@@ -714,6 +799,10 @@ section.newsletters {
     > div {
       padding: 20px;
       text-align: center;
+
+      strong {
+        color: #fff;
+      }
     }
     @media(min-width: 826px) {
       flex-direction: row;
@@ -725,7 +814,7 @@ section.newsletters {
 
     .logo-rodape {
       display: block;
-      background: url('../images/logo-hero-p.png');
+      background: url('../images/logo-p.png');
       width: 100px;
       height: 34px;
       text-indent: -9999px;
