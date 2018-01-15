@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <devpp-hero>Carregando Hero...</devpp-hero>
+    <devpp-intro>Carregando Hero...</devpp-intro>
   </div>
 </template>
 
 <script>
-import DevppHero from './components/hero/DevPPHero.vue';
+import DevppIntro from './components/intro/DevPPIntro.vue';
 
 export default {
   name: 'app',
   components: {
-    DevppHero
+    DevppIntro
   }
 }
 </script>

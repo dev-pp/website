@@ -8,17 +8,9 @@ const common = require('./webpack.common');
 
 const prodConfig = merge(common, {
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.join(__dirname, 'dist')
   },
   devtool: 'hidden-source-map',
-  vue: {
-    html: {
-      loader: 'html-loader',
-          options: {
-            attrs: ['use:xlink:href', 'img:src']
-          }
-    }
-  },
   module: {
     rules: [
       {

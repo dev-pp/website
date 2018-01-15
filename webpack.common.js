@@ -67,15 +67,9 @@ const config = {
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
+        loader: "vue-svg-symbol-loader"
       },
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
   },
   plugins: [
     new ExtractTextPlugin({

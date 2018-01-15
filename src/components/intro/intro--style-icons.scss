@@ -1,0 +1,13 @@
+section.intro {
+  .icon {
+    display: inline-block;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: #fff;
+
+    &.icon-arrow-down {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

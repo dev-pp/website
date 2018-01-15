@@ -14,8 +14,10 @@
 ✔ css classes duplicadas
 ✔ palestrante animation overlay
 ✔ dropdown filtrar
+✔ svg icon symbol
 ◻ arrumar parallax palestre
 ◻ componentizar com Vue.js
+◻ fazer build com vue
 ◻ inserir google analytics
 ◻ destacar e colocar palestrantes no proximo meetup
 

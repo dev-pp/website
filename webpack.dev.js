@@ -7,7 +7,7 @@ const devConfig = merge(common, {
   devServer: {
     contentBase: path.join(__dirname, 'src'),
     publicPath: "/",
-    port: 9000
+    port: 9000,
   },
 });
 

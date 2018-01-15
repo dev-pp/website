@@ -1,7 +1,7 @@
 <template>
   <section class="intro">
     <div class="content-box">
-      <div class="intro-overlay"></div>
+      <div class="intro-overlay"></div>w
       <div class="parallax-container">
         <div class="parallax">
           <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515629005/vista-da-catedral-praa-9-de-julho-presidente-prudente-sp-2000x1500_dcx9ct.jpg">
@@ -19,9 +19,7 @@
       </div>
       <div class="arrow arrow-floating">
         <a href="#about">
-          <svg class="icon icon-arrow-down">
-            <use xlink:href="./components/hero/arrow.svg#icon-keyboard_arrow_down"></use>
-          </svg>
+          <ArrowDown class="icon icon-arrow-down" />
         </a>
       </div>
     </div>
@@ -30,10 +28,16 @@
 
 <script>
 
+import ArrowDown from "./intro--icons.svg?icon-keyboard_arrow_down";
+
 export default {
-  name: 'dev-pp-hero',
+  name: 'devpp-intro',
+  components: {
+    ArrowDown
+  }
 }
 </script>
 
-<style src="./hero.scss" lang="scss" scoped></style>
+<style src="./intro--style.scss" lang="scss" scoped></style>
+<style src="./intro--style-icons.scss" lang="scss" scoped></style>
 
