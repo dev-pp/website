@@ -12,6 +12,10 @@ import 'materialize-css';
 
 import './favicons/favicons';
 
+import toggleFixedHeader from './components/header/fixed-header';
+import toggleFixedNavbar from './assets/js/fixed-navbar';
+import { adjustIntroHeroOnScroll, adjustIntroHeroOnResize } from './components/intro/adjust-hero-layout';
+
 // exporting jquery for external libraries to use it
 window.$ = window.jQuery = jQuery;
 
@@ -55,60 +59,14 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   easing: 'easeInOutQuart',
 });
 
-const $body = document.body;
-
-const toggleFixedNavbar = function () {
-  const currentScroll = Math.round(document.documentElement.scrollTop);
-  const introHeight = document.querySelectorAll('.intro')[0].offsetHeight;
-
-  if (currentScroll > introHeight - 80) {
-    // fix navbar
-    $body.classList.add('fixed-navbar');
-  }
-
-  if (currentScroll < introHeight - 80) {
-    // unfix navbar
-    $body.classList.remove('fixed-navbar');
-  }
-};
-
-const toggleFixedHeader = function () {
-  const currentScroll = Math.round(document.documentElement.scrollTop);
-  const introHeight = document.querySelectorAll('.intro')[0].offsetHeight;
-
-  if (currentScroll > 10) {
-    // fix header
-    $body.classList.add('fixed-header');
-  }
-
-  if (currentScroll < 10) {
-    // unfix header
-    $body.classList.remove('fixed-header');
-  }
-
-  if (currentScroll > (introHeight - 80)) {
-    // unfix header
-    $body.classList.remove('fixed-header');
-  }
-}
-
-const adjustHeroContentOpacity = function () {
-  const newOpacity = (230 - $(window).scrollTop()) / 100;
-  document.querySelectorAll('.hero-content')[0].style.opacity = newOpacity;
-};
-
-const adjustHeroContentSize = function () {
-  document.querySelectorAll('.hero-content')[0].style.width = (window.innerWidth - 110) + 'px';
-}
-
 window.onscroll = function () {
-  adjustHeroContentOpacity();
   toggleFixedNavbar();
   toggleFixedHeader();
+  adjustIntroHeroOnScroll();
 };
 
 window.onresize = (function () {
-  adjustHeroContentSize();
+  adjustIntroHeroOnResize();
 });
 
 window.sr = ScrollReveal({ reset: true });
