@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <devpp-intro>Carregando Hero...</devpp-intro>
+    <devpp-header />
+    <devpp-intro />
+    <devpp-navbar />
+    <devpp-about />
+    <devpp-footer />
   </div>
 </template>
 
 <script>
-import DevppIntro from './components/intro/DevPPIntro.vue';
+import DevppHeader from './components/header/DevppHeader.vue';
+import DevppIntro from './components/intro/DevppIntro.vue';
+import DevppNavbar from './components/navbar/DevppNavbar.vue';
+import DevppAbout from './components/about/DevppAbout.vue';
+import DevppFooter from './components/footer/DevppFooter.vue';
 
 export default {
   name: 'app',
   components: {
-    DevppIntro
+    DevppIntro,
+    DevppNavbar,
+    DevppAbout,
+    DevppHeader,
+    DevppFooter
   }
 }
 </script>
@@ -132,70 +144,6 @@ h4 {
   color: #fff !important;
   border-color: #D9534F !important;
   background: rgba(0, 0, 0, .3);
-}
-
-section.header {
-  width: 100%;
-  height: 86px;
-  padding: 20px 30px;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  z-index: 4;
-
-  -webkit-transition: all 300ms ease-in-out 0s;
-  -o-transition: all 300ms ease-in-out 0s;
-  transition: all 300ms ease-in-out 0s;
-
-  .logo {
-    display: block;
-    float: left;
-
-    -webkit-transition: all .2s ease-in-out 0s;
-    -o-transition: all .2s ease-in-out 0s;
-    transition: all .2s ease-in-out 0s;
-
-    width: 142px;
-    height: 48px;
-    background-image: url('./assets/images/logo-p.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    position: relative;
-    top: -5px;
-
-    &:hover {
-      transform: perspective(96px) rotateX(65deg);
-    }
-  }
-  @media(max-width: 530px) {
-    .logo {
-      width: 100px;
-      top: 3px;
-    }
-
-    .btn {
-      width: 150px;
-      font-size: 13px;
-    }
-  }
-  @media(max-width: 470px) {
-    .logo {
-      display: none;
-    }
-
-    .btn {
-      width: 100%;
-      font-size: 17px;
-    }
-  }
-}
-
-.fixed-header {
-  section.header {
-    position: fixed;
-    background: rgba(255, 255, 255, 0.5);
-  }
 }
 
 section.custom-navbar {
@@ -745,39 +693,6 @@ section.newsletters {
   }
 }
 
-.social-icons {
-  .sicon {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 29px;
-    height: 56px;
-    line-height: 61px;
-    margin: 0 10px 13px 0;
-    text-align: center;
-    width: 56px;
-  }
-
-  .sicon svg {
-    fill: #fff;
-  }
-
-  .facebook {
-    background: #3e5b98;
-  }
-
-  .youtube {
-    background: #e02a20;
-  }
-
-  .instagram {
-    background: #9c7c6e;
-  }
-
-  .meetup {
-    background: #F64060;
-  }
-}
-
 .sponsor {
   text-align: center;
 
@@ -804,65 +719,9 @@ section.newsletters {
   background: #fff;
 }
 
-section.contact {
-  margin-top: 60px;
 
-  .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    > div {
-      padding: 20px;
-      text-align: center;
-
-      strong {
-        color: #fff;
-      }
-    }
-    @media(min-width: 826px) {
-      flex-direction: row;
-
-      div {
-        text-align: left;
-      }
-    }
-
-    .logo-rodape {
-      display: block;
-      background: url('./assets/images/logo-p.png');
-      width: 100px;
-      height: 34px;
-      text-indent: -9999px;
-      background-size: cover;
-      margin: 0 auto;
-      @media(min-width: 826px) {
-        margin: 0;
-      }
-    }
-
-    ul {
-      padding: 0;
-
-      li {
-        list-style: none;
-
-        a:hover {
-          color: #fff;
-        }
-      }
-    }
-  }
-}
 
 .gallery-container {
   background-color: #000;
-}
-
-.bar,
-.foo {
-  height: 300px;
 }
 </style>

@@ -1,0 +1,56 @@
+section.header {
+  width: 100%;
+  height: 86px;
+  padding: 20px 30px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+
+  -webkit-transition: all 300ms ease-in-out 0s;
+  -o-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+
+  .logo {
+    display: block;
+    float: left;
+
+    -webkit-transition: all .2s ease-in-out 0s;
+    -o-transition: all .2s ease-in-out 0s;
+    transition: all .2s ease-in-out 0s;
+
+    width: 142px;
+    height: 48px;
+    background-image: url('./header--logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    position: relative;
+    top: -5px;
+
+    &:hover {
+      transform: perspective(96px) rotateX(65deg);
+    }
+  }
+  @media(max-width: 530px) {
+    .logo {
+      width: 100px;
+      top: 3px;
+    }
+
+    .btn {
+      width: 150px;
+      font-size: 13px;
+    }
+  }
+  @media(max-width: 470px) {
+    .logo {
+      display: none;
+    }
+
+    .btn {
+      width: 100%;
+      font-size: 17px;
+    }
+  }
+}
