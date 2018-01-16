@@ -68,4 +68,6 @@ export default {
 }
 </script>
 
-<style src="./footer--style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import './footer--style.scss';
+</style>

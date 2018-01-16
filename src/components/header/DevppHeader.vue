@@ -11,4 +11,6 @@ export default {
 }
 </script>
 
-<style src="./header--style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import './header--style.scss';
+</style>

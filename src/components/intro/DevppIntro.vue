@@ -38,6 +38,9 @@ export default {
 }
 </script>
 
-<style src="./intro--style.scss" lang="scss" scoped></style>
-<style src="./intro--style-icons.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import './intro--style.scss';
+@import './intro--style-icons.scss'
+</style>
+
 

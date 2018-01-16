@@ -32,4 +32,6 @@ export default {
 }
 </script>
 
-<style src="./navbar--style.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import './navbar--style.scss';
+</style>
