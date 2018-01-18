@@ -19,7 +19,8 @@
     "materialize-css": "0.100.2",
     "scrollreveal": "3.3.6",
     "smooth-scroll": "12.1.5",
-    "vue": "2.5.13"
+    "vue": "2.5.13",
+    "vue-simple-photoswipe": "1.0.3"
   },
   "devDependencies": {
     "babel-core": "6.26.0",

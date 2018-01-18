@@ -7,7 +7,7 @@
     <devpp-members />
     <devpp-join-us class="dark-bg" />
     <devpp-meetups />
-    <devpp-photos />
+    <devpp-gallery />
     <devpp-materials />
     <devpp-call-to-talk />
     <devpp-newsletters />
@@ -24,7 +24,7 @@ import DevppAbout from './components/about/DevppAbout.vue';
 import DevppMembers from './components/members/DevppMembers.vue';
 import DevppJoinUs from './components/join_us/DevppJoinUs.vue';
 import DevppMeetups from './components/meetups/DevppMeetups.vue';
-import DevppPhotos from './components/photos/DevppPhotos.vue';
+import DevppGallery from './components/gallery/DevppGallery.vue';
 import DevppMaterials from './components/material/DevppMaterial.vue';
 import DevppCallToTalk from './components/call_to_talk/DevppCallToTalk.vue';
 import DevppNewsletters from './components/newsletters/DevppNewsletters.vue';
@@ -41,7 +41,7 @@ export default {
     DevppMembers,
     DevppJoinUs,
     DevppMeetups,
-    DevppPhotos,
+    DevppGallery,
     DevppMaterials,
     DevppCallToTalk,
     DevppNewsletters,

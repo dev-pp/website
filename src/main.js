@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 
+import PhotoSwipe from 'vue-simple-photoswipe/dist/vue-simple-photoswipe';
+Vue.use(PhotoSwipe);
+
 import jQuery from 'jquery/src/jquery';
 import * as SmoothScroll from 'smooth-scroll';
 
