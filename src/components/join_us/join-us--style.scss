@@ -1,0 +1,30 @@
+$break-point-p: 450px;
+$break-point-m: 768px;
+
+section.join-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 30px 0;
+
+  img {
+    border-radius: 6px;
+  }
+
+  p {
+    margin-top: 5%;
+    @media(min-width: $break-point-p) {
+      margin-top: 10px;
+    }
+
+    @media(min-width: $break-point-m) {
+      margin-top: 0;
+    }
+  }
+
+  a.btn {
+    width: 100%;
+    @media(min-width: $break-point-m) {
+      width: auto;
+    }
+  }
+}

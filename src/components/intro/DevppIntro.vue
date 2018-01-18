@@ -19,7 +19,7 @@
       </div>
       <div class="arrow arrow-floating">
         <a href="#about">
-          <ArrowDown class="icon icon-arrow-down" />
+          <arrow-down-icon class="icon icon-arrow-down" />
         </a>
       </div>
     </div>
@@ -28,12 +28,12 @@
 
 <script>
 
-import ArrowDown from "./intro--icons.svg?icon-keyboard_arrow_down";
+import ArrowDownIcon from "./intro--icons.svg?icon-keyboard_arrow_down";
 
 export default {
   name: 'devpp-intro',
   components: {
-    ArrowDown
+    ArrowDownIcon,
   }
 }
 </script>

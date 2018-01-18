@@ -48,38 +48,5 @@ section.footer {
         }
       }
     }
-
-    .social-icons {
-      .s-icon {
-        cursor: pointer;
-        display: inline-block;
-        font-size: 29px;
-        height: 56px;
-        line-height: 61px;
-        margin: 0 10px 13px 0;
-        text-align: center;
-        width: 56px;
-
-        svg {
-          fill: #fff;
-        }
-
-        &.facebook {
-          background: #3e5b98;
-        }
-
-        &.youtube {
-          background: #e02a20;
-        }
-
-        &.instagram {
-          background: #9c7c6e;
-        }
-
-        &.meetup {
-          background: #F64060;
-        }
-      }
-    }
   }
 }

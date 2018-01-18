@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
 import jQuery from 'jquery/src/jquery';
 import * as SmoothScroll from 'smooth-scroll';
@@ -69,43 +69,44 @@ window.onresize = (function () {
   adjustIntroHeroOnResize();
 });
 
-window.sr = ScrollReveal({ reset: true });
-sr.reveal('.reveal');
-sr.reveal('.reveal-overflow', { distance: '150%' });
-sr.reveal('.reveal-distance-70px', { distance: '70px' });
-sr.reveal('.reveal-delay', { delay: 100 });
-sr.reveal('.reveal-left', { origin: 'left' });
-sr.reveal('.reveal-right', { origin: 'right' });
-sr.reveal('.reveal-bottom', { origin: 'bottom' });
-sr.reveal('.reveal-duration-800', { duration: 800 });
-sr.reveal('.reveal-no-opacity', { opacity: 1 });
-sr.reveal('.reveal-no-scale', { scale: 1 });
-
-sr.reveal('.content-header-with-options .btn-group.filter', {
-  delay: 200,
-  origin: 'bottom',
-  easing: 'linear',
-  opacity: 0,
-  scale: 1,
-  distance: '150%',
-});
-
-sr.reveal('.mbr-gallery-item.reveal-sequence', 50);
-sr.reveal('.material-item.reveal-sequence', 50);
-sr.reveal('.sponsor .reveal-sequence', 50);
-sr.reveal('.footer .reveal-sequence', 15);
-
-// Materialize Parallax
 $(document).ready(function () {
+  // Materialize Parallax
   $('.parallax').parallax();
 
+  // Close collapse menu on click
   $('.navbar-collapse ul li a:not(.dropdown-toggle)')
     .bind('click touchstart', () => {
       $('.navbar-toggle:visible').click();
     });
+
+  window.sr = ScrollReveal({ reset: true });
+  sr.reveal('.reveal');
+  sr.reveal('.reveal-overflow', { distance: '150%' });
+  sr.reveal('.reveal-distance-70px', { distance: '70px' });
+  sr.reveal('.reveal-delay', { delay: 100 });
+  sr.reveal('.reveal-left', { origin: 'left' });
+  sr.reveal('.reveal-right', { origin: 'right' });
+  sr.reveal('.reveal-bottom', { origin: 'bottom' });
+  sr.reveal('.reveal-duration-800', { duration: 800 });
+  sr.reveal('.reveal-no-opacity', { opacity: 1 });
+  sr.reveal('.reveal-no-scale', { scale: 1 });
+
+  sr.reveal('.content-header-with-options .btn-group.filter', {
+    delay: 200,
+    origin: 'bottom',
+    easing: 'linear',
+    opacity: 0,
+    scale: 1,
+    distance: '150%',
+  });
+
+  sr.reveal('.mbr-gallery-item.reveal-sequence', 50);
+  sr.reveal('.material-item.reveal-sequence', 50);
+  sr.reveal('.sponsor .reveal-sequence', 50);
+  sr.reveal('.footer .reveal-sequence', 15);
 });
 
 new Vue({
   el: '#app',
   render: h => h(App)
-})
+});

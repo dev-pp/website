@@ -1,0 +1,17 @@
+section.sponsors {
+  text-align: center;
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      img {
+        border: solid 1px #ccc;
+        padding: 5px;
+        width: 150px;
+      }
+    }
+  }
+}

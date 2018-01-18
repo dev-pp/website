@@ -1,5 +1,5 @@
 <template>
-  <section class="footer dark-bg" id="contact">
+  <section class="footer" id="contact">
     <div class="container">
       <div class="reveal-sequence">
         <p>
@@ -19,25 +19,35 @@
           <div class="social-icons">
             <strong>SOCIAL</strong>
             <br>
-            <a class="sicon facebook" title="Facebook" target="_blank" href="#">
-              <svg class="icon">
+            <a class="s-icon facebook" title="Facebook" target="_blank" href="#">
+              <facebook-icon class="icon" />
+              <!-- <svg class="icon">
                 <use xlink:href="./assets/icons/icons.svg#icon-facebook"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a class="sicon youtube" title="YouTube" target="_blank" href="#">
-              <svg class="icon">
+            <a class="s-icon youtube" title="YouTube" target="_blank" href="#">
+              <youtube-icon class="icon" />
+              <!-- <svg class="icon">
                 <use xlink:href="./assets/icons/icons.svg#icon-youtube"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a class="sicon instagram" title="Instagram" target="_blank" href="#">
-              <svg class="icon">
+            <a class="s-icon instagram" title="Instagram" target="_blank" href="#">
+               <instagram-icon class="icon" />
+               <!-- <svg class="icon">
                 <use xlink:href="./assets/icons/icons.svg#icon-instagram"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a class="sicon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
-              <svg class="icon">
+            <a class="s-icon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
+              <meetup-icon class="icon" />
+              <!-- <svg class="icon">
                 <use xlink:href="./assets/icons/icons.svg#icon-meetup"></use>
-              </svg>
+              </svg> -->
+            </a>
+            <a class="s-icon github" title="github" target="_blank" href="#">
+              <github-icon class="icon" />
+              <!-- <svg class="icon">
+                <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
+              </svg> -->
             </a>
           </div>
         </p>
@@ -63,11 +73,25 @@
 </template>
 
 <script>
+import FacebookIcon from "./footer--s-icons.svg?icon-facebook";
+import YoutubeIcon from "./footer--s-icons.svg?icon-youtube";
+import InstagramIcon from "./footer--s-icons.svg?icon-instagram";
+import MeetupIcon from "./footer--s-icons.svg?icon-meetup";
+import GithubIcon from "./footer--s-icons.svg?icon-github";
+
 export default {
   name: 'devpp-footer',
+  components: {
+    FacebookIcon,
+    YoutubeIcon,
+    InstagramIcon,
+    MeetupIcon,
+    GithubIcon
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+@import './footer--s-icons.scss';
 @import './footer--style.scss';
 </style>
