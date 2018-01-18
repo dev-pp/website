@@ -44,11 +44,11 @@
     object-fit: cover;
     margin: .5px;
     cursor: pointer;
-  }
-}
 
-.pswp--zoom-allowed .pswp__img {
-  height: auto !important;
+    &:hover {
+      opacity: .8
+    }
+  }
 }
 </style>
 

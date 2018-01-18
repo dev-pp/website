@@ -1,9 +1,9 @@
 <template>
   <section class="intro">
     <div class="content-box">
-      <div class="intro-overlay"></div>w
+      <div class="intro-overlay"></div>
       <div class="parallax-container">
-        <div class="parallax">
+        <div class="parallax parallax-intro">
           <img src="http://res.cloudinary.com/dwtuxv53y/image/upload/v1515629005/vista-da-catedral-praa-9-de-julho-presidente-prudente-sp-2000x1500_dcx9ct.jpg">
         </div>
       </div>
@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 @import './intro--style.scss';
-@import './intro--style-icons.scss'
+@import './intro--style-icons.scss';
 </style>
 
 

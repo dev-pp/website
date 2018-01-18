@@ -1,11 +1,11 @@
 <template>
   <section id="newsletters" class="newsletters reveal">
       <div class="container">
-        <h3>FIQUE LIGADO(A)</h3>
+        <h3>NOVIDADES</h3>
         <p>
-          Fique ligado(a) nas últimas novidades sobre <strong>tecnologias front e back-end, mercado, oportunidades
-              de trabalho e os eventos da Dev-pp, eventos em Presidente Prudente e região e no
-              Brasil todo</strong> através de uma newsletter semanal com links da semana.
+          Receba uma newsletter semanal sobre <strong>novas tecnologias, front-end, back-end, inovações, notícias, oportunidades
+          de trabalho, novos meetups da Dev-pp e também eventos em Presidente Prudente e região e no
+          Brasil todo</strong>.
         </p>
         <div class="form">
           <div>

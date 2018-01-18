@@ -16,6 +16,7 @@
               <li><a href="#meetups">Meetups</a></li>
               <li><a href="#photos">Fotos</a></li>
               <li><a href="#material">Material</a></li>
+              <li><a href="#palestre">Palestre</a></li>
               <li><a href="#contact">Contato</a></li>
             </ul>
             <a class="btn btn-md btn-custom pull-right" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>

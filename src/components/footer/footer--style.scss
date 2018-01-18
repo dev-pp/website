@@ -12,8 +12,38 @@ section.footer {
       padding: 20px;
       text-align: center;
 
-      strong {
-        color: #fff;
+      &.links-wrapper {
+        @media(max-width: 825px) {
+          margin-top: -67px;
+        }
+      }
+
+      strong.title {
+        display: inline-block;
+        background: url("footer--titles.png") no-repeat;
+        text-indent: -999px;
+        height: 22px;
+        background-position-x: 4px;
+
+        &.address {
+          background-position-y: 5px;
+          width: 125px;
+        }
+
+        &.contact {
+          background-position-y: -25px;
+          width: 73px;
+        }
+
+        &.social {
+          background-position-y: -58px;
+          width: 131px;
+        }
+
+        &.links {
+          background-position-y: -86px;
+          width: 120px;
+        }
       }
     }
     @media(min-width: 826px) {
@@ -39,6 +69,7 @@ section.footer {
 
     ul {
       padding: 0;
+      margin: 0;
 
       li {
         list-style: none;

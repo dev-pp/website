@@ -19,11 +19,11 @@
             Se você é desenvolvedor e está interessado em aprender, evoluir, dividir conhecimento
             e ajudar a criar uma comunidade forte <a href="#join-us">junte-se a nós</a> e
             compareça aos meetups (<a href="#meetups">veja a agenda</a>). Se você quer compartilhar
-            o seu conhecimento <a href="#call-to-talk">aplique uma palestra</a>.
+            o seu conhecimento <a href="#palestre">aplique uma palestra</a>.
           </p>
           <p>
             Todos os participantes, organizadores, palestrantes, apoiadores e envolvidos devem seguir
-            o nosso <a href="#">código de conduta</a>.
+            o nosso <a href="https://github.com/devppmeetup/dev-pp/blob/master/Codigo-de-conduta.md" target="_blank">código de conduta</a>.
           </p>
         </div>
       </div>

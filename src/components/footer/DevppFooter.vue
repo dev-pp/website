@@ -6,55 +6,40 @@
           <span class="logo-rodape">DEV PP - Comunidade de Desenvolvedores de Presidente Prudente e Região</span>
         </p>
         <p>
-          <strong>ENDEREÇO</strong><br> Rua Nicolau Cacciatori, 489<br> Presidente Prudente- SP
+          <strong class="title address">ENDEREÇO</strong><br> Rua Nicolau Cacciatori, 489<br> Presidente Prudente- SP
         </p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.6302787405098!2d-51.40932405065853!3d-22.140067985335364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f45f0110115d%3A0xf1609421dc209826!2sR.+Nicolau+Cacciatori%2C+489+-+Jardim+dos+Pioneiros%2C+Pres.+Prudente+-+SP%2C+19050-340!5e0!3m2!1sen!2sbr!4v1515196116965" width="250" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="reveal-sequence">
         <p>
-          <strong>CONTATO</strong>
+          <strong class="title contact">CONTATO</strong>
           <br>Email: contato@devpp.com.br
           <br>Telefone: +1 (0) 000 0000 001
           <br>Whatsapp: +1 (0) 000 0000 002
           <div class="social-icons">
-            <strong>SOCIAL</strong>
+            <strong class="title social">SOCIAL</strong>
             <br>
             <a class="s-icon facebook" title="Facebook" target="_blank" href="#">
               <facebook-icon class="icon" />
-              <!-- <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#icon-facebook"></use>
-              </svg> -->
             </a>
             <a class="s-icon youtube" title="YouTube" target="_blank" href="#">
               <youtube-icon class="icon" />
-              <!-- <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#icon-youtube"></use>
-              </svg> -->
             </a>
             <a class="s-icon instagram" title="Instagram" target="_blank" href="#">
                <instagram-icon class="icon" />
-               <!-- <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#icon-instagram"></use>
-              </svg> -->
             </a>
             <a class="s-icon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
               <meetup-icon class="icon" />
-              <!-- <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#icon-meetup"></use>
-              </svg> -->
             </a>
             <a class="s-icon github" title="github" target="_blank" href="#">
               <github-icon class="icon" />
-              <!-- <svg class="icon">
-                <use xlink:href="./assets/icons/icons.svg#icon-github"></use>
-              </svg> -->
             </a>
           </div>
         </p>
       </div>
-      <div class="reveal-sequence">
+      <div class="reveal-sequence links-wrapper">
         <p>
-          <strong>LINKS</strong>
+          <strong class="title links">LINKS</strong>
           <ul>
             <li>
               <a target="_blank" href="http://www.inovaprudente.com.br/">Inova Prudente</a>

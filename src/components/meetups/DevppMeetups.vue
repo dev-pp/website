@@ -34,52 +34,53 @@
         </div>
         <div class="info">
           <div class="small">20 de Dezembro de 2017, 19:45</div>
-          <h4>Bate Papo Sobre Tecnologia 2</h4>
+          <a class="title" href="https://www.meetup.com/dev-pp/events/245829094/" target="_blank">
+            <h4>Bate Papo Sobre Tecnologia II</h4>
+          </a>
           <p>
-            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade de aprendizado e networking.
+            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade de aprendizado e networking. Agenda e informações, acesse o link abaixo: https://github.com/felipeblini/dev-pp (PS: Não esqueça de dar uma estrelinha para apoiar essa iniciativa que visa apenas o desenvolvimento da nossa comunidade de Desenvolvedores da região). Então falaremos nesse encontro...
+            <a target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">Leia mais</a>
           </p>
           <div class="place">
             <div>
               <room-icon class="icon icon-room" />
-              <!-- <svg class="icon icon-room">
-                <use xlink:href="./assets/icons-temp/icons.svg#icon-room"></use>
-              </svg> -->
             </div>
             <div>
-              <h4 class="name">For Space</h4>
+              <h5 class="name">For Space</h5>
               <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
             </div>
           </div>
-          <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+          <a href="https://github.com/devppmeetup/dev-pp#2-encontro---20122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
         </div>
       </div>
 
       <div class="content-panel meetup-panel reveal">
         <div class="data">
           <div class="data-info">
-            <span class="day">20</span>
+            <span class="day">13</span>
             <span class="month">Dez</span>
           </div>
         </div>
         <div class="info">
-          <div class="small">20 de Dezembro de 2017, 19:45</div>
-          <h4>Bate Papo Sobre Tecnologia 2</h4>
+          <div class="small">13 de Dezembro de 2017, 19:45</div>
+          <a href="https://www.meetup.com/dev-pp/events/245793906/" target="_blank" class="title">
+            <h4>Bate papo sobre tecnologia, experiências e carreira</h4>
+          </a>
           <p>
-            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade de aprendizado e networking.
+            Programação e mais informações: https://github.com/felipeblini/dev-pp
           </p>
           <div class="place">
             <div>
               <room-icon class="icon icon-room" />
-              <!-- <svg class="icon icon-room">
-                <use xlink:href="./assets/icons/icons.svg#icon-room"></use>
-              </svg> -->
             </div>
             <div>
-              <h4 class="name">For Space</h4>
+              <h5 class="name">For Space</h5>
               <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
             </div>
           </div>
-          <a class="btn btn-md btn-custom pull-right" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+          <a class="btn btn-md btn-custom pull-right" target="_blak" href="https://www.meetup.com/dev-pp/events/245793906/">RSVP</a>
+          <a href="https://github.com/devppmeetup/dev-pp#1-encontro---13122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
         </div>
       </div>
     </div>
