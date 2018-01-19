@@ -1,7 +1,7 @@
-`npm install`
 
-`npm run dev`
+# Dev
+`npm install` and `npm run dev`
 
-`npm run build`
+# Prod
+`npm run build` and `npm run serve-prod`
 
-`http-server dist -o`
