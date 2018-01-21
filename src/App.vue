@@ -10,7 +10,7 @@
     <devpp-gallery />
     <devpp-materials />
     <devpp-palestre />
-    <devpp-newsletters />
+    <devpp-newsletters action="https://felipeblini.us12.list-manage.com/subscribe/post?u=aa251961375a2fd4ac20a6132&amp;id=5718990c28" />
     <devpp-sponsors />
     <devpp-footer class="dark-bg" />
   </div>
