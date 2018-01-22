@@ -9,12 +9,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --progress --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js -p",
-    "serve-prod": "http-server dist -o"
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "bootstrap": "3.3.7",
     "bootstrap-sass": "3.3.7",
+    "express": "4.16.2",
     "jquery": "3.2.1",
     "jquery-placeholder": "2.3.1",
     "jsonp": "0.2.1",
@@ -27,6 +29,9 @@
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
     "clean-webpack-plugin": "0.1.17",
     "copy-webpack-plugin": "4.3.1",
     "css-loader": "0.28.8",

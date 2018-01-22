@@ -69,11 +69,11 @@ export default {
             this.errorMessage = 'Ocorreu um erro, por favor tente novamente.';
           }
 
-          // const _self = this;
-          // setTimeout(function() {
-          //   _self.errorMessage = null;
-          //   console.log('object');
-          // }, 4000);
+          const _self = this;
+          setTimeout(function() {
+            _self.errorMessage = null;
+            console.log('object');
+          }, 4000);
 
           if (err) {
             console.log('err', err);
