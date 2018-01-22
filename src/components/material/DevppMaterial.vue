@@ -7,8 +7,8 @@
 
       <div class="content-btn-group">
         <div class="btn-group filter">
-          <button type="button" class="btn btn-default">Filtrar</button>
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-default" disabled>Filtrar</button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
