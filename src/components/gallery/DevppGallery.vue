@@ -109,7 +109,7 @@ export default {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_4_glyek1.jpg',
         w: 844,
         h: 1500
-      }]
+       }]
     }
   }
 }

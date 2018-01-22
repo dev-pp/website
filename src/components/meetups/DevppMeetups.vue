@@ -38,7 +38,7 @@
             <h4>Bate Papo Sobre Tecnologia II</h4>
           </a>
           <p>
-            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade de aprendizado e networking. Agenda e informações, acesse o link abaixo: https://github.com/felipeblini/dev-pp (PS: Não esqueça de dar uma estrelinha para apoiar essa iniciativa que visa apenas o desenvolvimento da nossa comunidade de Desenvolvedores da região). Então falaremos nesse encontro...
+            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade de aprendizado e networking. Agenda e informações, acesse o link abaixo: https://github.com/dev-pp/meetup (PS: Não esqueça de dar uma estrelinha para apoiar essa iniciativa que visa apenas o desenvolvimento da nossa comunidade de Desenvolvedores da região). Então falaremos nesse encontro...
             <a target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">Leia mais</a>
           </p>
           <div class="place">
@@ -68,7 +68,7 @@
             <h4>Bate papo sobre tecnologia, experiências e carreira</h4>
           </a>
           <p>
-            Programação e mais informações: https://github.com/felipeblini/dev-pp
+            Programação e mais informações: https://github.com/dev-pp/meetup
           </p>
           <div class="place">
             <div>

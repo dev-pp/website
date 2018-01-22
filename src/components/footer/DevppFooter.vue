@@ -13,25 +13,23 @@
       <div class="reveal-sequence">
         <p>
           <strong class="title contact">CONTATO</strong>
-          <br>Email: contato@devpp.com.br
-          <br>Telefone: +1 (0) 000 0000 001
-          <br>Whatsapp: +1 (0) 000 0000 002
+          <br>contato@devpp.tech
           <div class="social-icons">
             <strong class="title social">SOCIAL</strong>
             <br>
-            <a class="s-icon facebook" title="Facebook" target="_blank" href="#">
+            <a class="s-icon facebook" title="Facebook" target="_blank" href="https://www.facebook.com/groups/770159453169235/">
               <facebook-icon class="icon" />
             </a>
-            <a class="s-icon youtube" title="YouTube" target="_blank" href="#">
+            <!-- <a class="s-icon youtube" title="YouTube" target="_blank" href="#">
               <youtube-icon class="icon" />
             </a>
             <a class="s-icon instagram" title="Instagram" target="_blank" href="#">
                <instagram-icon class="icon" />
-            </a>
+            </a> -->
             <a class="s-icon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
               <meetup-icon class="icon" />
             </a>
-            <a class="s-icon github" title="github" target="_blank" href="#">
+            <a class="s-icon github" title="github" target="_blank" href="https://github.com/dev-pp/meetup">
               <github-icon class="icon" />
             </a>
           </div>
