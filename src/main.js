@@ -103,9 +103,8 @@ $(document).ready(function () {
     distance: '150%',
   });
 
-  sr.reveal('.mbr-gallery-item.reveal-sequence', 50);
   sr.reveal('.material-item.reveal-sequence', 50);
-  sr.reveal('.sponsor .reveal-sequence', 50);
+  sr.reveal('.sponsors .reveal-sequence', 50);
   sr.reveal('.footer .reveal-sequence', 15);
 });
 

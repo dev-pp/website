@@ -41,7 +41,6 @@ $palestre-width: 218px;
 section.palestre {
   margin-top: 30px;
   text-align: center;
-  text-shadow: 3px 3px 3px #000;
 
   .parallax-container {
     height: $palestre-width;
@@ -74,6 +73,7 @@ section.palestre {
       padding: 0 20px;
 
       h3 {
+        text-shadow: 3px 3px 3px #000;
         margin: 0 0 20px;
       }
     }

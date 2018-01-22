@@ -60,15 +60,15 @@ export default {
       items: [{
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283055/image_1_1_fuqwom.jpg',
         w: 1024,
-        h: 768
+        h: 972
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283055/image_1_2_bj3r5v.jpg',
         w: 1024,
-        h: 768
+        h: 576
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283055/image_1_3_dtng30.jpg',
-        w: 1024,
-        h: 768
+        w: 1152,
+        h: 864
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283055/image_1_4_yihqjb.jpg',
         w: 1024,
@@ -76,15 +76,15 @@ export default {
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283055/image_1_aiy7oc.jpg',
         w: 1024,
-        h: 768
+        h: 576
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283055/image_2_1_ge1tvk.jpg',
         w: 1024,
-        h: 768
+        h: 1820
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283056/image_2_3_xodg7u.jpg',
-        w: 1024,
-        h: 768
+        w: 1152,
+        h: 824
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283056/image_2_4_m7febr.jpg',
         w: 1024,
@@ -92,31 +92,23 @@ export default {
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_2_nxu4dt.jpg',
         w: 1024,
-        h: 768
+        h: 576
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_3_1_jgisib.jpg',
         w: 1024,
-        h: 768
+        h: 1103
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283056/image_3_4_ohcbaj.jpg',
         w: 1024,
-        h: 768
+        h: 1070
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283056/image_3_mhejhh.jpg',
         w: 1024,
         h: 768
       }, {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_4_glyek1.jpg',
-        w: 1024,
-        h: 768
-      }, {
-        src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_5_1_dui5nj.jpg',
-        w: 1024,
-        h: 768
-      }, {
-        src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_5_syla2i.jpg',
-        w: 1024,
-        h: 768
+        w: 844,
+        h: 1500
       }]
     }
   }
