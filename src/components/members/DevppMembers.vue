@@ -51,9 +51,6 @@
                 <a href="https://meetup.com/dev-pp/members">
                   Veja todos
                   <arrow-right-icon class="icon button-arrow-right" />
-                  <!-- <svg class="icon button-arrow-right">
-                    <use xlink:href="./assets/icons/icons.svg#icon-keyboard_arrow_right"></use>
-                  </svg> -->
                 </a>
               </li>
             </ul>
@@ -77,6 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 @import './members--style.scss';
+@import './members--icons.scss';
 </style>
 
 

@@ -28,12 +28,43 @@
       <div class="content-panel meetup-panel reveal">
         <div class="data">
           <div class="data-info">
+            <span class="day">25</span>
+            <span class="month">Jan</span>
+          </div>
+        </div>
+        <div class="info">
+          <div class="small">25 de Janeiro de 2018, 18:45</div>
+          <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
+            <h4>Bate Papo Sobre Tecnologia III</h4>
+          </a>
+          <p>Fala galera!</p>
+          <p>Aí vem o nosso primeiro encontro de 2018, vamos bater um papo sobre tecnologia e começar esse ano compartilhando conhecimento e aumentando o nosso networking</p>
+          <p>O formato será o mesmo de sempre...
+            <a target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">Leia mais</a>
+          </p>
+          <div class="place">
+            <div>
+              <room-icon class="icon icon-room" />
+            </div>
+            <div>
+              <h5 class="name">For Space</h5>
+              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
+            </div>
+          </div>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
+          <a href="https://github.com/devppmeetup/dev-pp#2-encontro---20122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
+        </div>
+      </div>
+
+      <div class="content-panel meetup-panel reveal">
+        <div class="data">
+          <div class="data-info">
             <span class="day">20</span>
             <span class="month">Dez</span>
           </div>
         </div>
         <div class="info">
-          <div class="small">20 de Dezembro de 2017, 19:45</div>
+          <div class="small">20 de Dezembro de 2017, 18:45</div>
           <a class="title" href="https://www.meetup.com/dev-pp/events/245829094/" target="_blank">
             <h4>Bate Papo Sobre Tecnologia II</h4>
           </a>
@@ -63,7 +94,7 @@
           </div>
         </div>
         <div class="info">
-          <div class="small">13 de Dezembro de 2017, 19:45</div>
+          <div class="small">13 de Dezembro de 2017, 18:45</div>
           <a href="https://www.meetup.com/dev-pp/events/245793906/" target="_blank" class="title">
             <h4>Bate papo sobre tecnologia, experiências e carreira</h4>
           </a>

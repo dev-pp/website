@@ -10,7 +10,7 @@
             aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na sua carreia, evolua e fortaleça a comunidade
             e a região!
           </p>
-          <a class="btn btn-md btn-custom" href="https://meetup.com/dev-pp">JUNTE-SE A NÓS</a>
+          <a class="btn btn-md btn-custom" href="https://meetup.com/dev-pp" target="_blank">JUNTE-SE A NÓS</a>
         </div>
       </div>
     </section>

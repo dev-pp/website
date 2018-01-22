@@ -49,9 +49,15 @@
       }
     }
 
-    a.title h4 {
+    a.title {
+      h4 {
         color: #666;
       }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
 
     .btn {
       margin: 15px 5px 0;

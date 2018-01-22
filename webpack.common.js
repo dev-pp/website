@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
   entry: {
@@ -61,6 +62,7 @@ const config = {
     ]
   },
   plugins: [
+    new UglifyJSPlugin(),
     new ExtractTextPlugin({
       filename: '[id]-[name].[hash].style.css',
       allChunks: true,
