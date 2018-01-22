@@ -4,7 +4,7 @@
       <h3>RECEBA AS NOVIDADES</h3>
       <p>
         Receba uma newsletter semanal sobre
-        <strong>novas tecnologias, front-end, back-end, inovações, notícias, oportunidades de trabalho, novos meetups da Dev-pp e também eventos em Presidente Prudente e região e no Brasil todo</strong>.
+        <strong>novas tecnologias, front-end, back-end, inovações, notícias, oportunidades de trabalho, novos meetups da Dev PP e também eventos em Presidente Prudente e região e no Brasil todo</strong>.
       </p>
       <div class="form-container">
         <div class="messages">
