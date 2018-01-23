@@ -21,3 +21,11 @@
 ◻ destacar e colocar palestrantes no proximo meetup  
 ◻ arrumar apecto ratio da imagens na galeria  
 ◻ fazer esquema de mansory na lista de material  
+◻ Mailchimp
+◻ Meetups (agenda)
+◻ versao mobile mais compacta
+◻ pull request 
+◻ imagem intro mobile 
+◻ loading background intro 
+◻ arrumar texto evento III 
+◻ identificar botao disabled no mobile 
