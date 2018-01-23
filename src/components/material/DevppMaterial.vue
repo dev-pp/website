@@ -51,7 +51,7 @@
                     <presentation-icon class="icon" />
                     Slides
                   </a>
-                  <a href="javascript:void(0)" class="btn btn-default disabled" role="button" disabled>
+                  <a href="https://github.com/ThinkAM/Wakatime" class="btn btn-default" role="button">
                     <github-icon class="icon" />
                     Fonte
                   </a>
