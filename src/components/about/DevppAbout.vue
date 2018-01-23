@@ -12,7 +12,7 @@
             preparar um pouco os novatos para o mercado.
           </p>
           <p>
-            O projeto conciste em meetups gratuitos em forma de palestras, demos, keynotes, workshops e bate-papos,
+            O projeto consiste em meetups gratuitos em forma de palestras, demos, keynotes, workshops e bate-papos,
             sempre com uma confraternização para fomentar o networking e novas idéias.
           </p>
           <p>
