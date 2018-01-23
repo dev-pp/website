@@ -51,7 +51,7 @@
                     <presentation-icon class="icon" />
                     Slides
                   </a>
-                  <a href="#" class="btn btn-default" role="button" disabled>
+                  <a href="javascript:void(0)" class="btn btn-default disabled" role="button" disabled>
                     <github-icon class="icon" />
                     Fonte
                   </a>
@@ -86,7 +86,7 @@
                     <presentation-icon class="icon" />
                     Slides
                   </a>
-                  <a href="#" class="btn btn-default" role="button" disabled>
+                  <a href="javascript:void(0)" class="btn btn-default disabled" role="button" disabled>
                     <github-icon class="icon" />
                     Fonte
                   </a>
@@ -121,7 +121,7 @@
                     <presentation-icon class="icon" />
                     Slides
                   </a>
-                  <a href="#" class="btn btn-default" role="button" disabled>
+                  <a href="javascript:void(0)" class="btn btn-default disabled" role="button" disabled>
                     <github-icon class="icon" />
                     Fonte
                   </a>
@@ -152,7 +152,7 @@
                 <h4>Banco de Dados Realtime com Firebase</h4>
                 <p>Exemplo de como conectar o Banco de Dados Realtime do Firebase com Javascript puro</p>
                 <p>
-                  <a href="#" target="_blank" class="btn btn-default" role="button" disabled>
+                  <a href="javascript:void(0)" target="_blank" class="btn btn-default disabled" role="button" disabled>
                     <presentation-icon class="icon" />
                     Slides
                   </a>
@@ -191,7 +191,7 @@
                     <presentation-icon class="icon" />
                     Slides
                   </a>
-                  <a href="#" class="btn btn-default" role="button" disabled>
+                  <a href="javascript:void(0)" class="btn btn-default disabled" role="button" disabled>
                     <github-icon class="icon" />
                     Fonte
                   </a>

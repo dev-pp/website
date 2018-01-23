@@ -87,25 +87,33 @@ h4 {
   letter-spacing: 1px;
 }
 
-.btn.btn-custom {
-  color: white !important;
-  border-color: #E81035 !important;
-  background: #E81035 !important;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
 .btn,
 .form-control {
   border-radius: 0;
 }
 
-.btn.btn-custom:hover {
-  background: #D9534F !important;
-  color: #fff !important;
-  border-color: #D9534F !important;
-  background: rgba(0, 0, 0, .3);
+.btn {
+  &.disabled {
+    opacity: .3 !important;
+    background: #efefef !important;
+    pointer-events: initial !important;
+  }
+
+  &.btn-custom {
+    color: white !important;
+    border-color: #E81035 !important;
+    background: #E81035 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: #D9534F !important;
+      color: #fff !important;
+      border-color: #D9534F !important;
+      background: rgba(0, 0, 0, .3);
+    }
+  }
 }
 
 .fixed-navbar {

@@ -62,7 +62,7 @@ const config = {
     ]
   },
   plugins: [
-    new UglifyJSPlugin(),
+    //new UglifyJSPlugin(),
     new ExtractTextPlugin({
       filename: '[id]-[name].[hash].style.css',
       allChunks: true,

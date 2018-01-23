@@ -106,6 +106,18 @@ $(document).ready(function () {
   sr.reveal('.material-item.reveal-sequence', 50);
   sr.reveal('.sponsors .reveal-sequence', 50);
   sr.reveal('.footer .reveal-sequence', 15);
+
+  // (function (document) {
+  //   const disabledButtons = document.querySelectorAll(".disabled");
+  //   const length = disabledButtons.length;
+  //   for (let i = 0; i < disabledButtons.length; i++) {
+  //     console.log(disabledButtons[i]);
+  //     disabledButtons[i].addEventListener('click', () => {
+  //       alert('oi')
+  //       return false;
+  //     });
+  //   }
+  // })(document);
 });
 
 new Vue({

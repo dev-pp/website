@@ -1,7 +1,7 @@
 <template>
-  <section id="newsletters" class="newsletters reveal">
+  <section id="weekly" class="weekly reveal">
     <div class="container">
-      <h3>RECEBA AS NOVIDADES</h3>
+      <h3>DEV-PP Weekly</h3>
       <p>
         Receba uma newsletter semanal sobre
         <strong>novas tecnologias, front-end, back-end, inovações, notícias, oportunidades de trabalho, novos meetups da Dev PP e também eventos em Presidente Prudente e região e no Brasil todo</strong>.
@@ -11,7 +11,9 @@
           <div class="alert alert-danger" v-if="errorMessage && !successMessage" transition="fade">
             <b>Erro:</b> {{ errorMessage }}</div>
           <div class="alert alert-success" v-if="successMessage" transition="fade">
-            <b>Tudo certo:</b> {{ successMessage }}</div>
+            <b>Tudo certo:</b> {{ successMessage }}
+            <a href="#" @click.prevent.stop="onSuccessBack">Voltar</a>
+          </div>
         </div>
         <form class="form" v-if="!successMessage" @submit.prevent="subscribe($event)">
           <div>
@@ -35,9 +37,9 @@
 import jsonp from 'jsonp';
 
 export default {
-  name: 'devpp-newsletters',
+  name: 'devpp-weekly',
   props: {
-    action: {
+    formAction: {
       required: true,
       type: String
     }
@@ -52,7 +54,7 @@ export default {
   },
   computed: {
     preparedAction: function() {
-      return this.action.replace('/post?', '/post-json?').concat(`&EMAIL=${this.email}`)
+      return this.formAction.replace('/post?', '/post-json?').concat(`&EMAIL=${this.email}`)
     }
   },
   methods: {
@@ -82,11 +84,15 @@ export default {
           console.log(data);
         }
       });
+    },
+    onSuccessBack(e) {
+      this.successMessage = '';
+      this.email = '';
     }
   }
 };
 </script>
 
-<style src="./newsletters--style.scss" lang="scss" scoped></style>
+<style src="./weekly--style.scss" lang="scss" scoped></style>
 
 

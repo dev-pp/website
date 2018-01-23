@@ -17,15 +17,17 @@
 ✔ arrumar parallax palestre  
 ✔ componentizar com Vue.js  
 ◻ fazer build com vue  
-◻ inserir google analytics  
+◻ melhorar performance do webpack  
+✔ inserir google analytics  
 ◻ destacar e colocar palestrantes no proximo meetup  
-◻ arrumar apecto ratio da imagens na galeria  
-◻ fazer esquema de mansory na lista de material  
-◻ Mailchimp
+✔ arrumar apecto ratio da imagens na galeria  
+✔ fazer esquema de mansory na lista de material  
+✔ Mailchimp
 ◻ Meetups (agenda)
 ◻ versao mobile mais compacta
 ◻ pull request 
 ◻ imagem intro mobile 
 ◻ loading background intro 
-◻ arrumar texto evento III 
+✔ arrumar data e link meetup III 
 ◻ identificar botao disabled no mobile 
+◻ retirar jquery

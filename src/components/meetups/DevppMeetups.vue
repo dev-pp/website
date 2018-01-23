@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="info">
-          <div class="small">25 de Janeiro de 2018, 18:45</div>
+          <div class="small">30 de Janeiro de 2018, 18:45</div>
           <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
             <h4>Bate Papo Sobre Tecnologia III</h4>
           </a>
@@ -51,8 +51,7 @@
               <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
             </div>
           </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-          <a href="https://github.com/devppmeetup/dev-pp#2-encontro---20122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">RSVP</a>
         </div>
       </div>
 
