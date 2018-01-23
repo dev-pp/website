@@ -51,7 +51,7 @@
                     <presentation-icon class="icon" />
                     Slides
                   </a>
-                  <a href="https://github.com/ThinkAM/Wakatime" class="btn btn-default" role="button">
+                  <a href="https://github.com/ThinkAM/Wakatime" class="btn btn-default" role="button" target="_blank">
                     <github-icon class="icon" />
                     Fonte
                   </a>
