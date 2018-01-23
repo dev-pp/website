@@ -1,0 +1,15 @@
+{
+  "android-chrome-192x192.png": "android-chrome-192x192.png",
+  "android-chrome-512x512.png": "android-chrome-512x512.png",
+  "apple-touch-icon.png": "apple-touch-icon.png",
+  "favicon-16x16.png": "favicon-16x16.png",
+  "favicon-32x32.png": "favicon-32x32.png",
+  "footer--logo.png": "5be3e0fbd52ede6f35c2805e2666f7a2.png",
+  "footer--titles.png": "414194540c9e6ed5b01ff7f497d25771.png",
+  "intro--logo-m.png": "66b9661cc4f15544b22af879a38caa44.png",
+  "intro--logo.png": "b29ac1791b22e851f82c1bdede41300d.png",
+  "main.js": "main.bundle.e19b66bd2b2860507375.js",
+  "mstile-150x150.png": "mstile-150x150.png",
+  "polyfills.js": "polyfills.bundle.e19b66bd2b2860507375.js",
+  "safari-pinned-tab.svg": "safari-pinned-tab.svg"
+}
