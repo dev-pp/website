@@ -28,7 +28,7 @@
       <div class="content-panel meetup-panel reveal">
         <div class="data">
           <div class="data-info">
-            <span class="day">25</span>
+            <span class="day">30</span>
             <span class="month">Jan</span>
           </div>
         </div>
