@@ -15,7 +15,7 @@
             </button>
             <ul class="dropdown-menu bs-dropdow">
               <li>
-                <a class="active" href="#">Agendados</a>
+                <a class="active" href="#">Próximos</a>
               </li>
               <li>
                 <a href="#">Passados</a>
@@ -62,7 +62,7 @@
             <span class="month">Dez</span>
           </div>
         </div>
-        <div class="info">
+        <div class="info" style="width: 100%">
           <div class="small">20 de Dezembro de 2017, 18:45</div>
           <a class="title" href="https://www.meetup.com/dev-pp/events/245829094/" target="_blank">
             <h4>Bate Papo Sobre Tecnologia II</h4>
