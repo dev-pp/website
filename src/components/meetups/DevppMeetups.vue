@@ -52,6 +52,7 @@
             </div>
           </div>
           <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">RSVP</a>
+          <a href="https://github.com/dev-pp/meetup/blob/master/README.md#3-encontro---30012018" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
         </div>
       </div>
 
@@ -81,7 +82,7 @@
             </div>
           </div>
           <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-          <a href="https://github.com/devppmeetup/dev-pp#2-encontro---20122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
+          <a href="https://github.com/dev-pp/meetup/blob/master/README.md#3-encontro---30012018" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
         </div>
       </div>
 
