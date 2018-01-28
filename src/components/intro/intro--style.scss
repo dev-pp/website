@@ -120,12 +120,6 @@ section.intro {
       width: 100%;
       z-index: 3;
 
-      .icon-arrow-down {
-        fill: #fff;
-        width: 66px;
-        height: 66px;
-      }
-
       &.arrow-floating a {
         display: block;
         -webkit-animation: floating-arrow 1.6s infinite ease-in-out 0s;

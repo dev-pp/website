@@ -1,13 +1,23 @@
 section.intro {
-  .icon {
-    display: inline-block;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: #fff;
+  .arrow {
+    bottom: 71px;
+    left: 0;
+    line-height: 1px;
+    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
 
-    &.icon-arrow-down {
-      width: 1em;
-      height: 1em;
+    .icon {
+      display: inline-block;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: #fff;
+
+      &.icon-arrow-down {
+        width: 66px;
+        height: 66px;
+      }
     }
   }
 }
