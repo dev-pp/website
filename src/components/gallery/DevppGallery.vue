@@ -33,28 +33,30 @@
 </template>
 
 <style lang="scss" scoped>
-.preview-img-list {
-  display: flex;
-  flex-wrap: wrap;
+section.gallery {
+  .preview-img-list {
+    display: flex;
+    flex-wrap: wrap;
 
 
-  img.preview-img-item {
-    height: 200px;
-    flex-grow: 1;
-    object-fit: cover;
-    margin: .5px;
-    cursor: pointer;
+    img.preview-img-item {
+      height: 200px;
+      flex-grow: 1;
+      object-fit: cover;
+      margin: .5px;
+      cursor: pointer;
 
-    &:hover {
-      opacity: .8
+      &:hover {
+        opacity: .8
+      }
     }
   }
 }
 </style>
 
 <script>
-
 export default {
+  name: 'devpp-gallery',
   data() {
     return {
       items: [{
@@ -109,7 +111,7 @@ export default {
         src: 'http://res.cloudinary.com/dwtuxv53y/image/upload/v1516283057/image_4_glyek1.jpg',
         w: 844,
         h: 1500
-       }]
+      }]
     }
   }
 }
