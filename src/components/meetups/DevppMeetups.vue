@@ -15,7 +15,7 @@
             </button>
             <ul class="dropdown-menu bs-dropdow">
               <li>
-                <a class="active" href="#">Agendados</a>
+                <a class="active" href="#">Próximos</a>
               </li>
               <li>
                 <a href="#">Passados</a>
@@ -28,12 +28,12 @@
       <div class="content-panel meetup-panel reveal">
         <div class="data">
           <div class="data-info">
-            <span class="day">25</span>
+            <span class="day">30</span>
             <span class="month">Jan</span>
           </div>
         </div>
         <div class="info">
-          <div class="small">25 de Janeiro de 2018, 18:45</div>
+          <div class="small">30 de Janeiro de 2018, 18:45</div>
           <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
             <h4>Bate Papo Sobre Tecnologia III</h4>
           </a>
@@ -51,8 +51,8 @@
               <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
             </div>
           </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-          <a href="https://github.com/devppmeetup/dev-pp#2-encontro---20122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">RSVP</a>
+          <a href="https://github.com/dev-pp/meetup/blob/master/README.md#3-encontro---30012018" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
         </div>
       </div>
 
@@ -63,7 +63,7 @@
             <span class="month">Dez</span>
           </div>
         </div>
-        <div class="info">
+        <div class="info" style="width: 100%">
           <div class="small">20 de Dezembro de 2017, 18:45</div>
           <a class="title" href="https://www.meetup.com/dev-pp/events/245829094/" target="_blank">
             <h4>Bate Papo Sobre Tecnologia II</h4>
@@ -82,7 +82,7 @@
             </div>
           </div>
           <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-          <a href="https://github.com/devppmeetup/dev-pp#2-encontro---20122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
+          <a href="https://github.com/dev-pp/meetup/blob/master/README.md#3-encontro---30012018" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
         </div>
       </div>
 

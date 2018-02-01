@@ -1,7 +1,12 @@
-section.newsletters {
+section.weekly {
   text-align: center;
   padding: 20px 0;
   background: #fff;
+
+  h3 {
+    font-size: 3rem !important;
+    letter-spacing: 0;
+  }
 
   .form-container {
     .alert {

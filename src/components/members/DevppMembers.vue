@@ -5,7 +5,7 @@
 
       <div class="content-panel reveal">
         <p>
-          Somos 86 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores, criativos, artistas, inovadores, empreendedores....
+          Somos 96 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores, criativos, artistas, inovadores, empreendedores....
         </p>
 
         <ul class="faces">
