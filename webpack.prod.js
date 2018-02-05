@@ -34,6 +34,7 @@ const prodConfig = merge(common, {
       { from: 'src/robots.txt', to: 'robots.txt' },
       { from: 'src/sitemap.xml', to: 'sitemap.xml' },
       { from: 'src/manifest.json', to: 'manifest.json' },
+      { from: 'src/facebook-image.png', to: 'facebook-image.png' },
     ]),
     new ManifestPlugin({
       fileName: 'webpack-files-manifest.json'
