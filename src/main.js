@@ -86,13 +86,10 @@ $(document).ready(function () {
   sr.reveal('.reveal');
   sr.reveal('.reveal-overflow', { distance: '150%' });
   sr.reveal('.reveal-distance-70px', { distance: '70px' });
-  sr.reveal('.reveal-delay', { delay: 100 });
   sr.reveal('.reveal-left', { origin: 'left' });
   sr.reveal('.reveal-right', { origin: 'right' });
   sr.reveal('.reveal-bottom', { origin: 'bottom' });
   sr.reveal('.reveal-duration-800', { duration: 800 });
-  sr.reveal('.reveal-no-opacity', { opacity: 1 });
-  sr.reveal('.reveal-no-scale', { scale: 1 });
 
   sr.reveal('.content-header-with-options .btn-group.filter', {
     delay: 200,
@@ -103,7 +100,6 @@ $(document).ready(function () {
     distance: '150%',
   });
 
-  sr.reveal('.material-item.reveal-sequence', 50);
   sr.reveal('.sponsors .reveal-sequence', 50);
   sr.reveal('.footer .reveal-sequence', 15);
 

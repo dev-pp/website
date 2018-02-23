@@ -7,17 +7,14 @@
 
       <div class="content-btn-group">
         <div class="btn-group filter">
-          <button type="button" class="btn btn-default" disabled>Filtrar</button>
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
+          <button type="button" class="btn btn-default btn-active">{{ activeDate }}</button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu bs-dropdow">
             <li>
-              <a class="active" href="#">13/12/2017</a>
-            </li>
-            <li>
-              <a href="#">20/12/2017</a>
+              <a v-for="(dateObj, index) in dates" :key="index" :class="{ activated: dateObj.date === activeDate }" @click.prevent="listByDate(dateObj.date)">{{ dateObj.date }}</a>
             </li>
           </ul>
         </div>
@@ -38,6 +35,8 @@ export default {
   name: 'devpp-material-list',
   data() {
     return {
+      dates: [],
+      activeDate: '',
       materialList: []
     }
   },
@@ -45,21 +44,76 @@ export default {
     DevppMaterialItem
   },
   methods: {
-    listar() {
-      service.listar().then(res => {
-        if (res.status === 200) {
-          res.data.forEach(material => {
-            if (material) {
-              this.materialList.push(material)
+    getDateList() {
+      return new Promise((resolve, reject) => {
+        service.listar()
+          .then(res => {
+            if (res.status === 200) {
+              resolve(Object.keys(res.data));
             }
-          });
-        }
-      }).catch(e => console.log(e))
-    }
+          }).catch(e => {
+            console.log(e);
+            reject(e);
+          })
+      })
+    },
+    toDescSortedDateList(dateList) {
+      let reversedDates,
+        numericDates,
+        descSortedNumbericDates;
+
+      reversedDates = dateList
+        .map(date => {
+          if (date) {
+            return date.split('-').reverse().join('-');
+          }
+        });
+
+      numericDates = reversedDates
+        .map(date => {
+          return {
+            date: date.split('-').reverse().join('/'),
+            number: Number(date.replace(/-/g, ''))
+          }
+        });
+
+      descSortedNumbericDates = numericDates
+        .sort((a, b) => {
+          return a.number > b.number ? -1 : 1;
+        })
+
+      return descSortedNumbericDates;
+    },
+    listByDate(date) {
+      this.materialList = [];
+
+      service.listarPorData(date.replace(/\//g, '-'))
+        .then(res => {
+          if (res.status === 200) {
+            res.data.forEach(material => {
+              if (material) {
+                this.materialList.push(material)
+              }
+            });
+
+            this.activeDate = date;
+          }
+        }).catch(e => console.log(e))
+    },
   },
   mounted() {
-    this.listar();
-    console.log(this.materialList instanceof Array);
+    // pegar a lista de datas que contem material cadastrado
+    this.getDateList()
+      .then(dateList => {
+        // ordenar lista decrescentemente
+        const descSortedDates = this.toDescSortedDateList(dateList);
+        this.dates = descSortedDates;
+
+        const lastDate = descSortedDates[0].date;
+
+        // listar materiais pela ultima data
+        this.listByDate(lastDate);
+      }).catch(e => console.log(e));
   }
 }
 </script>
@@ -75,6 +129,22 @@ section.material {
       -moz-column-width: 22em;
       -webkit-column-width: 22em;
     }
+  }
+}
+
+.content-btn-group {
+  a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &.activated {
+      color: #999;
+      pointer-events: none;
+    }
+  }
+
+  .btn-active {
+    pointer-events: none;
   }
 }
 </style>
