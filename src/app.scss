@@ -141,11 +141,9 @@ h4 {
     position: relative;
 
     &.bs-dropdow {
-      // left: -71px;
-      // top: 31px;
       position: absolute;
       position: absolute;
-      left: -74px;
+      left: -96px;
     }
   }
 
@@ -153,6 +151,7 @@ h4 {
     flex: 2;
     text-align: right;
     z-index: 3;
+    padding-top: 19px;
   }
 
   .content-btn-group {

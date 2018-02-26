@@ -7,10 +7,9 @@
 
       <div class="content-btn-group">
         <div class="btn-group filter">
-          <button type="button" class="btn btn-default btn-active">{{ activeDate }}</button>
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ activeDate }}
             <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu bs-dropdow">
             <li>
