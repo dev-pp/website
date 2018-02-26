@@ -20,8 +20,9 @@
       </div>
     </header>
 
-    <div class="material-wrapper">
-      <devpp-material-item v-for="(material, index) in materialList" :key="index" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
+    <div class="grid-material-wrapper reveal">
+      <div class="material-loading" v-if="loading">Loading</div>
+      <devpp-material-item class="grid-material-item" v-for="(material, index) in materialList" :key="index" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
     </div>
   </section>
 </template>
@@ -29,6 +30,7 @@
 <script>
 import DevppMaterialItem from './DevppMaterialItem.vue';
 import service from './service/material';
+import Masonry from 'masonry-layout'
 
 export default {
   name: 'devpp-material-list',
@@ -36,7 +38,8 @@ export default {
     return {
       dates: [],
       activeDate: '',
-      materialList: []
+      materialList: [],
+      loading: true
     }
   },
   components: {
@@ -84,6 +87,7 @@ export default {
       return descSortedNumbericDates;
     },
     listByDate(date) {
+      this.loading = true;
       this.materialList = [];
 
       service.listarPorData(date.replace(/\//g, '-'))
@@ -96,6 +100,7 @@ export default {
             });
 
             this.activeDate = date;
+            this.loading = false;
           }
         }).catch(e => console.log(e))
     },
@@ -113,20 +118,23 @@ export default {
         // listar materiais pela ultima data
         this.listByDate(lastDate);
       }).catch(e => console.log(e));
+
+    var msnry = new Masonry('.grid');
   }
 }
 </script>
 
 <style lang="scss" scoped>
 section.material {
-  .material-wrapper {
-    -moz-column-width: 20em;
-    -webkit-column-width: 20em;
-    -moz-column-gap: .3em;
-    -webkit-column-gap: .3em;
-    @media(max-width: 680px) {
-      -moz-column-width: 22em;
-      -webkit-column-width: 22em;
+  .grid-material-wrapper {
+    .grid-material-item {
+      @media (min-width: 720px) {
+        width: 50%;
+      }
+
+      @media (min-width: 1200px) {
+        width: 33%;
+      }
     }
   }
 }

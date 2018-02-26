@@ -1,8 +1,7 @@
 <template>
   <div class="material-wrapper-item">
-    <div class="material-item content-panel reveal-sequence">
+    <div class="material-item content-panel">
       <div class="palestrante">
-        <div class="overflow"></div>
         <div class="foto">
           <img :src="palestrante.foto" alt="" class="pull-left">
         </div>
@@ -64,10 +63,8 @@ export default {
 @import './material-item--icons.scss';
 
 .material-wrapper-item {
-  display: inline-block;
-  margin-bottom: .5rem;
+  display: inline-flex;
   padding: 0.3rem;
-  width: 100%;
   background: #efefef;
 
   .material-item {
