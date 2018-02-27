@@ -5,7 +5,9 @@
 
       <div class="content-panel reveal">
         <p>
-          Somos 96 desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores, criativos, artistas, inovadores, empreendedores....
+          Somos <b>162</b> desenvolvedores, programadores, engenheiros, designers, ux, criadores, transformadores,
+          criativos, artistas, inovadores, empreendedores.... E nos reunimos periodicamente
+          para compartilhar conhecimento, fazer networking e evoluirmos a comunidade.
         </p>
 
         <ul class="faces">
@@ -48,7 +50,7 @@
                 <img src="https://secure.meetupstatic.com/photos/member/d/3/8/1/highres_273174145.jpeg" alt="">
               </li>
               <li class="member-see-all">
-                <a href="https://meetup.com/dev-pp/members">
+                <a href="https://meetup.com/dev-pp/members" target="_blank">
                   Veja todos
                   <arrow-right-icon class="icon button-arrow-right" />
                 </a>
