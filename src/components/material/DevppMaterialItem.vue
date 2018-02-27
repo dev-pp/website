@@ -73,18 +73,6 @@ export default {
       overflow: hidden;
       padding: 10px;
 
-      .overflow {
-        width: 47px;
-        position: absolute;
-        height: 80px;
-        left: 19px;
-        background: #fff;
-        z-index: 2;
-        @media(max-width: 305px) {
-          display: none;
-        }
-      }
-
       img {
         width: 80px;
         height: 80px;
