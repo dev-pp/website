@@ -21,26 +21,7 @@
     </header>
 
     <div class="grid-material-wrapper reveal">
-      <div class="material-loading" v-if="loading">
-        <header>
-          <div class="loading-img linear-background"></div>
-          <div class="loading-info">
-            <div class="linear-background"></div>
-            <div class="linear-background"></div>
-          </div>
-        </header>
-        <div class="loading-content">
-          <div class="linear-background"></div>
-          <div class="linear-background"></div>
-          <div class="linear-background"></div>
-          <div class="linear-background"></div>
-        </div>
-        <footer>
-          <div class="linear-background"></div>
-          <div class="linear-background"></div>
-          <div class="linear-background"></div>
-        </footer>
-      </div>
+      <devpp-material-item-loading v-if="loading"></devpp-material-item-loading>
       <devpp-material-item class="grid-material-item" v-for="(material, index) in materialList" :key="index" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
     </div>
   </section>
@@ -48,6 +29,7 @@
 
 <script>
 import DevppMaterialItem from './DevppMaterialItem.vue';
+import DevppMaterialItemLoading from './DevppMaterialItemLoading.vue';
 import service from './service/material';
 import Masonry from 'masonry-layout'
 
@@ -62,7 +44,8 @@ export default {
     }
   },
   components: {
-    DevppMaterialItem
+    DevppMaterialItem,
+    DevppMaterialItemLoading
   },
   methods: {
     getDateList() {
@@ -144,97 +127,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@keyframes placeHolderShimmer {
-  0% {
-    background-position: -468px 0
-  }
-  100% {
-    background-position: 468px 0
-  }
-}
-
-.linear-background {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: placeHolderShimmer;
-  animation-timing-function: linear;
-  background: #f6f7f8;
-  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
-  background-size: 1000px 104px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-}
-
 section.material {
-  .material-loading {
-    border: solid 1px #EBEBEB;
-    width: 100%;
-    height: 300px;
-    padding: 20px;
-    border-radius: 6px;
-
-    @media (min-width: 780px) {
-      width: 50%;
-    }
-
-    @media (min-width: 1200px) {
-      width: 33%;
-    }
-
-    header {
-      .loading-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        float: left;
-      }
-
-      .loading-info {
-        height: 80px;
-        margin-left: 95px;
-        padding: 10px;
-
-        div {
-          &:nth-child(1) {
-            height: 22px;
-            margin-bottom: 5px;
-          }
-
-          &:nth-child(2) {
-            height: 22px;
-            width: 30%;
-          }
-        }
-      }
-    }
-
-    .loading-content {
-      margin-top: 10px;
-
-      div {
-        height: 22px;
-        margin-bottom: 5px;
-
-        &:nth-child(4) {
-          width: 30%;
-        }
-      }
-    }
-
-    footer {
-      margin-top: 20px;
-
-      div {
-        height: 30px;
-        width: 80px;
-        float: left;
-        margin-left: 5px;
-      }
-    }
-  }
-
   .grid-material-wrapper {
     min-height: 300px;
 
