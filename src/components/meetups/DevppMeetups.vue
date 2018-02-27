@@ -28,6 +28,68 @@
       <div class="content-panel meetup-panel reveal">
         <div class="data">
           <div class="data-info">
+            <span class="day">6</span>
+            <span class="month">Mar</span>
+          </div>
+        </div>
+        <div class="info">
+          <div class="small">06 de Março de 2018, 18:45</div>
+          <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
+            <h4>Bate papo sobre tecnologia V</h4>
+          </a>
+          <p>Fala galera!</p>
+          <p>Mais conteúdo de muita qualidade no dia 06/03</p>
+          <p>
+            Esperamos você no mesmo Bat Local de sempre!
+            <a target="_blank" href="https://www.meetup.com/dev-pp/events/248099911/">Leia mais</a>
+          </p>
+          <div class="place">
+            <div>
+              <room-icon class="icon icon-room" />
+            </div>
+            <div>
+              <h5 class="name">For Space</h5>
+              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
+            </div>
+          </div>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247426958/">RSVP</a>
+        </div>
+      </div>
+
+      <div class="content-panel meetup-panel reveal">
+        <div class="data">
+          <div class="data-info">
+            <span class="day">20</span>
+            <span class="month">Fev</span>
+          </div>
+        </div>
+        <div class="info">
+          <div class="small">20 de Fevereiro de 2018, 18:45</div>
+          <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
+            <h4>Bate papo sobre tecnologia IV</h4>
+          </a>
+          <p>Fala galera!</p>
+          <p>Nosso próximo encontro será dia 20!</p>
+          <p>
+            Bora!!
+            <a target="_blank" href="https://www.meetup.com/dev-pp/events/247426958/">Leia mais</a>
+          </p>
+          <div class="place">
+            <div>
+              <room-icon class="icon icon-room" />
+            </div>
+            <div>
+              <h5 class="name">For Space</h5>
+              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
+            </div>
+          </div>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247426958/">RSVP</a>
+        </div>
+      </div>
+
+      <div class="content-panel meetup-panel reveal">
+        <div class="data">
+          <div class="data-info">
             <span class="day">30</span>
             <span class="month">Jan</span>
           </div>
@@ -39,7 +101,8 @@
           </a>
           <p>Fala galera!</p>
           <p>Aí vem o nosso primeiro encontro de 2018, vamos bater um papo sobre tecnologia e começar esse ano compartilhando conhecimento e aumentando o nosso networking</p>
-          <p>O formato será o mesmo de sempre...
+          <p>
+            O formato será o mesmo de sempre...
             <a target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">Leia mais</a>
           </p>
           <div class="place">
