@@ -21,7 +21,11 @@
     </header>
 
     <div class="grid-material-wrapper reveal">
-      <devpp-material-item-loading v-if="loading"></devpp-material-item-loading>
+      <div v-if="loading">
+        <devpp-material-item-loading style="float: left;"></devpp-material-item-loading>
+        <devpp-material-item-loading style="float: left; margin-left: 5px; margin-top: 5px"></devpp-material-item-loading>
+        <devpp-material-item-loading style="float: left; margin-left: 5px; margin-top: 5px"></devpp-material-item-loading>
+      </div>
       <devpp-material-item class="grid-material-item" v-for="(material, index) in materialList" :key="index" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
     </div>
   </section>

@@ -53,17 +53,17 @@ export default {
 
 .material-loading {
   border: solid 1px #EBEBEB;
-  width: 100%;
+  width: 99%;
   height: 300px;
   padding: 20px;
   border-radius: 6px;
 
   @media (min-width: 780px) {
-    width: 50%;
+    width: 49%;
   }
 
   @media (min-width: 1200px) {
-    width: 33%;
+    width: 32%;
   }
 
   header {
