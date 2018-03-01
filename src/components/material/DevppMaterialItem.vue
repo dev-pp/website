@@ -12,7 +12,7 @@
           </div>
           <div>
             <calendar-icon class="icon" />
-            <span>{{ palestra.data }}</span>
+            <span>{{ date }}</span>
           </div>
         </div>
       </div>
@@ -45,6 +45,7 @@ import YoutubeIcon from "./material--icons.svg?icon-youtube";
 export default {
   name: 'devpp-material-item',
   props: {
+    date: '',
     palestrante: '',
     palestra: '',
     recursos: ''

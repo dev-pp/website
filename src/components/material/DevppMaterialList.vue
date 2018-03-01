@@ -26,7 +26,7 @@
         <devpp-material-item-loading style="float: left; margin-left: 5px; margin-top: 5px"></devpp-material-item-loading>
         <devpp-material-item-loading style="float: left; margin-left: 5px; margin-top: 5px"></devpp-material-item-loading>
       </div>
-      <devpp-material-item class="grid-material-item" v-for="(material, index) in materialList" :key="index" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
+      <devpp-material-item class="grid-material-item" v-for="(material, index) in materialList" :key="index" :date="activeDate" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
     </div>
   </section>
 </template>
