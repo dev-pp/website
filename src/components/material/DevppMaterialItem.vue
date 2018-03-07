@@ -3,7 +3,7 @@
     <div class="material-item content-panel">
       <div class="palestrante">
         <div class="foto">
-          <img :src="palestrante.foto" alt="" class="pull-left">
+          <img :src="this.foto" alt="" class="pull-left">
         </div>
         <div class="info">
           <div>
@@ -49,6 +49,12 @@ export default {
     palestrante: '',
     palestra: '',
     recursos: ''
+  },
+  computed: {
+    foto() {
+      const nophoto = "http://res.cloudinary.com/dwtuxv53y/image/upload/v1519940593/avatar_operqm.gif";
+      return !this.palestrante.foto ? nophoto : this.palestrante.foto
+    }
   },
   components: {
     CalendarIcon,

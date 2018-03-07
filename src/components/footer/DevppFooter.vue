@@ -20,10 +20,10 @@
             <a class="s-icon facebook" title="Facebook" target="_blank" href="https://www.facebook.com/groups/770159453169235/">
               <facebook-icon class="icon" />
             </a>
-            <!-- <a class="s-icon youtube" title="YouTube" target="_blank" href="#">
+            <a class="s-icon youtube" title="YouTube" target="_blank" href="https://www.youtube.com/channel/UC9QAZYQ0fHLERa6PLN4GWyw">
               <youtube-icon class="icon" />
             </a>
-            <a class="s-icon instagram" title="Instagram" target="_blank" href="#">
+            <!-- <a class="s-icon instagram" title="Instagram" target="_blank" href="#">
                <instagram-icon class="icon" />
             </a> -->
             <a class="s-icon meetup" title="meetup" target="_blank" href="https://www.meetup.com/dev-pp/">
@@ -47,6 +47,9 @@
             </li>
             <li>
               <a target="_blank" href="http://www.forspace.com.br/">For Space Coworking</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://makeplace.com.br/">Makeplace</a>
             </li>
           </ul>
         </p>
