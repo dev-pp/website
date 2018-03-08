@@ -1,5 +1,5 @@
 <template>
-  <div class="material-wrapper-item">
+  <div class="material-item-wrapper">
     <div class="material-item content-panel">
       <div class="palestrante">
         <div class="foto">
@@ -7,8 +7,13 @@
         </div>
         <div class="info">
           <div>
-            <mic-icon class="icon" />
-            <span>{{ palestrante.nome }}</span>
+            <mic-icon class="icon mic" />
+            <span v-if="!palestrante.link">{{ palestrante.nome }}</span>
+            <span v-else>
+              <a :href="palestrante.link" target="_blank">
+                {{ palestrante.nome }}
+              </a>
+            </span>
           </div>
           <div>
             <calendar-icon class="icon" />
@@ -69,12 +74,15 @@ export default {
 <style lang="scss" scoped>
 @import './material-item--icons.scss';
 
-.material-wrapper-item {
+.material-item-wrapper {
   display: inline-flex;
   padding: 0.3rem;
   background: #efefef;
+  width: 100%;
 
   .material-item {
+    width: 100%;
+
     .palestrante {
       display: flex;
       overflow: hidden;
@@ -87,6 +95,7 @@ export default {
         border: solid 3px white;
         position: relative;
         z-index: 2;
+
         @media(max-width: 305px) {
           display: none;
         }
@@ -136,6 +145,10 @@ export default {
           }
         }
       }
+    }
+
+    .btn[disabled] {
+      opacity: .2;
     }
   }
 }

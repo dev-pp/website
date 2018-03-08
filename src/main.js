@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import App from './App.vue';
 
+import { VueMasonryPlugin } from 'vue-masonry';
+
+Vue.use(VueMasonryPlugin)
+
 import jQuery from 'jquery/src/jquery';
 import * as SmoothScroll from 'smooth-scroll';
 
@@ -51,7 +55,7 @@ if (!modernBrowser) {
   scriptElement.async = false;
   scriptElement.src = '/polyfills.bundle.' + hash + 'js';
   document.head.appendChild(scriptElement);
-  console.log(scriptElement);
+  console.log('polyfill in old browsers', scriptElement);
 }
 
 var scroll = new SmoothScroll('a[href*="#"]', {
@@ -99,18 +103,6 @@ $(document).ready(function () {
 
   sr.reveal('.sponsors .reveal-sequence', 50);
   sr.reveal('.footer .reveal-sequence', 15);
-
-  // (function (document) {
-  //   const disabledButtons = document.querySelectorAll(".disabled");
-  //   const length = disabledButtons.length;
-  //   for (let i = 0; i < disabledButtons.length; i++) {
-  //     console.log(disabledButtons[i]);
-  //     disabledButtons[i].addEventListener('click', () => {
-  //       alert('oi')
-  //       return false;
-  //     });
-  //   }
-  // })(document);
 });
 
 new Vue({

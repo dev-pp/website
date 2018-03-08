@@ -20,13 +20,17 @@
       </div>
     </header>
 
-    <div class="grid-material-wrapper reveal">
-      <div v-if="loading">
-        <devpp-material-item-loading style="float: left;"></devpp-material-item-loading>
-        <devpp-material-item-loading style="float: left; margin-left: 5px; margin-top: 5px"></devpp-material-item-loading>
-        <devpp-material-item-loading style="float: left; margin-left: 5px; margin-top: 5px"></devpp-material-item-loading>
+    <div class="grid reveal">
+      <div class="loading" v-if="loading">
+        <devpp-material-item-loading class="loading--grid-item"></devpp-material-item-loading>
+        <devpp-material-item-loading class="loading--grid-item"></devpp-material-item-loading>
+        <devpp-material-item-loading class="loading--grid-item"></devpp-material-item-loading>
+        <devpp-material-item-loading class="loading--grid-item"></devpp-material-item-loading>
       </div>
-      <devpp-material-item class="grid-material-item" v-for="(material, index) in materialList" :key="index" :date="activeDate" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
+
+      <div v-masonry transition-duration="0.3s" item-selector=".grid-item">
+        <devpp-material-item v-masonry-tile class="grid-item" v-for="(material, index) in materialList" :key="index" :date="activeDate" :palestrante="material.palestrante" :palestra="material.palestra" :recursos="material.recursos"></devpp-material-item>
+      </div>
     </div>
   </section>
 </template>
@@ -124,24 +128,43 @@ export default {
         // listar materiais pela ultima data
         this.listByDate(lastDate);
       }).catch(e => console.log(e));
-
-    var msnry = new Masonry('.grid');
   }
 }
 </script>
 
 <style lang="scss" scoped>
 section.material {
-  .grid-material-wrapper {
-    min-height: 300px;
+  .loading {
+    .loading--grid-item {
+      float: left;
 
-    .grid-material-item {
       @media (min-width: 780px) {
         width: 50%;
       }
 
-      @media (min-width: 1200px) {
-        width: 33%;
+      &:nth-last-child(3),
+      &:nth-last-child(2),
+      &:nth-last-child(1) {
+        display: none;
+
+        @media (min-width: 780px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .g-item {
+    min-height: 300px;
+    border: solid 3px goldenrod;
+  }
+
+  .grid {
+    .grid-item {
+      width: 100%;
+
+      @media (min-width: 780px) {
+        width: 50%;
       }
     }
   }
