@@ -28,6 +28,61 @@
       <div class="content-panel meetup-panel reveal">
         <div class="data">
           <div class="data-info">
+            <span class="day">27</span>
+            <span class="month">Mar</span>
+          </div>
+        </div>
+        <div class="info">
+          <div class="small">17 de Abril de 2018, 19:15</div>
+          <a class="title" href="https://www.meetup.com/dev-pp/events/249677522/" target="_blank">
+            <h4>Bate papo sobre tecnologia VII</h4>
+          </a>
+          <p>Fala galera!</p>
+          <p>Bora pra 7ª edição do nosso querido meetup que vai rolar na próxima terça-feira dia 17/04???</p>
+          <p>Nesse meetup vai rolar IPv6, Offline First e um workshop sobre validação de ideia e aquisição de leads sem escreve uma única linha de código.</p>
+          <div class="place">
+            <div>
+              <room-icon class="icon icon-room" />
+            </div>
+            <div>
+              <h5 class="name">For Space</h5>
+              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
+            </div>
+          </div>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/249677522/">RSVP</a>
+        </div>
+      </div>
+
+      <div class="content-panel meetup-panel reveal">
+        <div class="data">
+          <div class="data-info">
+            <span class="day">27</span>
+            <span class="month">Mar</span>
+          </div>
+        </div>
+        <div class="info">
+          <div class="small">27 de Março de 2018, 18:45</div>
+          <a class="title" href="https://www.meetup.com/dev-pp/events/248583682/" target="_blank">
+            <h4>Bate papo sobre tecnologia VI</h4>
+          </a>
+          <p>Fala galera!</p>
+          <p>Dia 27 tem Magento, Blockchain e Consumindo a API do meetup.com com Vue.js, Desenvolvimento Gerencial e muito Networking.</p>
+          <div class="place">
+            <div>
+              <room-icon class="icon icon-room" />
+            </div>
+            <div>
+              <h5 class="name">For Space</h5>
+              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
+            </div>
+          </div>
+          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/248583682/">RSVP</a>
+        </div>
+      </div>
+
+      <div class="content-panel meetup-panel reveal">
+        <div class="data">
+          <div class="data-info">
             <span class="day">6</span>
             <span class="month">Mar</span>
           </div>
@@ -185,15 +240,15 @@
 import RoomIcon from "./meetups--icons.svg?icon-room";
 
 export default {
-  name: 'devpp-meetups',
+  name: "devpp-meetups",
   components: {
-    RoomIcon,
+    RoomIcon
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import './meetups--icons.scss';
-@import './meetups--style.scss';
+@import "./meetups--icons.scss";
+@import "./meetups--style.scss";
 </style>
 
