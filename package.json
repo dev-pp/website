@@ -25,9 +25,8 @@
     "scrollreveal": "3.3.6",
     "smooth-scroll": "12.1.5",
     "vue": "2.5.13",
-    "vue-masonry": "0.10.16",
-    "vue-simple-photoswipe": "1.0.3",
-    "vue-template-compiler": "2.5.13"
+    "vue-masonry": "0.11.6",
+    "vue-simple-photoswipe": "1.0.3"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
