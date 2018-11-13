@@ -1,24 +1,23 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
   entry: {
-    main: path.join(__dirname, 'src', 'main'),
-    polyfills: path.join(__dirname, 'src', 'assets', 'js', 'polyfills'),
+    main: path.join(__dirname, "src", "main"),
+    polyfills: path.join(__dirname, "src", "assets", "js", "polyfills")
   },
   output: {
-    filename: '[name].bundle.[hash].js',
+    filename: "[name].bundle.[hash].js"
   },
   module: {
     rules: [
       {
         test: /\.(png|jpg|gif)$/,
         use: [
-          'file-loader',
+          "file-loader",
           {
-            loader: 'image-webpack-loader',
+            loader: "image-webpack-loader",
             options: {
               bypassOnDebug: true,
               mozjpeg: {
@@ -26,32 +25,29 @@ const config = {
                 quality: 65
               },
               pngquant: {
-                quality: '65-90',
+                quality: "65-90",
                 speed: 4
-              },
-            },
-          },
+              }
+            }
+          }
         ]
       },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: [
-            'css-loader',
-            'sass-loader'
-          ]
+          use: ["css-loader", "sass-loader"]
         }),
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: "vue-loader"
       },
       {
         test: /\.svg$/,
         loader: "vue-svg-symbol-loader"
-      },
+      }
       // {
       //   test: /\.js$/,
       //   loader: 'babel',
@@ -62,16 +58,15 @@ const config = {
     ]
   },
   plugins: [
-    //new UglifyJSPlugin(),
     new ExtractTextPlugin({
-      filename: '[id]-[name].[hash].style.css',
-      allChunks: true,
+      filename: "[id]-[name].[hash].style.css",
+      allChunks: true
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
-      favicon: path.join(__dirname, 'src', 'favicons', 'favicon.ico'),
-      excludeChunks: ['polyfills'],
-    }),
+      template: path.join(__dirname, "src", "index.html"),
+      favicon: path.join(__dirname, "src", "favicons", "favicon.ico"),
+      excludeChunks: ["polyfills"]
+    })
   ]
 };
 
