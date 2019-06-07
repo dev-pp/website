@@ -12,7 +12,7 @@
           front-end e back-end, user experience, inovações, oportunidades de
           trabalho e o que mais der na teia 🖖. </strong>Além disso você fica
         ligado(a) quando acontece os
-        <strong>meetups do Dev PP</strong>, do <sttrong>GDG Prudente</sttrong>
+        <strong>meetups do Dev PP</strong>, do <strong>GDG Prudente</strong>
         e também <strong>eventos techs em Presidente Prudente
           e região e os melhores em todo o Brasil</strong>.
       </p>
