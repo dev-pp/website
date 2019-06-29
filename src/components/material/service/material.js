@@ -1,10 +1,18 @@
-import { http } from '../../../config/services/config';
+import axios from 'axios';
+
+const _http = axios.create({
+  baseURL: 'https://dev-pp.firebaseio.com',
+  timeout: 10000,
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+  },
+});
 
 export default {
-  listar: () => {
-    return http.get('material.json');
+  list: () => {
+    return _http.get('material.json');
   },
-  listarPorData: (data) => {
-    return http.get('material/' + data + '.json');
+  fetchByDate: (date) => {
+    return _http.get('material/' + date + '.json');
   },
 }

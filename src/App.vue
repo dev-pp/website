@@ -5,52 +5,55 @@
     <devpp-navbar />
     <devpp-about />
     <devpp-members />
+    <devpp-jobs />
     <devpp-join-us class="dark-bg" />
     <devpp-meetups />
     <devpp-gallery />
-    <devpp-material-list />
+    <devpp-material />
     <devpp-palestre />
-    <devpp-weekly form-action="https://tech.us17.list-manage.com/subscribe/post?u=dd95564dc86cde20bf6712519&amp;id=69e305d9aa" />
+    <devpp-weekly />
     <devpp-sponsors />
     <devpp-footer class="dark-bg" />
   </div>
 </template>
 
 <script>
-import DevppHeader from './components/header/DevppHeader.vue';
-import DevppIntro from './components/intro/DevppIntro.vue';
-import DevppNavbar from './components/navbar/DevppNavbar.vue';
-import DevppAbout from './components/about/DevppAbout.vue';
-import DevppMembers from './components/members/DevppMembers.vue';
-import DevppJoinUs from './components/join_us/DevppJoinUs.vue';
-import DevppMeetups from './components/meetups/DevppMeetups.vue';
-import DevppGallery from './components/gallery/DevppGallery.vue';
-import DevppMaterialList from './components/material/DevppMaterialList.vue';
-import DevppPalestre from './components/palestre/DevppPalestre.vue';
-import DevppWeekly from './components/weekly/DevppWeekly.vue';
-import DevppSponsors from './components/sponsors/DevppSponsors.vue';
-import DevppFooter from './components/footer/DevppFooter.vue';
+import DevppHeader from "./components/header/DevppHeader.vue";
+import DevppIntro from "./components/intro/DevppIntro.vue";
+import DevppNavbar from "./components/navbar/DevppNavbar.vue";
+import DevppAbout from "./components/about/DevppAbout.vue";
+import DevppMembers from "./components/members/DevppMembers.vue";
+import DevppJobs from "./components/jobs_opportunities/DevppJobOportunities.vue";
+import DevppJoinUs from "./components/join_us/DevppJoinUs.vue";
+import DevppMeetups from "./components/meetups/DevppMeetups.vue";
+import DevppGallery from "./components/gallery/DevppGallery.vue";
+import DevppMaterial from "./components/material/DevppMaterial.vue";
+import DevppPalestre from "./components/palestre/DevppPalestre.vue";
+import DevppWeekly from "./components/weekly/DevppWeekly.vue";
+import DevppSponsors from "./components/sponsors/DevppSponsors.vue";
+import DevppFooter from "./components/footer/DevppFooter.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     DevppHeader,
     DevppIntro,
     DevppNavbar,
     DevppAbout,
     DevppMembers,
+    DevppJobs,
     DevppJoinUs,
     DevppMeetups,
     DevppGallery,
-    DevppMaterialList,
+    DevppMaterial,
     DevppPalestre,
     DevppWeekly,
     DevppSponsors,
-    DevppFooter,
+    DevppFooter
   }
-}
+};
 </script>
 
 <style lang="scss">
-@import './app.scss';
+@import "./app.scss";
 </style>

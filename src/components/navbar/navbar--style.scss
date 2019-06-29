@@ -19,7 +19,22 @@ section.custom-navbar {
       border-right: none;
       border-left: none;
       border-top: none;
-      @media(max-width: 768px) {
+      @media(max-width: 918px) {
+        .navbar-toggle {
+          display: block;
+          right: 0;
+          position: absolute;
+          z-index: 1;
+        }
+
+        .navbar-collapse.collapse {
+          display: none!important;
+        }
+
+        .collapse.in {
+          display: block !important;
+        }
+
         .navbar-collapse {
           overflow: hidden;
 

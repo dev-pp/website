@@ -52,6 +52,34 @@ body {
   background: tomato;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+
+a.btn-blue-rounded {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #267DDD;
+  color: white !important;
+  cursor: pointer;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+  height: 50px;
+  padding: 0 33px;
+  border-radius: 25px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
 .dark-bg {
   background-color: rgb(60, 60, 60);
 }

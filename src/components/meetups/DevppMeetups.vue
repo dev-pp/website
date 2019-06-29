@@ -1,248 +1,234 @@
 <template>
-  <section id="meetups" class="container meetups">
+  <section class="container meetups">
+    <a id="meetups" class="anchor"></a>
     <div class="col-xs-12">
       <div class="content-header-with-options">
         <div>
-          <h3>MEETUPS</h3>
+          <h3>MEETUPS ({{ fetching ? "⌛" : totalExisting }})</h3>
         </div>
 
         <div class="content-btn-group">
           <div class="btn-group filter">
-            <button type="button" class="btn btn-default" disabled>Filtrar</button>
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
+            <button
+              type="button"
+              class="btn btn-default"
+              style="cursor: default; background-color: transparent; border: none"
+            >
+              Filtrar por
             </button>
-            <ul class="dropdown-menu bs-dropdow">
-              <li>
-                <a class="active" href="#">Próximos</a>
-              </li>
-              <li>
-                <a href="#">Passados</a>
-              </li>
-            </ul>
+
+            <button
+              type="button"
+              class="btn btn-default"
+              @click="filterByStatus('upcoming')"
+            >
+              <span>📆</span>
+              <span>Agendados</span>
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-default"
+              @click="filterByStatus('past')"
+            >
+              <span>✔</span>
+              <span>Passados</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">27</span>
-            <span class="month">Mar</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="small">17 de Abril de 2018, 19:15</div>
-          <a class="title" href="https://www.meetup.com/dev-pp/events/249677522/" target="_blank">
-            <h4>Bate papo sobre tecnologia VII</h4>
-          </a>
-          <p>Fala galera!</p>
-          <p>Bora pra 7ª edição do nosso querido meetup que vai rolar na próxima terça-feira dia 17/04???</p>
-          <p>Nesse meetup vai rolar IPv6, Offline First e um workshop sobre validação de ideia e aquisição de leads sem escreve uma única linha de código.</p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
-            </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
-            </div>
-          </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/249677522/">RSVP</a>
-        </div>
+      <div v-if="fetching">
+        <meetups-item-loading />
       </div>
 
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">27</span>
-            <span class="month">Mar</span>
-          </div>
+      <template v-else>
+        <div v-if="meetups.length === 0" style="padding: 30px">
+          😥 Não tem eventos {{ currentFilter.name }}
         </div>
-        <div class="info">
-          <div class="small">27 de Março de 2018, 18:45</div>
-          <a class="title" href="https://www.meetup.com/dev-pp/events/248583682/" target="_blank">
-            <h4>Bate papo sobre tecnologia VI</h4>
-          </a>
-          <p>Fala galera!</p>
-          <p>Dia 27 tem Magento, Blockchain e Consumindo a API do meetup.com com Vue.js, Desenvolvimento Gerencial e muito Networking.</p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
-            </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
-            </div>
-          </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/248583682/">RSVP</a>
-        </div>
-      </div>
 
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">6</span>
-            <span class="month">Mar</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="small">06 de Março de 2018, 18:45</div>
-          <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
-            <h4>Bate papo sobre tecnologia V</h4>
-          </a>
-          <p>Fala galera!</p>
-          <p>Mais conteúdo de muita qualidade no dia 06/03</p>
-          <p>
-            Esperamos você no mesmo Bat Local de sempre!
-            <a target="_blank" href="https://www.meetup.com/dev-pp/events/248099911/">Leia mais</a>
-          </p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
+        <template v-else>
+          <div
+            v-for="(meetup, i) in meetups"
+            :key="i"
+            class="content-panel meetup-panel reveal"
+          >
+            <div class="data">
+              <div class="data-info">
+                <span class="day">{{ meetup.day }}</span>
+                <span class="month">{{ meetup.short_month }}</span>
+              </div>
             </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
+            <div class="info">
+              <div class="small">{{ meetup.long_time }}</div>
+              <a class="title" :href="meetup.link" target="_blank">
+                <h4>{{ meetup.name }}</h4>
+              </a>
+              <div v-html="meetup.description"></div>
+              <div class="place" v-if="meetup.venue">
+                <div>
+                  🚩
+                </div>
+                <div>
+                  <h5 class="name">{{ meetup.venue.name }}</h5>
+                  <address class="small">
+                    {{ meetup.venue.address_1 }} · {{ meetup.venue.city }}
+                  </address>
+                </div>
+              </div>
+              <div v-if="meetup.venue" style="margin-top: 15px">
+                <iframe
+                  width="200px"
+                  height="100px"
+                  frameborder="0"
+                  style="border:0"
+                  :src="
+                    `https://maps.google.com/maps?q=${meetup.venue.lat},${
+                      meetup.venue.lon
+                    }&hl=es;z=14&amp;output=embed`
+                  "
+                ></iframe>
+              </div>
+              <a
+                :disabled="!meetup.upcomming"
+                class="btn btn-md btn-custom pull-right"
+                target="_blank"
+                href="https://www.meetup.com/dev-pp/events/249677522/"
+              >
+                RSVP
+              </a>
             </div>
           </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247426958/">RSVP</a>
-        </div>
-      </div>
 
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">20</span>
-            <span class="month">Fev</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="small">20 de Fevereiro de 2018, 18:45</div>
-          <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
-            <h4>Bate papo sobre tecnologia IV</h4>
+          <a
+            v-if="totalOfpages > page"
+            href="#"
+            @click.prevent.stop="fetchMore"
+            class="btn btn-lg load-more"
+          >
+            <span v-show="fetchingMore">⌛</span>
+            <span v-show="!fetchingMore">
+              <span>📥</span
+              ><span>Carregar mais {{ page }}/{{ totalOfpages }}</span>
+            </span>
           </a>
-          <p>Fala galera!</p>
-          <p>Nosso próximo encontro será dia 20!</p>
-          <p>
-            Bora!!
-            <a target="_blank" href="https://www.meetup.com/dev-pp/events/247426958/">Leia mais</a>
-          </p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
-            </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
-            </div>
-          </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247426958/">RSVP</a>
-        </div>
-      </div>
-
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">30</span>
-            <span class="month">Jan</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="small">30 de Janeiro de 2018, 18:45</div>
-          <a class="title" href="https://www.meetup.com/dev-pp/events/247066330/" target="_blank">
-            <h4>Bate Papo Sobre Tecnologia III</h4>
-          </a>
-          <p>Fala galera!</p>
-          <p>Aí vem o nosso primeiro encontro de 2018, vamos bater um papo sobre tecnologia e começar esse ano compartilhando conhecimento e aumentando o nosso networking</p>
-          <p>
-            O formato será o mesmo de sempre...
-            <a target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">Leia mais</a>
-          </p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
-            </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
-            </div>
-          </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/247066330/">RSVP</a>
-          <a href="https://github.com/dev-pp/meetup/blob/master/README.md#3-encontro---30012018" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
-        </div>
-      </div>
-
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">20</span>
-            <span class="month">Dez</span>
-          </div>
-        </div>
-        <div class="info" style="width: 100%">
-          <div class="small">20 de Dezembro de 2017, 18:45</div>
-          <a class="title" href="https://www.meetup.com/dev-pp/events/245829094/" target="_blank">
-            <h4>Bate Papo Sobre Tecnologia II</h4>
-          </a>
-          <p>
-            Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região. Na For Space! Não percam mais essa oportunidade de aprendizado e networking. Agenda e informações, acesse o link abaixo: https://github.com/dev-pp/meetup (PS: Não esqueça de dar uma estrelinha para apoiar essa iniciativa que visa apenas o desenvolvimento da nossa comunidade de Desenvolvedores da região). Então falaremos nesse encontro...
-            <a target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">Leia mais</a>
-          </p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
-            </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
-            </div>
-          </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blank" href="https://www.meetup.com/dev-pp/events/245829094/">RSVP</a>
-          <a href="https://github.com/dev-pp/meetup/blob/master/README.md#3-encontro---30012018" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
-        </div>
-      </div>
-
-      <div class="content-panel meetup-panel reveal">
-        <div class="data">
-          <div class="data-info">
-            <span class="day">13</span>
-            <span class="month">Dez</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="small">13 de Dezembro de 2017, 18:45</div>
-          <a href="https://www.meetup.com/dev-pp/events/245793906/" target="_blank" class="title">
-            <h4>Bate papo sobre tecnologia, experiências e carreira</h4>
-          </a>
-          <p>
-            Programação e mais informações: https://github.com/dev-pp/meetup
-          </p>
-          <div class="place">
-            <div>
-              <room-icon class="icon icon-room" />
-            </div>
-            <div>
-              <h5 class="name">For Space</h5>
-              <address class="small">Rua Nicolau Cacciatori, 489 · Presidente Prudente</address>
-            </div>
-          </div>
-          <a class="btn btn-md btn-custom pull-right" target="_blak" href="https://www.meetup.com/dev-pp/events/245793906/">RSVP</a>
-          <a href="https://github.com/devppmeetup/dev-pp#1-encontro---13122017" target="_blank" class="btn btn-md btn-default pull-right">Agenda</a>
-        </div>
-      </div>
+        </template>
+      </template>
     </div>
   </section>
 </template>
 
 <script>
 import RoomIcon from "./meetups--icons.svg?icon-room";
+import api from "../../apis/meetup.api";
+import MeetupsItemLoading from "./meetups-iItem-loading.vue";
+import * as moment from "moment";
+
+const _pageSize = 2;
+
+moment.locale("pt-br");
+
+const _normalizeEvent = x => {
+  return Object.assign(x, {
+    long_time: moment(x.time).format("dddd, D [de] MMMM [de] YYYY [às] H:mm"),
+    day: moment(x.time).format("D"),
+    short_month: moment.localeData().monthsShort(moment(x.time)),
+    upcomming: new Date(x.time) > new Date(),
+    description: x.description.replace(/&amp;gt;/g, "")
+  });
+};
 
 export default {
   name: "devpp-meetups",
   components: {
-    RoomIcon
+    RoomIcon,
+    MeetupsItemLoading
+  },
+  data() {
+    return {
+      meetups: [],
+      page: 1,
+      totalExisting: 0,
+      fetching: true,
+      fetchingMore: false,
+      currentFilter: {
+        name: "",
+        status: "any"
+      }
+    };
+  },
+  computed: {
+    totalOfpages() {
+      return Math.ceil(this.totalExisting / _pageSize);
+    }
+  },
+  async created() {
+    const upcoming = await api.getEventsByStatus("upcoming", _pageSize);
+
+    const past = await api.getEventsByStatus(
+      "past",
+      _pageSize - upcoming.data.data.length
+    );
+
+    this.meetups = [
+      ...upcoming.data.data.map(_normalizeEvent),
+      ...past.data.data.map(_normalizeEvent)
+    ];
+
+    this.totalExisting =
+      Number(upcoming.data.meta.total_count) +
+      Number(past.data.meta.total_count);
+
+    this.fetching = false;
+  },
+  methods: {
+    async fetchMore() {
+      this.fetchingMore = true;
+
+      let upcoming,
+        past = {
+          data: {
+            data: []
+          }
+        };
+
+      if (this.currentFilter.status === "upcoming" || "any") {
+        upcoming = await api.getEventsByStatus(
+          "upcoming",
+          _pageSize * (this.page + 1)
+        );
+      }
+
+      if (this.currentFilter.status === "past" || "any") {
+        past = await api.getEventsByStatus(
+          "past",
+          _pageSize * (this.page + 1) - upcoming.data.data.length
+        );
+      }
+
+      this.page++;
+
+      this.meetups = [
+        ...upcoming.data.data.map(_normalizeEvent),
+        ...past.data.data.map(_normalizeEvent)
+      ];
+
+      this.fetchingMore = false;
+    },
+    async filterByStatus(status) {
+      this.currentFilter.name = status === "past" ? "Passados" : "Agendados";
+      this.currentFilter.status = status;
+      this.page = 1;
+      this.fetching = true;
+
+      const events = await api.getEventsByStatus(status, _pageSize);
+
+      this.meetups = events.data.data.map(_normalizeEvent);
+
+      this.totalExisting = Number(events.data.meta.total_count);
+
+      this.fetching = false;
+    }
   }
 };
 </script>

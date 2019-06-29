@@ -1,4 +1,10 @@
 section.members {
+  .loading {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 500px;
+  }
+
   ul.faces {
     padding: 0;
     display: flex;

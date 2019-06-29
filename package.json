@@ -9,11 +9,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --progress --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "postinstall": "npm run build",
     "start": "node server.js"
   },
   "dependencies": {
     "axios": "0.18.0",
+    "axios-jsonp": "1.0.1",
     "babel-polyfill": "6.26.0",
     "bootstrap": "3.3.7",
     "bootstrap-sass": "3.3.7",
@@ -22,6 +22,7 @@
     "jquery-placeholder": "2.3.1",
     "jsonp": "0.2.1",
     "materialize-css": "0.100.2",
+    "moment": "2.24.0",
     "scrollreveal": "3.3.6",
     "smooth-scroll": "12.1.5",
     "vue": "2.5.13",
