@@ -18,6 +18,7 @@
             </button>
 
             <button
+              :disabled="currentFilter.status === 'upcoming'"
               type="button"
               class="btn btn-default"
               @click="filterByStatus('upcoming')"
@@ -27,6 +28,7 @@
             </button>
 
             <button
+              :disabled="currentFilter.status === 'past'"
               type="button"
               class="btn btn-default"
               @click="filterByStatus('past')"

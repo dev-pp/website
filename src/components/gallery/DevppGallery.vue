@@ -48,27 +48,6 @@
   </section>
 </template>
 
-<style lang="scss" scoped>
-section.gallery {
-  .preview-img-list {
-    display: flex;
-    flex-wrap: wrap;
-
-    img.preview-img-item {
-      height: 200px;
-      flex-grow: 1;
-      object-fit: cover;
-      margin: 0.5px;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-}
-</style>
-
 <script>
 import Vue from "vue";
 import PhotoSwipe from "vue-simple-photoswipe/dist/vue-simple-photoswipe";
@@ -162,3 +141,24 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+section.gallery {
+  .preview-img-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    img.preview-img-item {
+      height: 200px;
+      flex-grow: 1;
+      object-fit: cover;
+      margin: 0.5px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+</style>
