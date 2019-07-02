@@ -10,14 +10,15 @@
         />
       </div>
       <div class="col-sm-6 reveal-right white-text">
+        <h2>Faça parte da nossa comunidade</h2>
         <p>
-          <strong>Faça parte da nossa comunidade</strong>, participe dos
-          meetups, compartilhe conhecimento, faça networking com pessoas
-          incríveis, aprenda, construa ideias juntos, atualize-se, faça amigos,
-          dê um up na sua carreia, evolua e fortaleça a comunidade e a região!
+          Participe dos meetups, compartilhe e adquira conhecimento, faça
+          networking com pessoas incríveis, aproveite oportunidades de trabalho,
+          aprenda, construa ideias juntos, atualize-se, faça amigos, dê um up na
+          sua carreia, evolua e fortaleça a comunidade e a região!
         </p>
         <a
-          class="btn btn-md btn-custom"
+          class="btn btn-lg btn-custom"
           href="https://meetup.com/dev-pp"
           target="_blank"
           >JUNTE-SE A NÓS</a

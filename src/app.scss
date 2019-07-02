@@ -165,30 +165,39 @@ h4 {
   display: flex;
   align-items: center;
 
+  // if its dropdown child is not open
+  position: relative;
+  z-index: 1;
+
+  &.expanded-filter-dropdown {
+    z-index: 2;
+  }
+
   .dropdown-menu {
-    position: relative;
+    //position: relative;
 
     &.bs-dropdow {
-      position: absolute;
-      position: absolute;
-      left: -96px;
+      //position: absolute;
     }
   }
 
   > div:nth-last-child(1) {
     flex: 2;
     text-align: right;
-    z-index: 3;
+    z-index: 1;
     padding-top: 19px;
   }
 
   .content-btn-group {
-    a {
-      text-decoration: none;
-    }
+    .filter {
+      a {
+        text-decoration: none;
+        padding: 15px;
+      }
 
-    a.active {
-      background-color: #efefef;
+      a.active {
+        background-color: #efefef;
+      }
     }
   }
 }
@@ -197,6 +206,11 @@ h4 {
   color: #777;
   font-size: 17px;
   line-height: 27px;
+}
+
+.output-msg {
+  text-align: center;
+  padding: 53px;
 }
 
 .content-panel {

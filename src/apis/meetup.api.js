@@ -10,7 +10,7 @@ const getMembers = () => {
  });
 };
 
-const getEventsByStatus = (status, page) => {
+const getEventsByStatus = (status, page = 200) => {
  return axios({
   url: `${apiurl}/events?status=${status}&page=${page}&desc=true`,
   adapter: jsonpAdapter

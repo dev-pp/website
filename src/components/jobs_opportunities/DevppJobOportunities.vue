@@ -7,14 +7,14 @@
         Nós divulgamos vagas de emprego na área de TI frequentemente em nossos
         eventos e emails.
 
-        <h2>Tem uma vaga na área de TI aberta na sua empresa?</h2>
+        <h4>Tem uma vaga na área de TI aberta na sua empresa?</h4>
         Cadastre-a no nosso repositório de vagas ou entre em contato conosco que
         divulgaremos e tentaremos ajudar.
 
-        <h2>
+        <h4>
           Tá procurando vagas abertas na área de TI em Presidente Prudente e
           região?
-        </h2>
+        </h4>
         Fique ligado(a) no nosso repositório de vagas que estamos sempre
         recebendo oportunidades para você_blank
 
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-h2 {
+h4 {
   margin: 0;
   margin-top: 20px;
 }

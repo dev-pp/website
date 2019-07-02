@@ -1,7 +1,7 @@
 <template>
   <section class="material container">
     <a id="material" class="anchor"></a>
-    <header class="content-header-with-options">
+    <header class="content-header-with-options" ref="content-header">
       <div>
         <h3>MATERIAL</h3>
       </div>
@@ -10,12 +10,22 @@
         <div class="btn-group filter">
           <button
             type="button"
+            class="btn btn-default"
+            style="cursor: default; background-color: transparent; border: none"
+          >
+            Filtrar
+          </button>
+
+          <button
+            type="button"
             class="btn btn-default dropdown-toggle"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
+            @click="onDropDownFilterOpen"
           >
-            {{ activeDate }}
+            <span v-if="!activeDate">⌛ ...</span>
+            <span v-else>{{ activeDate }}</span>
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu bs-dropdow">
@@ -25,8 +35,9 @@
                 :key="index"
                 :class="{ activated: dateObj.date === activeDate }"
                 @click.prevent="listByDate(dateObj.date)"
-                >{{ dateObj.date }}</a
               >
+                {{ dateObj.date }}
+              </a>
             </li>
           </ul>
         </div>
@@ -140,6 +151,15 @@ export default {
           }
         })
         .catch(e => console.log(e));
+    },
+    onDropDownFilterOpen() {
+      Array.from(
+        document.getElementsByClassName("content-header-with-options")
+      ).forEach(el => {
+        el.classList.remove("expanded-filter-dropdown");
+      });
+
+      this.$refs["content-header"].classList.toggle("expanded-filter-dropdown");
     }
   },
   mounted() {

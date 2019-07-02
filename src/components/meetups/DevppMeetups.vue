@@ -45,7 +45,10 @@
       </div>
 
       <template v-else>
-        <div v-if="meetups.length === 0" style="padding: 30px">
+        <div
+          v-if="meetups.length === 0"
+          class="output-msg"
+        >
           😥 Não tem eventos {{ currentFilter.name }}
         </div>
 
@@ -122,7 +125,7 @@
 
 <script>
 import RoomIcon from "./meetups--icons.svg?icon-room";
-import api from "../../apis/meetup.api";
+import meetupApi from "../../apis/meetup.api";
 import MeetupsItemLoading from "./meetups-iItem-loading.vue";
 import * as moment from "moment";
 
@@ -165,9 +168,9 @@ export default {
     }
   },
   async created() {
-    const upcoming = await api.getEventsByStatus("upcoming", _pageSize);
+    const upcoming = await meetupApi.getEventsByStatus("upcoming", _pageSize);
 
-    const past = await api.getEventsByStatus(
+    const past = await meetupApi.getEventsByStatus(
       "past",
       _pageSize - upcoming.data.data.length
     );
@@ -195,14 +198,14 @@ export default {
         };
 
       if (this.currentFilter.status === "upcoming" || "any") {
-        upcoming = await api.getEventsByStatus(
+        upcoming = await meetupApi.getEventsByStatus(
           "upcoming",
           _pageSize * (this.page + 1)
         );
       }
 
       if (this.currentFilter.status === "past" || "any") {
-        past = await api.getEventsByStatus(
+        past = await meetupApi.getEventsByStatus(
           "past",
           _pageSize * (this.page + 1) - upcoming.data.data.length
         );
@@ -223,7 +226,7 @@ export default {
       this.page = 1;
       this.fetching = true;
 
-      const events = await api.getEventsByStatus(status, _pageSize);
+      const events = await meetupApi.getEventsByStatus(status, _pageSize);
 
       this.meetups = events.data.data.map(_normalizeEvent);
 

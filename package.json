@@ -9,12 +9,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --progress --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "serve": "nodemon server.js"
   },
   "dependencies": {
     "axios": "0.18.0",
     "axios-jsonp": "1.0.1",
     "babel-polyfill": "6.26.0",
+    "blob-util": "2.0.2",
     "bootstrap": "3.3.7",
     "bootstrap-sass": "3.3.7",
     "express": "4.16.2",
@@ -25,6 +27,7 @@
     "moment": "2.24.0",
     "scrollreveal": "3.3.6",
     "smooth-scroll": "12.1.5",
+    "url-metadata": "2.4.0",
     "vue": "2.5.13",
     "vue-masonry": "0.11.6",
     "vue-simple-photoswipe": "1.0.3"
@@ -44,6 +47,7 @@
     "html-webpack-plugin": "2.30.1",
     "image-webpack-loader": "3.4.2",
     "node-sass": "4.9.2",
+    "nodemon": "1.19.1",
     "sass-loader": "7.0.3",
     "style-loader": "0.19.1",
     "vue-loader": "13.7.0",
