@@ -3,7 +3,7 @@
     <div class="material-item content-panel">
       <div class="palestrante">
         <div class="foto">
-          <img :src="this.foto" alt="" class="pull-left">
+          <img :src="this.foto" alt="" class="pull-left" />
         </div>
         <div class="info">
           <div>
@@ -25,13 +25,31 @@
         <h4>{{ palestra.titulo }}</h4>
         <p>{{ palestra.desc }}</p>
         <p>
-          <a :href="recursos.slides" :disabled="!recursos.slides" class="btn btn-default" role="button" target="_blank">
+          <a
+            :href="recursos.slides"
+            :disabled="!recursos.slides"
+            class="btn btn-default"
+            role="button"
+            target="_blank"
+          >
             <presentation-icon class="icon" /> Slides
           </a>
-          <a :href="recursos.codigofonte" :disabled="!recursos.codigofonte" class="btn btn-default" role="button" target="_blank">
+          <a
+            :href="recursos.codigofonte"
+            :disabled="!recursos.codigofonte"
+            class="btn btn-default"
+            role="button"
+            target="_blank"
+          >
             <github-icon class="icon" /> Fonte
           </a>
-          <a :href="recursos.video" :disabled="!recursos.video" class="btn btn-default" role="button" target="_blank">
+          <a
+            :href="recursos.video"
+            :disabled="!recursos.video"
+            class="btn btn-default"
+            role="button"
+            target="_blank"
+          >
             <youtube-icon class="icon youtube" /> Vídeo
           </a>
         </p>
@@ -48,17 +66,19 @@ import PresentationIcon from "./material--icons.svg?icon-presentation";
 import YoutubeIcon from "./material--icons.svg?icon-youtube";
 
 export default {
-  name: 'devpp-material-item',
+  name: "devpp-material-item",
   props: {
-    date: '',
-    palestrante: '',
-    palestra: '',
-    recursos: ''
+    date: "",
+    palestrante: "",
+    palestra: "",
+    recursos: ""
   },
   computed: {
     foto() {
-      const nophoto = "http://res.cloudinary.com/dwtuxv53y/image/upload/v1519940593/avatar_operqm.gif";
-      return !this.palestrante.foto ? nophoto : this.palestrante.foto
+      const defaultPhoto =
+        "http://res.cloudinary.com/dwtuxv53y/image/upload/v1519940593/avatar_operqm.gif";
+
+      return !this.palestrante.foto ? defaultPhoto : this.palestrante.foto;
     }
   },
   components: {
@@ -68,11 +88,11 @@ export default {
     PresentationIcon,
     YoutubeIcon
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import './material-item--icons.scss';
+@import "./material-item--icons.scss";
 
 .material-item-wrapper {
   display: inline-flex;
@@ -96,7 +116,7 @@ export default {
         position: relative;
         z-index: 2;
 
-        @media(max-width: 305px) {
+        @media (max-width: 305px) {
           display: none;
         }
       }
@@ -118,7 +138,7 @@ export default {
             left: 4px;
           }
         }
-        @media(max-width: 305px) {
+        @media (max-width: 305px) {
           padding: 8px 8px 8px 16px;
           font-size: 12px;
           height: 40px;
@@ -148,7 +168,7 @@ export default {
     }
 
     .btn[disabled] {
-      opacity: .2;
+      opacity: 0.2;
     }
   }
 }

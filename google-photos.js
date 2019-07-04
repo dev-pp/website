@@ -1,7 +1,5 @@
 const axios = require('axios');
 
-var blobUtil = require('blob-util')
-
 const regex = /\["(https:\/\/lh3\.googleusercontent\.com\/[a-zA-Z0-9\-_]*)"/g
 
 function extractPhotos(content) {
@@ -49,6 +47,7 @@ function getFilesMetadata(photos) {
 async function getAlbum(albumId, meetupId) {
  try {
   const response = await axios.get(`https://photos.app.goo.gl/${albumId}`)
+
   let photos = extractPhotos(response.data)
 
   let result = await getFilesMetadata(photos);
@@ -56,11 +55,36 @@ async function getAlbum(albumId, meetupId) {
   return result;
  }
  catch (e) {
-  console.log(e);
+  console.log({ e });
   return null
  }
 }
 
+// async function getAlbum(albumId, meetupId) {
+//  let response = { data: {} }, photos = [], result = [];
+//  console.log({ photos, result });
+//  try {
+//   response = await axios.get(`https://photos.app.goo.gl/${albumId}`)
+//  } catch (e) {
+//   console.log({ e });
+//  }
+
+//  if (Object.keys(response.data).length > 0) {
+//   photos = extractPhotos(response.data);
+//  }
+
+//  if (photos.length > 0) {
+//   result = await getFilesMetadata(photos);
+//  }
+
+//  if (result.length > 0) {
+//   result = result.filter(x => x.meetup == meetupId);
+//  }
+
+//  console.log({ result });
+
+//  return result;
+// }
 
 module.exports = {
  getAlbum

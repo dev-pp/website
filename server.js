@@ -6,7 +6,7 @@ const { getAlbum } = require('./google-photos');
 var app = express();
 app.use(serveStatic(path.join(__dirname, "dist")));
 
-// authorize CORS (for demo only)
+// authorize CORS
 app.use(function (req, res, next) {
  const origin = req.headers.origin;
  if (origin) {
@@ -15,6 +15,10 @@ app.use(function (req, res, next) {
  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
  next();
 });
+
+// app.get('/', (req, res) => {
+//  res.send('oi')
+// })
 
 app.get('/photos/:albumId/:meetupId', async function (request, response) {
  try {

@@ -1,18 +1,16 @@
-import axios from 'axios';
+import FireStoreParser from 'firestore-parser'
 
-const _http = axios.create({
-  baseURL: 'https://dev-pp.firebaseio.com',
-  timeout: 10000,
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-  },
-});
+const baseUrl = 'https://firestore.googleapis.com/v1beta1/projects/dev-pp/databases/(default)';
 
 export default {
-  list: () => {
-    return _http.get('material.json');
-  },
-  fetchByDate: (date) => {
-    return _http.get('material/' + date + '.json');
-  },
+  fetchByMeetupId: async meetupId => {
+    const url = `${baseUrl}/documents/meetups-resources/${meetupId}`
+
+    const data = fetch(url)
+      .then(response => response.json())
+      .then(json => FireStoreParser(json))
+      .then(data => data);
+
+    return data;
+  }
 }

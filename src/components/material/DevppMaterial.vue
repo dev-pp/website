@@ -7,7 +7,7 @@
       </div>
 
       <div class="content-btn-group">
-        <div class="btn-group filter">
+        <div class="btn-group filter" ref="filter">
           <button
             type="button"
             class="btn btn-default"
@@ -24,19 +24,27 @@
             aria-expanded="false"
             @click="onDropDownFilterOpen"
           >
-            <span v-if="!activeDate">⌛ ...</span>
-            <span v-else>{{ activeDate }}</span>
+            <span v-if="fetchingFilters">⌛ ...</span>
+            <span v-else>
+              {{ currentMeetup.date }} ({{ currentMeetup.totalResources }})
+            </span>
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu bs-dropdow">
-            <li>
+            <li v-if="fetchingFilters" style="text-align: center; padding: 5px">
+              ⌛
+            </li>
+            <li v-else>
               <a
-                v-for="(dateObj, index) in dates"
-                :key="index"
-                :class="{ activated: dateObj.date === activeDate }"
-                @click.prevent="listByDate(dateObj.date)"
+                v-for="(meetup, i) in meetupsFilterDropDown"
+                :key="i"
+                :class="{ active: currentMeetup.id === meetup.id }"
+                @click.prevent.stop="filterByMeetup(meetup.id)"
+                href="#"
               >
-                {{ dateObj.date }}
+                {{ meetup.date }} ({{
+                  meetup.totalResources != "" ? meetup.totalResources : "..."
+                }})
               </a>
             </li>
           </ul>
@@ -45,20 +53,25 @@
     </header>
 
     <div class="grid reveal">
-      <div class="loading" v-if="loading">
+      <div class="loading" v-if="fetchingResources">
         <material-item-loading class="loading--grid-item" />
         <material-item-loading class="loading--grid-item" />
         <material-item-loading class="loading--grid-item" />
         <material-item-loading class="loading--grid-item" />
       </div>
 
-      <div v-masonry transition-duration="0.3s" item-selector=".grid-item">
+      <div
+        v-else
+        v-masonry
+        transition-duration="0.3s"
+        item-selector=".grid-item"
+      >
         <material-item
           v-masonry-tile
           class="grid-item"
-          v-for="(material, index) in materialList"
+          v-for="(material, index) in items"
           :key="index"
-          :date="activeDate"
+          :date="currentMeetup.date"
           :palestrante="material.palestrante"
           :palestra="material.palestra"
           :recursos="material.recursos"
@@ -71,86 +84,82 @@
 <script>
 import MaterialItem from "./material-item.vue";
 import MaterialItemLoading from "./material-iItem-loading.vue";
-import service from "./service/material";
+import _resourcesService from "./service/material";
 import Masonry from "masonry-layout";
+import meetupApi from "../../apis/meetup.api";
+import * as moment from "moment";
 
 export default {
   name: "devpp-material-list",
   data() {
     return {
-      dates: [],
-      activeDate: "",
-      materialList: [],
-      loading: true
+      currentMeetup: {
+        id: 0,
+        date: "",
+        totalResources: 0
+      },
+      meetupsFilterDropDown: [],
+      fetchingFilters: true,
+      fetchingResources: true,
+      items: []
     };
   },
   components: {
     MaterialItem,
     MaterialItemLoading
   },
-  methods: {
-    getDateList() {
-      return new Promise((resolve, reject) => {
-        service
-          .list()
-          .then(res => {
-            if (res.status === 200) {
-              resolve(Object.keys(res.data));
-            }
-          })
-          .catch(e => {
-            console.log(e);
-            reject(e);
-          });
-      });
-    },
-    toDescSortedDateList(dateList) {
-      let reversedDates, numericDates, descSortedNumbericDates;
+  async created() {
+    // fetch meetups list with id and date to fill up the dropdown filter
+    const res = await meetupApi.getEventsByStatus("past");
+    const pastMeetups = res.data.data.map(x => ({
+      id: x.id,
+      time: x.time,
+      date: moment(x.time).format("D [de] MMMM [de] YYYY")
+    }));
 
-      reversedDates = dateList.map(date => {
-        if (date) {
-          return date
-            .split("-")
-            .reverse()
-            .join("-");
+    // fetch resources of each meetup and identify the last one that has resources
+    let fetchedMeetupResources = 0;
+
+    pastMeetups.forEach(async meetup => {
+      let meetupResources = await _resourcesService.fetchByMeetupId(meetup.id);
+
+      if (!meetupResources.fields) {
+        meetupResources.fields = {};
+      }
+
+      pastMeetups.map(x => {
+        if (x.id === meetup.id) {
+          x.totalResources = Object.keys(meetupResources.fields).filter(
+            fieldName => Number.isInteger(Number(fieldName))
+          ).length;
         }
       });
 
-      numericDates = reversedDates.map(date => {
-        return {
-          date: date
-            .split("-")
-            .reverse()
-            .join("/"),
-          number: Number(date.replace(/-/g, ""))
-        };
+      fetchedMeetupResources++;
+
+      // when has fetched all meetups resources, filter only the ones that has at least 1 resoruce
+      if (fetchedMeetupResources === pastMeetups.length) {
+        const withResources = pastMeetups.filter(x => x.totalResources > 0);
+        this.meetupsFilterDropDown = withResources.sort(
+          (a, b) => b.time - a.time
+        );
+        this.currentMeetup = this.meetupsFilterDropDown[0];
+        this.fetchingFilters = false;
+      }
+    });
+  },
+  methods: {
+    async fetchResources(meetupId) {
+      this.fetchingResources = true;
+
+      const response = await _resourcesService.fetchByMeetupId(meetupId);
+      Object.keys(response.fields).forEach(field => {
+        if (Number.isInteger(Number(field))) {
+          this.items.push(response.fields[field]);
+        }
       });
 
-      descSortedNumbericDates = numericDates.sort((a, b) => {
-        return a.number > b.number ? -1 : 1;
-      });
-
-      return descSortedNumbericDates;
-    },
-    listByDate(date) {
-      this.loading = true;
-      this.materialList = [];
-
-      service
-        .fetchByDate(date.replace(/\//g, "-"))
-        .then(res => {
-          if (res.status === 200) {
-            res.data.forEach(material => {
-              if (material) {
-                this.materialList.push(material);
-              }
-            });
-
-            this.activeDate = date;
-            this.loading = false;
-          }
-        })
-        .catch(e => console.log(e));
+      this.fetchingResources = false;
     },
     onDropDownFilterOpen() {
       Array.from(
@@ -160,22 +169,26 @@ export default {
       });
 
       this.$refs["content-header"].classList.toggle("expanded-filter-dropdown");
+    },
+    filterByMeetup(id) {
+      if (this.currentMeetup.id === id) {
+        return false;
+      }
+
+      this.$refs["filter"].classList.remove("open");
+      this.$refs["content-header"].classList.remove("expanded-filter-dropdown");
+
+      this.currentMeetup = this.meetupsFilterDropDown.filter(
+        x => x.id === id
+      )[0];
+
+      this.fetchResources(id);
     }
   },
-  mounted() {
-    // pegar a lista de datas que contem material cadastrado
-    this.getDateList()
-      .then(dateList => {
-        // ordenar lista decrescentemente
-        const descSortedDates = this.toDescSortedDateList(dateList);
-        this.dates = descSortedDates;
-
-        const lastDate = descSortedDates[0].date;
-
-        // list materiais pela ultima data
-        this.listByDate(lastDate);
-      })
-      .catch(e => console.log(e));
+  watch: {
+    "currentMeetup.id"(value) {
+      this.fetchResources(value);
+    }
   }
 };
 </script>
