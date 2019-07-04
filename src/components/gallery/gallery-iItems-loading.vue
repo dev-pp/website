@@ -20,7 +20,7 @@
 export default {
   name: "devpp-gallery-item-loading",
   props: {
-    loadingStep: Boolean
+    loadingStep: Number
   }
 };
 </script>

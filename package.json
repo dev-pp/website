@@ -8,9 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --progress --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js",
-    "start": "node server.js",
-    "serve": "nodemon server.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
     "axios": "0.18.0",
@@ -48,7 +46,6 @@
     "image-webpack-loader": "3.4.2",
     "loadash": "1.0.0",
     "node-sass": "4.9.2",
-    "nodemon": "1.19.1",
     "sass-loader": "7.0.3",
     "style-loader": "0.19.1",
     "vue-loader": "13.7.0",

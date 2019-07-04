@@ -130,7 +130,11 @@ export default {
       let fetchedMeetupPhotos = 0;
 
       pastMeetups.forEach(async meetup => {
-        let photos = await fetch(`/photos/Z9ht4QK9B76BCvzRA/${meetup.id}`)
+        let photos = await fetch(
+          `https://devpp-website-api.herokuapp.com/photos/Z9ht4QK9B76BCvzRA/${
+            meetup.id
+          }`
+        )
           .then(photos => photos.json())
           .then(photos => photos)
           .catch(e => {
@@ -164,7 +168,9 @@ export default {
     fetchPhotos(meetupId) {
       this.fetchingPhotos = true;
 
-      fetch(`/photos/Z9ht4QK9B76BCvzRA/${meetupId}`)
+      fetch(
+        `https://devpp-website-api.herokuapp.com/photos/Z9ht4QK9B76BCvzRA/${meetupId}`
+      )
         .then(res => res.json())
         .then(res => {
           let promises = [];
