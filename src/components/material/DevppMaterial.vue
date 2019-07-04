@@ -151,6 +151,7 @@ export default {
   methods: {
     async fetchResources(meetupId) {
       this.fetchingResources = true;
+      this.items = [];
 
       const response = await _resourcesService.fetchByMeetupId(meetupId);
       Object.keys(response.fields).forEach(field => {
