@@ -151,14 +151,16 @@ export default {
   methods: {
     async fetchResources(meetupId) {
       this.fetchingResources = true;
-      this.items = [];
+      let items = [];
 
       const response = await _resourcesService.fetchByMeetupId(meetupId);
       Object.keys(response.fields).forEach(field => {
         if (Number.isInteger(Number(field))) {
-          this.items.push(response.fields[field]);
+          items.push(response.fields[field]);
         }
       });
+
+      this.items = items;
 
       this.fetchingResources = false;
     },
