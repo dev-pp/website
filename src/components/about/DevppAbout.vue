@@ -19,14 +19,15 @@
           trabalho.
         </p>
         <p>
-          O projeto consiste em meetups gratuitos em forma de palestras, demos,
-          keynotes, workshops, bate-papos informais, grupos de estudo e etc.
-          Sempre com uma confraternização para fomentar o networking e novas
-          idéias.
+          O projeto consiste em meetups gratuitos organizados em palestras,
+          demos, keynotes, workshops, bate-papos informais, grupos de estudo e
+          etc. Sempre com uma confraternização para fomentar ainda mais o
+          networking e novas ideias.
         </p>
         <p>
-          Se você é desenvolvedor e está interessado em aprender, evoluir,
-          dividir conhecimento e ajudar a criar uma comunidade forte
+          Se você é desenvolvedor(a) e está interessado(a) em aprender conosco,
+          evoluir, dividir conhecimento ou se você tem algum interesse na área e
+          quer nos ajudar a construir uma comunidade forte na nossa cidade
           <a href="#join-us">junte-se a nós</a> e compareça aos meetups (<a
             href="#meetups"
             >veja a agenda</a
@@ -34,8 +35,9 @@
           <a href="#palestre">aplique uma palestra</a>.
         </p>
         <p>
-          Todos os participantes, organizadores, palestrantes, apoiadores e
-          envolvidos devem seguir o nosso
+          Todos os participantes, organizadores, palestrantes, apoiadores,
+          voluntários e qualquer envolvido em nossos eventos devem seguir o
+          nosso
           <a
             href="https://github.com/devppmeetup/dev-pp/blob/master/Codigo-de-conduta.md"
             target="_blank"

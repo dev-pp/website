@@ -7,11 +7,10 @@
       <div class="content-panel reveal">
         <p>
           Somos <b v-if="totalOfMembers">{{ totalOfMembers }}</b>
-          <b v-else>...</b> (e contando...) desenvolvedores, programadores,
-          engenheiros, designers, ux designers, nerds, criadores,
-          transformadores,criativos, artistas, inovadores, empreendedores.... E
-          nos reunimos periodicamente para compartilhar conhecimento, fazer
-          networking e evoluirmos a comunidade.
+          <b v-else>...</b> (e contando...) desenvolvedores, engenheiros,
+          designers, ux, geeks, hackers, criadores, transformadores, inovadores,
+          artistas, empreendedores.... E nos reunimos periodicamente para
+          compartilhar conhecimento, fazer networking e evoluirmos a comunidade.
         </p>
 
         <members-faces />

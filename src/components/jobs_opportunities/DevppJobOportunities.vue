@@ -12,11 +12,11 @@
         divulgaremos e tentaremos ajudar.
 
         <h4>
-          Tá procurando vagas abertas na área de TI em Presidente Prudente e
+          Tá em busca de um trampo massa na área de TI em Presidente Prudente e
           região?
         </h4>
         Fique ligado(a) no nosso repositório de vagas que estamos sempre
-        recebendo oportunidades para você_blank
+        recebendo oportunidades para você
 
         <p>
           <a

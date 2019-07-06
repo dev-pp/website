@@ -66,7 +66,9 @@
       <h4 style="margin: 0">Seja um parceiro</h4>
       <p style="margin: 0">
         Entre em contato conosco:
-        <a href="mailto:contato@devpp.com.br">contato@devpp.com.br</a>
+        <a href="mailto:contato@devpp.com.br?subject=Quero Ser um Parceiro"
+          >contato@devpp.com.br</a
+        >
       </p>
     </div>
   </section>

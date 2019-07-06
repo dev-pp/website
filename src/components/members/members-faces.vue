@@ -3,32 +3,35 @@
     <div class="loading" v-if="members.length == 0">
       <member-item-loading v-for="(item, index) in 5" :key="index" />
     </div>
-    <ul class="faces" v-else>
-      <li
-        v-for="(member, index) in mainMembers"
-        :key="index"
-        class="member-face"
+    <template v-else>
+      <ul class="faces">
+        <li
+          v-for="(member, index) in mainMembers"
+          :key="index"
+          class="member-face"
+        >
+          <img :src="member.photo.thumb_link" alt="" />
+        </li>
+      </ul>
+
+      <a
+        href="https://meetup.com/dev-pp/members"
+        class="small-faces"
+        target="_blank"
       >
-        <img :src="member.photo.thumb_link" alt="" />
-      </li>
-      <li>
-        <ul class="small-faces">
-          <li
-            v-for="(member, index) in secondaryMembers"
-            :key="index"
-            class="member-face-sm"
-          >
-            <img :src="member.photo.thumb_link" alt="" />
-          </li>
-          <li class="member-see-all">
-            <a href="https://meetup.com/dev-pp/members" target="_blank">
-              Veja todos
-              <arrow-right-icon class="icon button-arrow-right" />
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+        <div
+          v-for="(member, index) in secondaryMembers"
+          :key="index"
+          class="member-face-sm"
+        >
+          <img :src="member.photo.thumb_link" alt="" />
+        </div>
+        <div class="see-all-link">
+          Veja todos
+          <arrow-right-icon class="icon button-arrow-right" />
+        </div>
+      </a>
+    </template>
   </div>
 </template>
 
