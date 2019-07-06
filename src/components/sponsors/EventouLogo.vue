@@ -30,8 +30,6 @@
 <style lang="scss" scoped>
 svg {
   fill: #f1583d;
-  height: 50px;
-  padding-top: 10px;
 }
 </style>
 
