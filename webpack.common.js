@@ -47,7 +47,11 @@ const config = {
       {
         test: /\.svg$/,
         loader: "vue-svg-symbol-loader"
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       // {
       //   test: /\.js$/,
       //   loader: 'babel',
