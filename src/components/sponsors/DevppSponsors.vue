@@ -9,14 +9,7 @@
         <a href="#" @click.prevent.stop="slidePrev" class="slide-prev-btn">
           <chevron-right style="transform: rotate(180deg);" />
         </a>
-        <swiper
-          :options="swiperOption"
-          ref="mySwiper"
-          @reachEnd="swiperReachEnd"
-          @reachBeginning="swiperReachBeginning"
-          @navigationShow="swiperNavigationShow"
-          @navigationHide="swiperNavigationHide"
-        >
+        <swiper :options="swiperOption" ref="mySwiper">
           <swiper-slide>
             <a
               class="item"
@@ -137,14 +130,6 @@ export default {
     slidePrev() {
       _mySwiper.slidePrev();
       this.nextEnable = true;
-    },
-    swiperReachEnd() {
-      console.log("swiperReachEnd");
-      this.nextEnable = false;
-    },
-    swiperReachBeginning() {
-      console.log("swiperReachBeginning");
-      this.prevEnable = false;
     }
   }
 };

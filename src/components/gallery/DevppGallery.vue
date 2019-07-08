@@ -49,7 +49,7 @@
 
     <div
       v-if="initialState"
-      style="margin: 20px auto; width: 390px; text-align:center"
+      style="margin: 20px auto; margin-top: -61px; width: 390px; text-align:center"
     >
       <p style="font-size: 18px; margin-bottom: 15px">
         Por respeito aos seus dados, vamos carregar as fotos do último meetup

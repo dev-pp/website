@@ -10,28 +10,23 @@ section.members {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 55x;
+    height: 55x;
 
     li {
       list-style: none;
 
       &.member-face img {
         background: #fff;
-        width: 65px;
-        height: 65px;
         border-radius: 50%;
         border: solid 3px white;
         margin-right: -15px;
-        @media(max-width: 611px) {
-          width: 55px;
-          height: 55px;
-        }
-        @media(max-width: 537px) {
+
+        width: 35px;
+        height: 35px;
+        @media(min-width: 458px) {
           width: 45px;
           height: 45px;
-        }
-        @media(max-width: 458px) {
-          width: 35px;
-          height: 35px;
         }
       }
     }
@@ -53,12 +48,21 @@ section.members {
     }
 
     div.member-face-sm {
+      display: none;
+      @media(min-width: 336px) {
+        display: block;
+      }
+
       img {
-        width: 40px;
         border: solid 3px white;
-        height: 40px;
         border-radius: 50%;
         margin: 0 0 0 -6px;
+        width: 25px;
+        height: 25px;
+        @media(min-width: 458px) {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
 

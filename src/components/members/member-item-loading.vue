@@ -23,7 +23,7 @@ export default {
 }
 
 .linear-background {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-name: placeHolderShimmer;
@@ -39,11 +39,16 @@ export default {
 .member-loading {
   header {
     .loading-img {
-      width: 95px;
-      height: 95px;
       border: solid 5px white;
       margin-right: -20px;
       border-radius: 50%;
+
+      width: 55px;
+      height: 55px;
+      @media (min-width: 458px) {
+        width: 75px;
+        height: 75px;
+      }
     }
   }
 }

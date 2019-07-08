@@ -165,30 +165,32 @@ h4 {
   display: flex;
   align-items: center;
 
-  // if its dropdown child is not open
   position: relative;
   z-index: 1;
 
+  // if its dropdown child is not open
   &.expanded-filter-dropdown {
     z-index: 2;
   }
 
-  .dropdown-menu {
-    //position: relative;
-
-    &.bs-dropdow {
-      //position: absolute;
-    }
+  flex-direction: column;
+  align-items: flex-start;
+  @media(min-width: 620px) {
+    flex-direction: row;
+    align-items: initial;
   }
 
   > div:nth-last-child(1) {
     flex: 2;
     text-align: right;
     z-index: 1;
-    padding-top: 19px;
-  }
+    padding-top: 0;
+    margin: -10px 0 25px -12px;
+    @media(min-width: 620px) {
+      padding-top: 19px;
+      margin: initial;
+    }
 
-  .content-btn-group {
     .filter {
       a {
         text-decoration: none;
@@ -200,6 +202,8 @@ h4 {
       }
     }
   }
+
+  .content-btn-group {}
 }
 
 .container {

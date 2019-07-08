@@ -84,7 +84,12 @@ $(document).ready(function () {
     });
 
   window.sr = ScrollReveal({ reset: true });
-  sr.reveal('.reveal');
+
+  sr.reveal('.reveal', {
+    delay: 100,
+    viewFactor: 0.0,
+  });
+
   sr.reveal('.reveal-overflow', { distance: '150%' });
   sr.reveal('.reveal-distance-70px', { distance: '70px' });
   sr.reveal('.reveal-left', { origin: 'left' });
@@ -101,7 +106,6 @@ $(document).ready(function () {
     distance: '150%',
   });
 
-  sr.reveal('.sponsors .reveal-sequence', 50);
   sr.reveal('.footer .reveal-sequence', 15);
 });
 
