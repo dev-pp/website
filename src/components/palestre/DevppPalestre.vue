@@ -15,6 +15,7 @@
           <a
             class="typeform-share button btn-blue-rounded"
             href="https://felipeblini.typeform.com/to/D2eCgg"
+            @click.prevent.stop="onBtnClick"
             data-mode="popup"
             target="_blank"
             >Call4Papers
@@ -48,7 +49,12 @@
 })();
 
 export default {
-  name: "devpp-palestre"
+  name: "devpp-palestre",
+  methods: {
+    onBtnClick() {
+      return false;
+    }
+  }
 };
 </script>
 

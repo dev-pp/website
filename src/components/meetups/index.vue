@@ -41,14 +41,11 @@
       </div>
 
       <div v-if="fetching">
-        <meetups-item-loading />
+        <item-loading />
       </div>
 
       <template v-else>
-        <div
-          v-if="meetups.length === 0"
-          class="output-msg"
-        >
+        <div v-if="meetups.length === 0" class="output-msg">
           😥 Não tem eventos {{ currentFilter.name }}
         </div>
 
@@ -58,17 +55,21 @@
             :key="i"
             class="content-panel meetup-panel reveal"
           >
-            <div class="data">
-              <div class="data-info">
-                <span class="day">{{ meetup.day }}</span>
-                <span class="month">{{ meetup.short_month }}</span>
+            <div class="meetup-header">
+              <div class="data">
+                <div class="data-info">
+                  <span class="day">{{ meetup.day }}</span>
+                  <span class="month">{{ meetup.short_month }}</span>
+                </div>
+              </div>
+              <div class="title">
+                <div class="small">{{ meetup.long_time }}</div>
+                <a class="title" :href="meetup.link" target="_blank">
+                  <h4>{{ meetup.name }}</h4>
+                </a>
               </div>
             </div>
             <div class="info">
-              <div class="small">{{ meetup.long_time }}</div>
-              <a class="title" :href="meetup.link" target="_blank">
-                <h4>{{ meetup.name }}</h4>
-              </a>
               <div v-html="meetup.description"></div>
               <div class="place" v-if="meetup.venue">
                 <div>
@@ -124,9 +125,9 @@
 </template>
 
 <script>
-import RoomIcon from "./meetups--icons.svg?icon-room";
+import RoomIcon from "./icons.svg?icon-room";
 import meetupApi from "../../apis/meetup.api";
-import MeetupsItemLoading from "./meetups-iItem-loading.vue";
+import ItemLoading from "./loading.vue";
 import * as moment from "moment";
 
 const _pageSize = 2;
@@ -135,7 +136,7 @@ moment.locale("pt-br");
 
 const _normalizeEvent = x => {
   return Object.assign(x, {
-    long_time: moment(x.time).format("dddd, D [de] MMMM [de] YYYY [às] H:mm"),
+    long_time: moment(x.time).format("dddd, D/M/YYYY, H:mm"),
     day: moment(x.time).format("D"),
     short_month: moment.localeData().monthsShort(moment(x.time)),
     upcomming: new Date(x.time) > new Date(),
@@ -147,7 +148,7 @@ export default {
   name: "devpp-meetups",
   components: {
     RoomIcon,
-    MeetupsItemLoading
+    ItemLoading
   },
   data() {
     return {
@@ -239,7 +240,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./meetups--icons.scss";
-@import "./meetups--style.scss";
+@import "./style.scss";
+@import "./icons.scss";
 </style>
 

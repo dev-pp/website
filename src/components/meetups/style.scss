@@ -1,32 +1,39 @@
 .meetup-panel {
-  display: flex;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 
-  .data {
-    margin-right: 10px;
+  .meetup-header {
+    display: flex;
 
-    .data-info {
-      padding: 5px 15px;
-      border-radius: 6px;
-      background-color: #F6F7F8;
-      border: solid 1px #DEE1E3;
-      display: inline-block;
-      text-align: center;
-      font-weight: 700;
+    .data {
+      margin-right: 10px;
 
-      .day {
-        color: #E81035;
-        font-size: 20px;
-        display: block;
+      .data-info {
+        padding: 5px 15px;
+        border-radius: 6px;
+        background-color: #F6F7F8;
+        border: solid 1px #DEE1E3;
+        display: inline-block;
         text-align: center;
-        margin-bottom: -12px;
-      }
+        font-weight: 700;
 
-      .month {
-        text-transform: uppercase;
-        font-size: 13px;
+        .day {
+          color: #E81035;
+          font-size: 20px;
+          display: block;
+          text-align: center;
+          margin-bottom: -12px;
+        }
+
+        .month {
+          text-transform: uppercase;
+          font-size: 13px;
+        }
       }
     }
+
+    .title {}
   }
 
   .small {
