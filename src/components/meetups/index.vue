@@ -70,7 +70,12 @@
               </div>
             </div>
             <div class="info">
-              <div v-html="meetup.description"></div>
+              <div
+                class="meetup-description collapsed"
+                v-html="meetup.description"
+                :ref="`desc-${meetup.id}`"
+                @click="expandDesc(meetup.id)"
+              ></div>
               <div class="place" v-if="meetup.venue">
                 <div>
                   🚩
@@ -188,6 +193,9 @@ export default {
     this.fetching = false;
   },
   methods: {
+    expandDesc(id) {
+      this.$refs[`desc-${id}`][0].classList.remove("collapsed");
+    },
     async fetchMore() {
       this.fetchingMore = true;
 

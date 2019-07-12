@@ -32,8 +32,6 @@
         }
       }
     }
-
-    .title {}
   }
 
   .small {
@@ -43,6 +41,33 @@
 
   .info {
     width: 100%;
+    overflow: hidden;
+
+    .meetup-description {
+      overflow-y: hidden;
+      margin-bottom: 30px;
+
+      &.collapsed {
+        position: relative;
+        margin-bottom: 50px;
+        max-height: 385px;
+
+        &:after {
+          content: "➕ ler mais";
+          color: black;
+          font-size: 23px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          height: 171px;
+          width: 100%;
+          background: linear-gradient(180deg, transparent, white);
+          position: absolute;
+          bottom: 0;
+          cursor: pointer;
+        }
+      }
+    }
 
     .place {
       display: flex;
