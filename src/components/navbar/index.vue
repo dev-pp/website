@@ -45,5 +45,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./navbar--style.scss";
+@import "./style.scss";
 </style>

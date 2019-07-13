@@ -101,7 +101,7 @@
                 ></iframe>
               </div>
               <a
-                :disabled="!meetup.upcomming"
+                v-if="meetup.upcomming"
                 class="btn btn-md btn-custom pull-right"
                 target="_blank"
                 href="https://www.meetup.com/dev-pp/events/249677522/"

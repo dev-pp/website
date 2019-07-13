@@ -47,11 +47,8 @@
       </div>
     </div>
 
-    <div
-      v-if="initialState"
-      style="margin: 40px auto;  width: 390px; text-align:center"
-    >
-      <p style="font-size: 18px; margin-bottom: 15px">
+    <div v-if="initialState" class="initial-state">
+      <p>
         Por respeito aos seus dados, vamos carregar as fotos do último meetup
         disponível apenas quando você clicar no botão abaixo
       </p>
@@ -239,6 +236,15 @@ export default {
 
 <style lang="scss" scoped>
 section.gallery {
+  .initial-state {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 30px;
+    max-width: 511px;
+    margin: 0 auto;
+  }
+
   .preview-img-list {
     display: flex;
     flex-wrap: wrap;

@@ -15,7 +15,6 @@
           <a
             class="typeform-share button btn-blue-rounded"
             href="https://felipeblini.typeform.com/to/D2eCgg"
-            @click.prevent.stop="onBtnClick"
             data-mode="popup"
             target="_blank"
             >Call4Papers
@@ -49,71 +48,11 @@
 })();
 
 export default {
-  name: "devpp-palestre",
-  methods: {
-    onBtnClick() {
-      return false;
-    }
-  }
+  name: "devpp-palestre"
 };
 </script>
 
 <style lang="scss" scoped>
-@charset "UTF-8";
-
-/* =========================================
- =========================================
- ======== MATERIALIZE PARALLAX ===========
- =========================================
- ========================================= */
-
-@import "~materialize-css/sass/components/color";
-@import "~materialize-css/sass/components/variables";
-@import "~materialize-css/sass/components/global";
-@import "~materialize-css/sass/components/typography";
-
-$palestre-width: 218px;
-
-section.palestre {
-  margin-top: 30px;
-  text-align: center;
-
-  .parallax-container {
-    height: $palestre-width;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-
-    .parallax {
-      img {
-        width: 150%;
-        @media (min-width: 555px) {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .palestre-content-wrapper {
-    height: $palestre-width;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-
-    .palestre-content {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-      padding: 0 20px;
-
-      h3 {
-        text-shadow: 3px 3px 3px #000;
-        margin: 0 0 20px;
-      }
-    }
-  }
-}
+@import "./parallax.scss";
 </style>
 

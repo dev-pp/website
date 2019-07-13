@@ -20,7 +20,7 @@
 <script>
 import DevppHeader from "./components/header/DevppHeader.vue";
 import DevppIntro from "./components/intro/DevppIntro.vue";
-import DevppNavbar from "./components/navbar/DevppNavbar.vue";
+import DevppNavbar from "./components/navbar/index.vue";
 import DevppAbout from "./components/about/DevppAbout.vue";
 import DevppMembers from "./components/members/DevppMembers.vue";
 import DevppJobs from "./components/jobs_opportunities/DevppJobOportunities.vue";
@@ -28,7 +28,7 @@ import DevppJoinUs from "./components/join_us/DevppJoinUs.vue";
 import DevppMeetups from "./components/meetups/index.vue";
 import DevppGallery from "./components/gallery/index.vue";
 import DevppMaterial from "./components/material/DevppMaterial.vue";
-import DevppPalestre from "./components/palestre/DevppPalestre.vue";
+import DevppPalestre from "./components/palestre/index.vue";
 import DevppWeekly from "./components/weekly/DevppWeekly.vue";
 import DevppSponsors from "./components/sponsors/DevppSponsors.vue";
 import DevppFooter from "./components/footer/DevppFooter.vue";
