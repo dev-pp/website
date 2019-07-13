@@ -49,7 +49,7 @@
 
     <div
       v-if="initialState"
-      style="margin: 20px auto; margin-top: -61px; width: 390px; text-align:center"
+      style="margin: 40px auto;  width: 390px; text-align:center"
     >
       <p style="font-size: 18px; margin-bottom: 15px">
         Por respeito aos seus dados, vamos carregar as fotos do último meetup
@@ -62,7 +62,7 @@
 
     <template v-else>
       <div class="container output-msg" v-if="fetchingPhotos">
-        <gallery-items-loading :loadingStep="loadingStep" />
+        <gallery-loading :loadingStep="loadingStep" />
       </div>
       <template v-else>
         <div class="container output-msg" v-if="items.length === 0">
@@ -89,7 +89,7 @@ import Vue from "vue";
 import PhotoSwipe from "vue-simple-photoswipe/dist/vue-simple-photoswipe";
 import meetupApi from "../../apis/meetup.api";
 import * as moment from "moment";
-import GalleryItemsLoading from "./gallery-iItems-loading.vue";
+import GalleryLoading from "./loading.vue";
 
 Vue.use(PhotoSwipe);
 
@@ -111,7 +111,7 @@ export default {
     };
   },
   components: {
-    GalleryItemsLoading
+    GalleryLoading
   },
   methods: {
     async init() {

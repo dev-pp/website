@@ -121,10 +121,8 @@ h4 {
 }
 
 .btn {
-  &.disabled {
-    opacity: .3 !important;
-    background: #efefef !important;
-    pointer-events: initial !important;
+  &[disabled] {
+    pointer-events: none;
   }
 
   &.btn-custom {
@@ -187,6 +185,9 @@ h4 {
     padding-top: 0;
     margin: -10px 0 25px -12px;
     @media(min-width: 620px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       padding-top: 19px;
       margin: initial;
     }
@@ -202,8 +203,6 @@ h4 {
       }
     }
   }
-
-  .content-btn-group {}
 }
 
 .container {

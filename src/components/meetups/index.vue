@@ -41,7 +41,7 @@
       </div>
 
       <div v-if="fetching">
-        <item-loading />
+        <meetups-loading />
       </div>
 
       <template v-else>
@@ -132,7 +132,7 @@
 <script>
 import RoomIcon from "./icons.svg?icon-room";
 import meetupApi from "../../apis/meetup.api";
-import ItemLoading from "./loading.vue";
+import MeetupsLoading from "./loading.vue";
 import * as moment from "moment";
 
 const _pageSize = 2;
@@ -153,7 +153,7 @@ export default {
   name: "devpp-meetups",
   components: {
     RoomIcon,
-    ItemLoading
+    MeetupsLoading
   },
   data() {
     return {
