@@ -28,7 +28,7 @@
             <li><a href="#material">Material</a></li>
             <li><a href="#palestre">Palestre</a></li>
             <li><a href="#sponsors">Parceiros</a></li>
-            <li><a href="#footer">Contato</a></li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
           <a
             class="btn btn-md btn-custom pull-right"
@@ -44,7 +44,21 @@
 
 <script>
 export default {
-  name: "devpp-navbar"
+  name: "devpp-navbar",
+  mounted() {
+    // to solve anchor navigation issues on mobile
+    document.querySelectorAll(".navbar-nav > li > a").forEach(el => {
+      el.addEventListener(
+        "touchstart",
+        function(event) {
+          event.preventDefault();
+          location.href = `/${event.target.getAttribute("href")}`;
+          return false;
+        },
+        false
+      );
+    });
+  }
 };
 </script>
 
