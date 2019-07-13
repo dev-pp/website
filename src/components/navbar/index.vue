@@ -52,8 +52,10 @@ export default {
         "touchstart",
         function(event) {
           event.preventDefault();
-          location.href = `/${event.target.getAttribute("href")}`;
-          return false;
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
         },
         false
       );

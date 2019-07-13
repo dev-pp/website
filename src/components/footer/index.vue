@@ -9,9 +9,9 @@
           >
         </p>
         <p>
-          <strong class="title address">ENDEREÇO</strong><br /><b
-            >For Space Coworking</b
-          ><br />
+          <strong class="title address" style="margin-top: 0">ENDEREÇO</strong>
+          <br />
+          <b>For Space Coworking</b><br />
           Rua Nicolau Cacciatori, 489<br />
           Presidente Prudente- SP
         </p>
@@ -26,7 +26,7 @@
       </div>
       <a id="contact" class="anchor"></a>
       <div class="reveal-sequence">
-        <strong class="title contact">CONTATO</strong>
+        <strong class="title contact" style="margin-top: 0">CONTATO</strong>
 
         <br />contato@devpp.com.br
         <div class="social-icons">
