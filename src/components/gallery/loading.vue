@@ -4,7 +4,7 @@
       <div></div>
       <div></div>
     </div>
-    <div style="text-align: left">
+    <div class="loading-text">
       <b>Carregando fotos, seja paciente...</b>
       <div>
         <span v-if="loadingStep === 1">
@@ -32,6 +32,18 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  @media (min-width: 620px) {
+    flex-direction: row;
+  }
+
+  .loading-text {
+    text-align: center;
+
+    @media (min-width: 620px) {
+      text-align: left;
+    }
+  }
 
   .lds-ripple {
     display: inline-block;
