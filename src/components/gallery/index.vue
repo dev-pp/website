@@ -243,6 +243,11 @@ section.gallery {
     padding: 30px;
     max-width: 511px;
     margin: 0 auto;
+    margin-top: -60px;
+
+    @media (min-width: 620px) {
+      margin-top: -27px;
+    }
   }
 
   .preview-img-list {

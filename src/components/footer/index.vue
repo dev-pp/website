@@ -1,7 +1,7 @@
 <template>
   <section
     class="footer"
-    id="contact"
+    id="footer"
   >
     <div class="container">
       <div class="reveal-sequence">
@@ -114,11 +114,11 @@
 </template>
 
 <script>
-import FacebookIcon from "./footer--s-icons.svg?icon-facebook";
-import YoutubeIcon from "./footer--s-icons.svg?icon-youtube";
-import InstagramIcon from "./footer--s-icons.svg?icon-instagram";
-import MeetupIcon from "./footer--s-icons.svg?icon-meetup";
-import GithubIcon from "./footer--s-icons.svg?icon-github";
+import FacebookIcon from "./social-icons.svg?icon-facebook";
+import YoutubeIcon from "./social-icons.svg?icon-youtube";
+import InstagramIcon from "./social-icons.svg?icon-instagram";
+import MeetupIcon from "./social-icons.svg?icon-meetup";
+import GithubIcon from "./social-icons.svg?icon-github";
 
 export default {
   name: "devpp-footer",
@@ -133,6 +133,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./footer--s-icons.scss";
-@import "./footer--style.scss";
+@import "./social-icons.scss";
+@import "./style.scss";
 </style>

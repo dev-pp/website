@@ -31,7 +31,7 @@ import DevppMaterial from "./components/material/DevppMaterial.vue";
 import DevppPalestre from "./components/palestre/index.vue";
 import DevppWeekly from "./components/weekly/DevppWeekly.vue";
 import DevppSponsors from "./components/sponsors/DevppSponsors.vue";
-import DevppFooter from "./components/footer/DevppFooter.vue";
+import DevppFooter from "./components/footer/index.vue";
 
 export default {
   name: "app",

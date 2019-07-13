@@ -14,7 +14,11 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div class="collapse navbar-collapse custom-navbar-nav" id="myNavbar">
+        <div
+          class="collapse navbar-collapse custom-navbar-nav"
+          id="myNavbar"
+          style="position: relative; z-index: 999px"
+        >
           <ul class="nav navbar-nav">
             <li><a href="#about">Sobre</a></li>
             <li><a href="#members">Membros</a></li>
@@ -24,7 +28,7 @@
             <li><a href="#material">Material</a></li>
             <li><a href="#palestre">Palestre</a></li>
             <li><a href="#sponsors">Parceiros</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#footer">Contato</a></li>
           </ul>
           <a
             class="btn btn-md btn-custom pull-right"
