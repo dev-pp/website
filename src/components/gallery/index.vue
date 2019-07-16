@@ -73,7 +73,6 @@
             v-for="(item, index) in items"
             :src="item.src"
             @click="$photoswipe.open(index, items, { shareEl: true })"
-            :title="item.src"
           />
         </div>
       </template>
@@ -127,11 +126,12 @@ export default {
       let fetchedMeetupPhotos = 0;
 
       pastMeetups.forEach(async meetup => {
-        let photos = await fetch(
-          `https://devpp-website-api.herokuapp.com/photos/Z9ht4QK9B76BCvzRA/${
-            meetup.id
-          }`
-        )
+        const url = `https://devpp-website-api.herokuapp.com/photos/1yhpM4uUCwvbnk35A/${
+          meetup.id
+        }`;
+
+        console.log({ url });
+        let photos = await fetch(url)
           .then(photos => photos.json())
           .then(photos => photos)
           .catch(e => {
