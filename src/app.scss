@@ -55,11 +55,11 @@ body {
 a.anchor {
   display: block;
   position: relative;
-  top: -2000px;
+  top: -60px;
   visibility: hidden;
-  @media(min-width: 620px) {
-    top: -60px;
-  }
+  // @media(min-width: 620px) {
+  //   top: -60px;
+  // }
 }
 
 a.btn-blue-rounded {
