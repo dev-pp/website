@@ -89,6 +89,10 @@ import GalleryLoading from "./loading.vue";
 
 Vue.use(PhotoSwipe);
 
+// const _photoaApiBaseUrl = "http://localhost:3000";
+const _photoaApiBaseUrl = "https://devpp-website-api.herokuapp.com";
+const _googlePhotosAlbumId = "1yhpM4uUCwvbnk35A";
+
 export default {
   name: "devpp-gallery",
   data() {
@@ -126,11 +130,10 @@ export default {
       let fetchedMeetupPhotos = 0;
 
       pastMeetups.forEach(async meetup => {
-        const url = `https://devpp-website-api.herokuapp.com/photos/1yhpM4uUCwvbnk35A/${
+        const url = `${_photoaApiBaseUrl}/photos/${_googlePhotosAlbumId}/${
           meetup.id
         }`;
 
-        console.log({ url });
         let photos = await fetch(url)
           .then(photos => photos.json())
           .then(photos => photos)
@@ -165,9 +168,7 @@ export default {
     fetchPhotos(meetupId) {
       this.fetchingPhotos = true;
 
-      fetch(
-        `https://devpp-website-api.herokuapp.com/photos/Z9ht4QK9B76BCvzRA/${meetupId}`
-      )
+      fetch(`${_photoaApiBaseUrl}/photos/${_googlePhotosAlbumId}/${meetupId}`)
         .then(res => res.json())
         .then(res => {
           let promises = [];
