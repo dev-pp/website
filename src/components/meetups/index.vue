@@ -94,9 +94,7 @@
                   frameborder="0"
                   style="border:0"
                   :src="
-                    `https://maps.google.com/maps?q=${meetup.venue.lat},${
-                      meetup.venue.lon
-                    }&hl=es;z=14&amp;output=embed`
+                    `https://maps.google.com/maps?q=${meetup.venue.lat},${meetup.venue.lon}&hl=es;z=14&amp;output=embed`
                   "
                 ></iframe>
               </div>
@@ -104,7 +102,7 @@
                 v-if="meetup.upcomming"
                 class="btn btn-md btn-custom pull-right"
                 target="_blank"
-                href="https://www.meetup.com/dev-pp/events/249677522/"
+                :href="meetup.link"
               >
                 RSVP
               </a>
