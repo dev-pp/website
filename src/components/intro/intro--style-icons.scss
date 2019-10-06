@@ -1,5 +1,15 @@
 section.intro {
   .arrow {
+    .icon {
+      display: inline-block;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: #fff;
+
+      width: 66px;
+      height: 66px;
+    }
+
     bottom: 71px;
     left: 0;
     line-height: 1px;
@@ -7,17 +17,5 @@ section.intro {
     position: absolute;
     width: 100%;
     z-index: 3;
-
-    .icon {
-      display: inline-block;
-      stroke-width: 0;
-      stroke: currentColor;
-      fill: #fff;
-
-      &.icon-arrow-down {
-        width: 66px;
-        height: 66px;
-      }
-    }
   }
 }

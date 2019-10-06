@@ -1,0 +1,106 @@
+@mixin event-buttons {
+  .buttons {
+    // border: solid;
+    @media (min-width: 500px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 1088px) {
+      flex-direction: column;
+      margin-left: 20px;
+      max-width: 400px;
+    }
+    @media (min-width: 1240px) {
+      margin-left: 154px;
+    }
+
+    .apoio {
+      margin-bottom: 20px;
+
+      .lista {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        > div.logo {
+          height: 40px;
+          width: 80px;
+          border: solid 5px;
+          @media(min-width: 950px) {
+            height: 40px;
+            width: 120px;
+            border: solid 7px;
+            margin: 10px;
+          }
+
+          background: #fff;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          &.foregon {
+            background-image: url('./evento-devpp-the-conference/apoio/foregon.png');
+          }
+
+          &.forspace {
+            background-image: url('./evento-devpp-the-conference/apoio/forspace-partner.png');
+          }
+
+          &.cobmais {
+            background-image: url('./evento-devpp-the-conference/apoio/cobmais-novo-site.png');
+          }
+
+          &.inova-prudente {
+            background-image: url('./evento-devpp-the-conference/apoio/inova-prudente.png');
+          }
+
+          &.sicoob {
+            background-image: url('./evento-devpp-the-conference/apoio/sicoob.png');
+            background-color: transparent;
+            border: 0;
+
+          }
+
+          &.sw {
+            background-image: url('./evento-devpp-the-conference/apoio/sw.png');
+          }
+        }
+      }
+    }
+
+    .btn-inscrevase {
+      width: 100%;
+
+      a {
+        color: white;
+
+        &.btn {
+          width: 233px;
+          @media(min-width: 1088px) {
+            width: 350px;
+          }
+
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0;
+          margin-right: 20px;
+          background: #1FAA00;
+          margin: 0 auto;
+          -webkit-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+          -moz-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+          box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+
+          &:hover {
+            background: #64dd17;
+          }
+
+        }
+      }
+    }
+  }
+}

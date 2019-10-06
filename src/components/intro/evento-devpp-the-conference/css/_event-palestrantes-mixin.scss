@@ -1,0 +1,176 @@
+@mixin event-palestrantes {
+  .palestrantes {
+    text-align: left;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.87);
+    @media(min-width: 760px) {
+      display: flex;
+    }
+    @media (min-width: 1088px) {
+      display: block;
+    }
+
+    .foto {
+      border: 4px solid #1FAA00;
+      -webkit-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+      -moz-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+      box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+
+    // > div {
+    //   border: solid;
+    // }
+
+    .palestrante-destaque {
+      text-align: center;
+      @media (min-width: 1088px) {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 21px;
+        margin-left: 15px;
+      }
+
+      .foto {
+        margin: 0 auto;
+
+        width: 94px;
+        height: 94px;
+        @media (min-width: 758px) {
+          width: 130px;
+          height: 130px;
+        }
+        @media (min-width: 1088px) {
+          width: 150px;
+          height: 150px;
+        }
+        background-image: url("./evento-devpp-the-conference/palestrantes/pokemaobr.jpg");
+      }
+
+      .info {
+        @media (min-width: 1088px) {
+          margin-left: 19px;
+        }
+
+        h1 {
+          font-size: 20px;
+          margin: 10px 0;
+          @media (min-width: 1088px) {
+            font-size: 28px;
+            margin-bottom: 0;
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .demais-palestrantes {
+      text-align: center;
+
+      h6 {
+
+        margin-top: 9px;
+        @media (min-width: 1088px) {
+          text-align: left;
+          margin: 20px 0 10px 10px;
+        }
+      }
+
+      a.ver-agenda {
+        color: white;
+        border: solid 1px;
+        padding: 10px 15px;
+        min-width: 134px;
+
+        &.out {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        &.in {
+          height: 50px;
+          margin-top: -10px;
+          display: none;
+        }
+        @media (min-width: 1088px) {
+          &.out {
+            display: none;
+          }
+
+          &.in {
+            display: block;
+          }
+        }
+
+        &:hover {
+          -webkit-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+          -moz-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+          box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+
+        }
+      }
+
+      .lista {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media(min-width: 482px) {
+          flex-wrap: nowrap;
+        }
+
+        margin-top: 10px;
+
+        .palestrante {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @media (min-width: 1088px) {
+            margin: 0 20px 0 0;
+          }
+
+          .foto {
+            width: 54px;
+            height: 54px;
+            @media (min-width: 758px) {
+              width: 84px;
+              height: 84px;
+            }
+            @media (min-width: 1088px) {
+              width: 100px;
+              height: 100px;
+            }
+
+            &.p1 {
+              background-image: url('./evento-devpp-the-conference/palestrantes/marcela-maciel.jpg');
+            }
+
+            &.p2 {
+              background-image: url('./evento-devpp-the-conference/palestrantes/leo.jpg');
+            }
+
+            &.p3 {
+              background-image: url('./evento-devpp-the-conference/palestrantes/santoro.jpg');
+            }
+          }
+
+          .nome {
+            font-size: 12px;
+            margin-top: 2px;
+            text-align: center;
+            line-height: 15px;
+            @media (min-width: 1088px) {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
