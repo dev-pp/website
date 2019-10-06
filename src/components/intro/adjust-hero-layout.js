@@ -4,8 +4,8 @@ const adjustHeroContentOpacity = function() {
 };
 
 const adjustHeroContentSize = function() {
-  document.querySelectorAll(".intro .hero-content")[0].style.width =
-    window.innerWidth - 110 + "px";
+  // document.querySelectorAll(".intro .hero-content")[0].style.width =
+  //   window.innerWidth - 110 + "px";
 };
 
 module.exports = {
