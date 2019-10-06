@@ -60,9 +60,19 @@
                         <div class="foto p3"></div>
                         <div class="nome">Marcelo Santoro</div>
                       </div>
-                      <a class="ver-agenda in" href="#">VER AGENDA</a>
+                      <a
+                        class="ver-agenda in"
+                        href="#"
+                        @click.prevent="toggleSchedule"
+                        >VER AGENDA</a
+                      >
                     </div>
-                    <a class="ver-agenda out" href="#">VER AGENDA</a>
+                    <a
+                      class="ver-agenda out"
+                      href="#"
+                      @click.prevent="toggleSchedule"
+                      >VER AGENDA</a
+                    >
                   </div>
                 </div>
 
@@ -115,16 +125,112 @@
         </a>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal-agenda" v-show="schedule">
+      <header>
+        <span>AGENDA</span><a href="#" @click="toggleSchedule">X</a>
+      </header>
+      <article>
+        <div class="schedule">
+          <div class="line">
+            <div class="column">🕝 18h30</div>
+            <div class="column"></div>
+            <div class="column">
+              Check-in Cafeínado ☕☕🧁<br /><small
+                >Recepção do pessoal com uma mesa de comes e bêbes e muito
+                café</small
+              >
+            </div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 19h00</div>
+            <div class="column"></div>
+            <div class="column">
+              🎙 Stand-up: Arquitetando seus sistemas de forma (IN)coerente<br />
+              <small>Rodrigo PokemaoBR</small>
+            </div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 19h15</div>
+            <div class="column"></div>
+            <div class="column">Abertura Oficial</div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 19h25</div>
+            <div class="column"></div>
+            <div class="column">
+              🎤⚡ Lightining - Prepare-se para a LGPD<br />
+              <small>Marcela Maciel</small>
+            </div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 19h40</div>
+            <div class="column"></div>
+            <div class="column">
+              🎤 Porquê você deveria estar usando GraphQL?<br />
+              <small>Leonardo Dias</small>
+            </div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 20h10</div>
+            <div class="column"></div>
+            <div class="column">
+              ⚡ Lightining - Monitoramento de serviços com Zabbix + Grafana +
+              Python<br />
+              <small>Marcelo Santoro</small>
+            </div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 20h30</div>
+            <div class="column"></div>
+            <div class="column">
+              🎤 Desenvolvendo chatbots mesmo sem saber codar!<br />
+              <small>Rodrigo PokemaoBR</small>
+            </div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 21h05</div>
+            <div class="column"></div>
+            <div class="column">Sorteios de Brindes com Node.js🎁</div>
+          </div>
+          <div class="line">
+            <div class="column">🕝 21h10</div>
+            <div class="column"></div>
+            <div class="column">
+              Happy Hour! 🎉<br />
+              <small>Food Truck 🍔 - Choop 🍻 - Networking 💗</small>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </section>
 </template>
 
 <script>
+import { EventBus } from "../../event-bus.js";
+
 import ArrowDownIcon from "./intro--icons.svg?icon-keyboard_arrow_down";
 
 export default {
   name: "devpp-intro",
   components: {
     ArrowDownIcon
+  },
+  data() {
+    return {
+      schedule: false
+    };
+  },
+  methods: {
+    toggleSchedule() {
+      this.schedule = !this.schedule;
+      EventBus.$emit("toggleSchedule", this.schedule);
+
+      if (this.schedule) document.body.style.overflow = "hidden";
+      else document.body.style.overflow = "initial";
+    }
   }
 };
 </script>
@@ -132,6 +238,123 @@ export default {
 <style lang="scss" scoped>
 @import "./intro--style.scss";
 @import "./intro--style-icons.scss";
+
+.modal-agenda {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  height: 95%;
+  z-index: 9;
+  transform: translate(-50%, -50%);
+  background: #fff;
+
+  header {
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    background: #e81035;
+    padding: 8px;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+
+    span {
+      flex: auto;
+      display: flex;
+      text-align: left;
+      align-items: center;
+      padding-left: 19px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      width: 44px;
+      font-size: 30px;
+
+      &:hover,
+      &:active,
+      &:visited {
+        color: #fff;
+      }
+    }
+  }
+
+  article {
+    overflow-y: scroll;
+    padding: 19px;
+    height: calc(100% - 60px);
+
+    .schedule {
+      background: #fafafa;
+      display: flex;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 800px;
+      flex-direction: column;
+      border: solid 1px #ccc;
+      border-radius: 7px;
+      margin: 20px auto;
+      padding: 20px 0;
+
+      .line {
+        display: flex;
+
+        .column {
+          padding: 13px;
+
+          &:first-child() {
+            justify-content: flex-end;
+            margin-right: 7px;
+
+            display: flex;
+            align-items: center;
+            min-width: 90px;
+            max-width: 90px;
+
+            @media (min-width: 580px) {
+              min-width: 126px;
+              max-width: 126px;
+            }
+          }
+
+          &:nth-child(2) {
+            min-width: 35px;
+            max-width: 35px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 11px 0 0 #fafafa,
+              inset 23px 0px 0px rgba(0, 0, 0, 0.1), inset 22px 0vh 0px #fafafa;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: #267ddd;
+              border-radius: 50%;
+            }
+          }
+
+          &:last-child() {
+            font-size: medium;
+            margin-left: 10px;
+
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
 </style>
 
 

@@ -42,13 +42,12 @@ section.intro {
     }
 
     .hero-content {
+      @media (max-width: 1700px) {
+        margin-top: -138px;
+      }
       position: relative;
       z-index: 7;
       color: #fff;
-      margin-top: 30px;
-      @media(min-width: 720px) {
-        margin-top: initial;
-      }
 
       h1 {
         font-style: normal;
@@ -160,10 +159,10 @@ section.intro {
     }
 
     .arrow {
-      display: none;
-      @media(min-width: 450px) {
-        display: block;
-      }
+      // display: none;
+      // @media(min-width: 450px) {
+      //   display: block;
+      // }
       bottom: 2px;
       left: 0;
       line-height: 1px;

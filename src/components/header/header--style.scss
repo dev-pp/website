@@ -6,6 +6,7 @@ section.header {
   position: absolute;
   top: 0;
   z-index: 4;
+  display: flex;
 
   -webkit-transition: all 300ms ease-in-out 0s;
   -o-transition: all 300ms ease-in-out 0s;
@@ -41,11 +42,13 @@ section.header {
     .btn {
       width: 150px;
       font-size: 13px;
+      display: none;
     }
   }
   @media(max-width: 470px) {
     .logo {
-      display: none;
+      // display: none;
+      margin: 0 auto;
     }
 
     .btn {
