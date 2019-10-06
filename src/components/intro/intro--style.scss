@@ -22,8 +22,6 @@
 section.intro {
   display: table;
   width: 100%;
-  -webkit-perspective: 1px;
-  perspective: 1px;
 
   .content-box {
     display: table-cell;
@@ -42,10 +40,8 @@ section.intro {
     }
 
     .hero-content {
-      @media (max-width: 1700px) {
-        margin-top: -138px;
-      }
       position: relative;
+      top: -40;
       z-index: 7;
       color: #fff;
 
@@ -80,7 +76,7 @@ section.intro {
           max-width: 1134px;
           margin: 14px auto !important;
           display: none;
-          @media(min-width: 833px) {
+          @media(min-width: 550px) {
             display: block;
           }
 

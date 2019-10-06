@@ -5,6 +5,9 @@
     @media(min-width: 760px) {
       display: flex;
     }
+    @media(min-width: 991px) {
+      justify-content: center;
+    }
     @media (min-width: 1088px) {
       display: block;
     }
@@ -18,10 +21,6 @@
       background-repeat: no-repeat;
       border-radius: 50%;
     }
-
-    // > div {
-    //   border: solid;
-    // }
 
     .palestrante-destaque {
       text-align: center;
@@ -55,8 +54,9 @@
         }
 
         h1 {
-          font-size: 20px;
-          margin: 10px 0;
+
+          font-size: 30px;
+          margin: 10px 0 15px;
           @media (min-width: 1088px) {
             font-size: 28px;
             margin-bottom: 0;
@@ -64,7 +64,10 @@
         }
 
         span {
-          display: block;
+          @media(min-width: 600px) {
+            display: block;
+          }
+          display: none;
           font-size: 14px;
         }
       }
@@ -74,45 +77,10 @@
       text-align: center;
 
       h6 {
-
         margin-top: 9px;
         @media (min-width: 1088px) {
           text-align: left;
           margin: 20px 0 10px 10px;
-        }
-      }
-
-      a.ver-agenda {
-        color: white;
-        border: solid 1px;
-        padding: 10px 15px;
-        min-width: 134px;
-
-        &.out {
-          display: inline-block;
-          margin-bottom: 10px;
-        }
-
-        &.in {
-          height: 50px;
-          margin-top: -10px;
-          display: none;
-        }
-        @media (min-width: 1088px) {
-          &.out {
-            display: none;
-          }
-
-          &.in {
-            display: block;
-          }
-        }
-
-        &:hover {
-          -webkit-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
-          -moz-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
-          box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
-
         }
       }
 
@@ -121,6 +89,9 @@
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
+        @media (min-width: 1088px) {
+          justify-content: start;
+        }
         @media(min-width: 482px) {
           flex-wrap: nowrap;
         }

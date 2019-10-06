@@ -1,4 +1,57 @@
 @mixin event-buttons {
+  .buttons-sm {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    @media(min-width: 1088px) {
+      display: none;
+    }
+  }
+
+  .buttons-lg {
+    display: none;
+    @media(min-width: 1088px) {
+      display: flex;
+    }
+  }
+
+  .buttons-lg,
+  .buttons-sm {
+    a.ver-agenda {
+      color: white;
+      border: solid 1px;
+      padding: 10px 15px;
+      min-width: 134px;
+
+      display: inline-block;
+      margin-bottom: 10px;
+
+      &:hover {
+        -webkit-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+        -moz-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+        box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
+
+      }
+    }
+
+    .inscrevase {
+      color: white;
+      padding: 10px 15px;
+      min-width: 160px;
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-left: 8px;
+      background: #1FAA00;
+      border: solid 1px;
+      border-color: #1FAA00;
+
+      &:hover {
+        background: #64dd17;
+        border-color: #64dd17;
+      }
+    }
+  }
+
   .buttons {
     // border: solid;
     @media (min-width: 500px) {
@@ -29,7 +82,7 @@
           border: solid 5px;
           height: 30px;
           width: 64px;
-          @media(min-width: 750px) {
+          @media(min-width: 650px) {
             height: 40px;
             width: 80px;
           }
@@ -75,29 +128,29 @@
       }
     }
 
-    .btn-inscrevase {
+    .btn-inscrevase-lg {
+      display: none;
+      @media(min-width: 1088px) {
+        display: block;
+      }
       width: 100%;
 
       a {
         color: white;
 
         &.btn {
-          width: 233px;
+          display: none;
           @media(min-width: 1088px) {
-            width: 350px;
+            display: block;
           }
 
-          height: 60px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 0;
-          margin-right: 20px;
+          color: white;
+          padding: 10px 15px;
+          min-width: 160px;
+          display: inline-block;
+          margin-bottom: 10px;
+          margin-left: 8px;
           background: #1FAA00;
-          margin: 0 auto;
-          -webkit-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
-          -moz-box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
-          box-shadow: 0 0 23px -4px rgba(31,170,0,0.7);
 
           &:hover {
             background: #64dd17;

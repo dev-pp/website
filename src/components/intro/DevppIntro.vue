@@ -60,19 +60,22 @@
                         <div class="foto p3"></div>
                         <div class="nome">Marcelo Santoro</div>
                       </div>
+                    </div>
+
+                    <div class="buttons-sm">
                       <a
-                        class="ver-agenda in"
+                        class="ver-agenda"
                         href="#"
                         @click.prevent="toggleSchedule"
                         >VER AGENDA</a
                       >
+                      <a
+                        class="inscrevase"
+                        href="#"
+                        @click.prevent="toggleSchedule"
+                        >INSCREVA-SE</a
+                      >
                     </div>
-                    <a
-                      class="ver-agenda out"
-                      href="#"
-                      @click.prevent="toggleSchedule"
-                      >VER AGENDA</a
-                    >
                   </div>
                 </div>
 
@@ -89,8 +92,19 @@
                     </div>
                   </div>
 
-                  <div class="btn-inscrevase">
-                    <a href="http://bit.ly/cta-site" class="btn">INSCREVA-SE</a>
+                  <div class="buttons-lg">
+                    <a
+                      class="ver-agenda"
+                      href="#"
+                      @click.prevent="toggleSchedule"
+                      >VER AGENDA</a
+                    >
+                    <a
+                      class="inscrevase"
+                      href="#"
+                      @click.prevent="toggleSchedule"
+                      >INSCREVA-SE</a
+                    >
                   </div>
                 </div>
               </div>
