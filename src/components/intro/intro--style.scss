@@ -50,6 +50,9 @@ section.intro {
         font-style: normal;
         font-weight: bold;
         font-size: 5vw;
+        @media(min-width: 1800px) {
+          font-size: 4vw;
+        }
 
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.87);
       }
