@@ -314,6 +314,7 @@ export default {
       text-align: center;
       width: 44px;
       font-size: 30px;
+      color: #fff;
 
       &:hover,
       &:active,
