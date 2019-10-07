@@ -71,8 +71,8 @@
                       >
                       <a
                         class="inscrevase"
-                        href="#"
-                        @click.prevent="toggleSchedule"
+                        href="http://bit.ly/cta-site"
+                        target="_blank"
                         >INSCREVA-SE</a
                       >
                     </div>
@@ -101,8 +101,8 @@
                     >
                     <a
                       class="inscrevase"
-                      href="#"
-                      @click.prevent="toggleSchedule"
+                      href="http://bit.ly/cta-site"
+                      target="_blank"
                       >INSCREVA-SE</a
                     >
                   </div>
@@ -218,7 +218,10 @@
           </div>
         </div>
 
-        <div class="galera" style="padding: 30px; text-align: center; flex-direction: column">
+        <div
+          class="galera"
+          style="padding: 30px; text-align: center; flex-direction: column"
+        >
           <div>
             <h5 style="margin-bottom: 15px">
               <b>A galera que tá fazendo isso acontecer:</b>
@@ -396,8 +399,6 @@ export default {
     }
   }
 }
-
-
 </style>
 
 
