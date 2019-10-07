@@ -217,6 +217,24 @@
             </div>
           </div>
         </div>
+
+        <div class="galera" style="padding: 30px; text-align: center">
+          <div>
+            <h5 style="margin-bottom: 15px">
+              A galera que tá fazendo isso acontecer:
+            </h5>
+          </div>
+          <div class="fotos-wrapper">
+            <div class="foto calistro" />
+            <div class="foto felipealmeida" />
+            <div class="foto blini" />
+            <div class="foto marquini" />
+            <div class="foto phillipe" />
+            <div class="foto marcelo" />
+            <div class="foto wesley" />
+            <div class="foto carneiro" />
+          </div>
+        </div>
       </article>
     </div>
   </section>
@@ -262,6 +280,10 @@ export default {
   z-index: 9;
   transform: translate(-50%, -50%);
   background: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 
   header {
     height: 60px;
@@ -273,6 +295,8 @@ export default {
     color: #fff;
     font-size: 24px;
     display: flex;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 
     span {
       flex: auto;
@@ -298,8 +322,11 @@ export default {
 
   article {
     overflow-y: scroll;
+    overflow-x: hidden;
     padding: 19px;
     height: calc(100% - 60px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
     .schedule {
       background: #fafafa;
@@ -312,6 +339,7 @@ export default {
       border-radius: 7px;
       margin: 20px auto;
       padding: 20px 0;
+      border-bottom-left-radius: 8px;
 
       .line {
         display: flex;
@@ -368,6 +396,7 @@ export default {
     }
   }
 }
+
 
 </style>
 

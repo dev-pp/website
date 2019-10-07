@@ -20,6 +20,7 @@
 @import "./evento-devpp-the-conference/css/event-buttons-mixin";
 
 section.intro {
+  overflow-x: hidden;
   display: table;
   width: 100%;
 
@@ -41,7 +42,7 @@ section.intro {
 
     .hero-content {
       position: relative;
-      top: -40;
+      top: -70px;
       z-index: 7;
       color: #fff;
 
@@ -78,67 +79,6 @@ section.intro {
           display: none;
           @media(min-width: 550px) {
             display: block;
-          }
-
-          .galera {
-            align-items: center;
-            display: flex;
-
-            flex-direction: column;
-            @media (min-width: 1080px) {
-              flex-direction: row;
-            }
-
-            h6 {
-              font-size: 13px;
-              margin-right: 10px;
-            }
-
-            .fotos-wrapper {
-              display: flex;
-
-              div.foto {
-                width: 50px;
-                height: 50px;
-                border: 2px solid #fff;
-                border-radius: 50%;
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                &.calistro {
-                  background-image: url("./evento-devpp-the-conference/galera/calistro.jpg");
-                }
-
-                &.felipealmeida {
-                  background-image: url("./evento-devpp-the-conference/galera/felipe-almeida.jpg");
-                }
-
-                &.blini {
-                  background-image: url("./evento-devpp-the-conference/galera/felipeblini-devpp-inova.jpg");
-                }
-
-                &.marquini {
-                  background-image: url("./evento-devpp-the-conference/galera/gustavo-marquini.jpg");
-                }
-
-                &.marcelo {
-                  background-image: url("./evento-devpp-the-conference/galera/marcelo-vieira.jpg");
-                }
-
-                &.carneiro {
-                  background-image: url("./evento-devpp-the-conference/galera/paulo.jpg");
-                }
-
-                &.wesley {
-                  background-image: url("./evento-devpp-the-conference/galera/wesley.jpg");
-                }
-
-                &.phillipe {
-                  background-image: url("./evento-devpp-the-conference/galera/phillipe-santana.jpg");
-                }
-              }
-            }
-
           }
         }
       }
@@ -222,6 +162,69 @@ section.intro {
         }
       }
     }
+  }
+
+  .galera {
+    align-items: center;
+    display: flex;
+
+    flex-direction: column;
+    @media (min-width: 1080px) {
+      flex-direction: row;
+    }
+
+    h6 {
+      font-size: 13px;
+      margin-right: 10px;
+    }
+
+    .fotos-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      div.foto {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.calistro {
+          background-image: url("./evento-devpp-the-conference/galera/calistro.jpg");
+        }
+
+        &.felipealmeida {
+          background-image: url("./evento-devpp-the-conference/galera/felipe-almeida.jpg");
+        }
+
+        &.blini {
+          background-image: url("./evento-devpp-the-conference/galera/felipeblini-devpp-inova.jpg");
+        }
+
+        &.marquini {
+          background-image: url("./evento-devpp-the-conference/galera/gustavo-marquini.jpg");
+        }
+
+        &.marcelo {
+          background-image: url("./evento-devpp-the-conference/galera/marcelo-vieira.jpg");
+        }
+
+        &.carneiro {
+          background-image: url("./evento-devpp-the-conference/galera/paulo.jpg");
+        }
+
+        &.wesley {
+          background-image: url("./evento-devpp-the-conference/galera/wesley.jpg");
+        }
+
+        &.phillipe {
+          background-image: url("./evento-devpp-the-conference/galera/phillipe-santana.jpg");
+        }
+      }
+    }
+
   }
 }
 
