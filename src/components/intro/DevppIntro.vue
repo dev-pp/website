@@ -152,7 +152,7 @@
             <div class="column"></div>
             <div class="column">
               Check-in Cafeínado ☕☕🧁<br /><small
-                >Recepção do pessoal com uma mesa de comes e bêbes e muito
+                >Recepção do pessoal com uma mesa de comes e bebes e muito
                 café</small
               >
             </div>
