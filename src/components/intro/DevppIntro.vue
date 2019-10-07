@@ -218,10 +218,10 @@
           </div>
         </div>
 
-        <div class="galera" style="padding: 30px; text-align: center">
+        <div class="galera" style="padding: 30px; text-align: center; flex-direction: column">
           <div>
             <h5 style="margin-bottom: 15px">
-              A galera que tá fazendo isso acontecer:
+              <b>A galera que tá fazendo isso acontecer:</b>
             </h5>
           </div>
           <div class="fotos-wrapper">
