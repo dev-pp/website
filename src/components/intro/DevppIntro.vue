@@ -105,7 +105,7 @@
                         class="logo inova-prudente"
                         >Inova Prudente</a
                       >
-                      <a href="@" target="_blank" class="logo sicoob" />
+                      <!-- <a href="@" target="_blank" class="logo sicoob" /> -->
                       <a
                         href="https://www.sympla.com.br/startup-weekend-educacao-de-presidente-prudente__526381"
                         title="Startup Weekend Educação Presidente Prudente"
