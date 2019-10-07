@@ -83,12 +83,36 @@
                   <div class="apoio">
                     <h6>APOIO:</h6>
                     <div class="lista">
-                      <div class="logo foregon" />
-                      <div class="logo forspace" />
-                      <div class="logo cobmais" />
-                      <div class="logo inova-prudente" />
-                      <div class="logo sicoob" />
-                      <div class="logo sw" />
+                      <a
+                        href="https://www.foregon.com/"
+                        title="Foregon"
+                        target="_blank"
+                        class="logo foregon"
+                        >Foregon</a
+                      >
+                      <!-- <div target="_blank" class="logo forspace" /> -->
+                      <a
+                        href="https://www.cobmais.com.br/"
+                        title="Cobmais"
+                        target="_blank"
+                        class="logo cobmais"
+                        >Cobmais</a
+                      >
+                      <a
+                        href="https://www.inovaprudente.com.br/"
+                        title="Inova Prudente"
+                        target="_blank"
+                        class="logo inova-prudente"
+                        >Inova Prudente</a
+                      >
+                      <!-- <div target="_blank" class="logo sicoob" /> -->
+                      <a
+                        href="https://www.sympla.com.br/startup-weekend-educacao-de-presidente-prudente__526381"
+                        title="Startup Weekend Educação Presidente Prudente"
+                        target="_blank"
+                        class="logo sw"
+                        >Startup Weekend Educação Presidente Prudente</a
+                      >
                     </div>
                   </div>
 
@@ -119,6 +143,10 @@
                   </div>
                   <div class="fotos-wrapper">
                     <div class="foto calistro" />
+                    <div class="tootip">
+                      <h6>Tiago Calistro</h6>
+                      <span>Eventoou</span>
+                    </div>
                     <div class="foto felipealmeida" />
                     <div class="foto blini" />
                     <div class="foto marquini" />
@@ -400,6 +428,7 @@ export default {
     }
   }
 }
+
 </style>
 
 
