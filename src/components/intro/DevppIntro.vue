@@ -179,7 +179,7 @@
             <div class="column">🕝 18h30</div>
             <div class="column"></div>
             <div class="column">
-              Check-in Cafeínado ☕☕🧁<br /><small
+              Check-in Cafeinado ☕☕🧁<br /><small
                 >Recepção do pessoal com uma mesa de comes e bebes e muito
                 café</small
               >
@@ -224,7 +224,7 @@
             </div>
           </div>
           <div class="line">
-            <div class="column">🕝 20h30</div>
+            <div class="column">🕝 20h25</div>
             <div class="column"></div>
             <div class="column">
               🎤 Desenvolvendo chatbots mesmo sem saber codar!<br />
@@ -232,12 +232,15 @@
             </div>
           </div>
           <div class="line">
-            <div class="column">🕝 21h05</div>
+            <div class="column">🕝 21h00</div>
             <div class="column"></div>
-            <div class="column">Sorteios de Brindes com Node.js🎁</div>
+            <div class="column">
+              🎁 Sorteios de Brindes com Node.js<br />
+              <small>Felipe Blini</small>
+            </div>
           </div>
           <div class="line">
-            <div class="column">🕝 21h10</div>
+            <div class="column">🕝 21h15</div>
             <div class="column"></div>
             <div class="column">
               Happy Hour! 🎉<br />
