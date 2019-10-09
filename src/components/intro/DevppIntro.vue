@@ -11,7 +11,7 @@
       </div>
       <div class="hero-content container">
         <div id="hero-content" class="row">
-          <div>
+          <div class="hc-wrapper">
             <h1>DevPP #15 The Conference</h1>
             <div class="event-date-place">
               <div class="date">
@@ -19,7 +19,7 @@
                   class="icon"
                   src="./evento-devpp-the-conference/icones/calendar.png"
                 />
-                <span>15 DE OUTUBRO</span>
+                <span>15 DE OUTUBRO, 18h30</span>
               </div>
               <div class="place">
                 <img
@@ -105,7 +105,6 @@
                         class="logo inova-prudente"
                         >Inova Prudente</a
                       >
-                      <!-- <a href="@" target="_blank" class="logo sicoob" /> -->
                       <a
                         href="https://www.sympla.com.br/startup-weekend-educacao-de-presidente-prudente__526381"
                         title="Startup Weekend Educação Presidente Prudente"
@@ -113,6 +112,21 @@
                         class="logo sw"
                         >Startup Weekend Educação Presidente Prudente</a
                       >
+                      <a
+                        href="https://www.influx.com.br/unidade/influx-presidente-prudente/"
+                        title="Influx"
+                        target="_blank"
+                        class="logo influx"
+                        >Influx</a
+                      >
+                      <a
+                        href="http://www.nucleobase.com.br/"
+                        title="Núcleo Base"
+                        target="_blank"
+                        class="logo nucleo-base"
+                        >Núcleo Base</a
+                      >
+                      <!-- <a href="@" target="_blank" class="logo sicoob" /> -->
                     </div>
                   </div>
 
@@ -143,10 +157,10 @@
                   </div>
                   <div class="fotos-wrapper">
                     <div class="foto calistro" />
-                    <div class="tootip">
+                    <!-- <div class="tootip">
                       <h6>Tiago Calistro</h6>
                       <span>Eventoou</span>
-                    </div>
+                    </div> -->
                     <div class="foto felipealmeida" />
                     <div class="foto blini" />
                     <div class="foto marquini" />
@@ -244,7 +258,7 @@
             <div class="column"></div>
             <div class="column">
               Happy Hour! 🎉<br />
-              <small>Food Truck 🍔 - Choop 🍻 - Networking 💗</small>
+              <small>Food Truck 🍔 - Chopp 🍻 - Networking 💗</small>
             </div>
           </div>
         </div>

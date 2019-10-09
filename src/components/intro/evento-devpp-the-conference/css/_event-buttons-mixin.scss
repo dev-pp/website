@@ -81,17 +81,17 @@
           color: #fff;
           display: block;
           border: solid 5px;
-          height: 30px;
-          width: 64px;
+          height: 40px;
+          width: 88px;
           outline: none;
-          @media (min-width: 650px) {
-            height: 40px;
-            width: 80px;
+          margin: 5px;
+          @media (min-width: 425px) {
+            height: 50px;
+            width: 100px;
           }
-          @media (min-width: 950px) {
-            height: 40px;
-            width: 120px;
-            border: solid 7px;
+          @media (min-width: 1088px) {
+            height: 50px;
+            width: 138px;
             margin: 10px;
           }
 
@@ -127,6 +127,18 @@
 
           &.sw {
             background-image: url("./evento-devpp-the-conference/apoio/sw.png");
+          }
+
+          &.influx {
+            background-image: url("./evento-devpp-the-conference/apoio/influx.png");
+            background-color: transparent;
+            border: none;
+          }
+
+          &.nucleo-base {
+            background-image: url("./evento-devpp-the-conference/apoio/Nucleo_Base.png");
+            background-color: transparent;
+            border: none;
           }
         }
       }
