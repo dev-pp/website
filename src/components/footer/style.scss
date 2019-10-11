@@ -7,16 +7,34 @@ section.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @media (min-width: 991px) {
+        flex-direction: row;
+      }
+
+      > div {
+        margin-bottom: 40px;
+
+        @media (min-width: 991px) {
+          margin-bottom: 0;
+          padding: 41px;
+        }
+
+        @media (min-width: 1200px) {
+          padding: 66px;
+        }
+      }
+    }
 
     > div {
       padding: 20px;
       text-align: center;
-
-      &.links-wrapper {
-        @media(max-width: 825px) {
-          margin-top: -67px;
-        }
-      }
 
       strong.title {
         display: inline-block;
@@ -24,7 +42,6 @@ section.footer {
         text-indent: -9999px;
         height: 22px;
         background-position-x: 4px;
-        margin-top: 42px;
 
         &.address {
           background-position-y: 5px;
@@ -47,23 +64,16 @@ section.footer {
         }
       }
     }
-    @media(min-width: 826px) {
-      flex-direction: row;
-
-      div {
-        text-align: left;
-      }
-    }
 
     .logo-rodape {
       display: block;
-      background: url('./logo.png');
+      background: url("./logo.png");
       width: 100px;
       height: 34px;
       text-indent: -9999px;
       background-size: cover;
       margin: 0 auto;
-      @media(min-width: 826px) {
+      @media (min-width: 991px) {
         margin: 0;
       }
     }

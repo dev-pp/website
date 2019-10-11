@@ -1,14 +1,17 @@
 <template>
   <section class="footer" id="footer">
     <div class="container">
-      <div class="reveal-sequence">
-        <p>
-          <span class="logo-rodape"
-            >DEV PP - Comunidade de Desenvolvedores de Presidente Prudente e
-            Região</span
-          >
-        </p>
-        <p>
+      <div class="wrapper">
+        <div class="reveal-sequence">
+          <p style="margin: 0 0 5px">
+            <span class="logo-rodape" id="logo-rodape"
+              >DEV PP - Comunidade de Desenvolvedores de Presidente Prudente e
+              Região</span
+            >
+          </p>
+
+          contato@devpp.com.br
+          <!-- <p>
           <strong class="title address" style="margin-top: 0">ENDEREÇO</strong>
           <br />
           <b>For Space Coworking</b><br />
@@ -22,67 +25,64 @@
           frameborder="0"
           style="border:0"
           allowfullscreen
-        ></iframe>
-      </div>
-      <a id="contact" class="anchor"></a>
-      <div class="reveal-sequence">
-        <strong class="title contact" style="margin-top: 0">CONTATO</strong>
-
-        <br />contato@devpp.com.br
-        <div class="social-icons">
-          <strong class="title social">SOCIAL</strong>
-          <br />
-          <a
-            class="s-icon facebook"
-            title="Facebook"
-            target="_blank"
-            href="https://www.facebook.com/groups/770159453169235/"
-          >
-            <facebook-icon class="icon" />
-          </a>
-          <a
-            class="s-icon youtube"
-            title="YouTube"
-            target="_blank"
-            href="https://www.youtube.com/channel/UC9QAZYQ0fHLERa6PLN4GWyw"
-          >
-            <youtube-icon class="icon" />
-          </a>
-          <a
-            class="s-icon instagram"
-            title="Instagram"
-            target="_blank"
-            href="https://www.instagram.com/devpp.com.br/"
-          >
-            <instagram-icon class="icon" />
-          </a>
-          <a
-            class="s-icon meetup"
-            title="meetup"
-            target="_blank"
-            href="https://www.meetup.com/dev-pp/"
-          >
-            <meetup-icon class="icon" />
-          </a>
-          <a
-            class="s-icon github"
-            title="github"
-            target="_blank"
-            href="https://github.com/dev-pp/meetup"
-          >
-            <github-icon class="icon" />
-          </a>
+        ></iframe> -->
         </div>
-      </div>
-      <div class="reveal-sequence links-wrapper">
-        <strong class="title links">LINKS</strong>
-        <ul>
-          <li>
-            <a target="_blank" href="http://www.inovaprudente.com.br/"
-              >Inova Prudente</a
+        <a id="contact" class="anchor"></a>
+        <div class="reveal-sequence">
+          <div class="social-icons">
+            <strong class="title social">SOCIAL</strong>
+            <br />
+            <a
+              class="s-icon facebook"
+              title="Facebook"
+              target="_blank"
+              href="https://www.facebook.com/groups/770159453169235/"
             >
-          </li>
-          <li>
+              <facebook-icon class="icon" />
+            </a>
+            <a
+              class="s-icon youtube"
+              title="YouTube"
+              target="_blank"
+              href="https://www.youtube.com/channel/UC9QAZYQ0fHLERa6PLN4GWyw"
+            >
+              <youtube-icon class="icon" />
+            </a>
+            <a
+              class="s-icon instagram"
+              title="Instagram"
+              target="_blank"
+              href="https://www.instagram.com/devpp.com.br/"
+            >
+              <instagram-icon class="icon" />
+            </a>
+            <a
+              class="s-icon meetup"
+              title="meetup"
+              target="_blank"
+              href="https://www.meetup.com/dev-pp/"
+            >
+              <meetup-icon class="icon" />
+            </a>
+            <a
+              class="s-icon github"
+              title="github"
+              target="_blank"
+              href="https://github.com/dev-pp/meetup"
+            >
+              <github-icon class="icon" />
+            </a>
+          </div>
+        </div>
+        <div class="reveal-sequence links-wrapper">
+          <strong class="title links">LINKS</strong>
+          <ul>
+            <li>
+              <a target="_blank" href="http://www.inovaprudente.com.br/"
+                >Inova Prudente</a
+              >
+            </li>
+            <!-- <li>
             <a
               target="_blank"
               href="http://www.presidenteprudente.sp.gov.br/site/index.xhtml"
@@ -93,18 +93,29 @@
             <a target="_blank" href="http://www.forspace.com.br/"
               >For Space Coworking</a
             >
-          </li>
-          <li>
-            <a target="_blank" href="https://eventou.com.br/">Eventou</a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.meetup.com/GDG-Presidente-Prudente/"
-              >GDG Prudente</a
-            >
-          </li>
-        </ul>
+          </li> -->
+            <li>
+              <a target="_blank" href="https://eventou.com.br/">Eventou</a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.meetup.com/GDG-Presidente-Prudente/"
+                >GDG Prudente</a
+              >
+            </li>
+            <li>
+              <a target="_blank" href="https://www.meetup.com/UX-Prudente/">
+                UX Prudente</a
+              >
+            </li>
+            <li>
+              <a target="_blank" href="https://www.meetup.com/DevelopersBR/">
+                DevelopersBR</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -125,6 +136,16 @@ export default {
     InstagramIcon,
     MeetupIcon,
     GithubIcon
+  },
+  mounted() {
+    setInterval(function() {
+      const p = document
+        .querySelector("#logo-rodape")
+        .style.backgroundPositionY.replace("px", "");
+
+      document.querySelector("#logo-rodape").style.backgroundPositionY = `${p -
+        1}px`;
+    }, 25);
   }
 };
 </script>
