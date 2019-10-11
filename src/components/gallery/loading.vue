@@ -7,12 +7,8 @@
     <div class="loading-text">
       <b>Carregando fotos, seja paciente...</b>
       <div>
-        <span v-if="loadingStep === 1">
-          💻 1/2 buscando fotos no servidor
-        </span>
-        <span v-if="loadingStep === 2">
-          📸 2/2 preparando imagens
-        </span>
+        <span v-if="loadingStep === 1"> 💻 {{ stepMessage }} </span>
+        <span v-if="loadingStep === 2"> 📸 {{ stepMessage }} </span>
       </div>
     </div>
   </div>
@@ -22,7 +18,8 @@
 export default {
   name: "devpp-gallery-item-loading",
   props: {
-    loadingStep: Number
+    loadingStep: Number,
+    stepMessage: ""
   }
 };
 </script>

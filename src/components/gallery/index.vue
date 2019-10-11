@@ -59,7 +59,10 @@
 
     <template v-else>
       <div class="container output-msg" v-if="fetchingPhotos">
-        <gallery-loading :loadingStep="loadingStep" />
+        <gallery-loading
+          :loadingStep="loadingStep"
+          :stepMessage="stepMessage"
+        />
       </div>
       <template v-else>
         <div class="container output-msg" v-if="items.length === 0">
@@ -89,6 +92,29 @@ import GalleryLoading from "./loading.vue";
 
 Vue.use(PhotoSwipe);
 
+const fetchPhotosMsg = [];
+
+fetchPhotosMsg[0] = "recuperando as imagens...";
+
+fetchPhotosMsg[1] = "quase lá, carregando as fotos...";
+
+fetchPhotosMsg[10] = "só mais um pouquinho, estamos trabalhando...";
+
+fetchPhotosMsg[20] = "a paciência é uma virtude...";
+
+fetchPhotosMsg[30] = "a paciência, na verdade, é a maior virtude do homem...";
+
+fetchPhotosMsg[40] =
+  "sua conexão está realmente lenta ⌛⌛, estamos fazendo o possível...";
+
+fetchPhotosMsg[50] = "tá demorando né, mas calma que tá quase...";
+
+fetchPhotosMsg[60] =
+  "1 minuto!! 😲😲 Internet lenta é f@%$, eu sei, mas calma que uma hora vai...";
+
+fetchPhotosMsg[120] =
+  "Está aí ainda? Realmente você é paciente, estamos esperando pacientemente também...";
+
 // const _photoaApiBaseUrl = "http://localhost:3000";
 const _photoaApiBaseUrl = "https://devpp-website-api.herokuapp.com";
 const _googlePhotosAlbumId = "1yhpM4uUCwvbnk35A";
@@ -104,6 +130,7 @@ export default {
       },
       initialState: true,
       loadingStep: 0,
+      stepMessage: "",
       meetupsFilterDropDown: [],
       fetchingFilters: true,
       fetchingPhotos: true,
@@ -117,6 +144,35 @@ export default {
     async init() {
       this.initialState = false;
       this.loadingStep = 1;
+      this.stepMessage = "aguarde, buscando os dados do último meetup...";
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[10];
+      }, 10000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[20];
+      }, 20000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[30];
+      }, 30000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[40];
+      }, 40000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[50];
+      }, 50000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[60];
+      }, 60000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[120];
+      }, 120000);
 
       // fetch meetups list with meetup id and date to fill up the dropdown filter
       const res = await meetupApi.getEventsByStatus("past");
@@ -130,9 +186,7 @@ export default {
       let fetchedMeetupPhotos = 0;
 
       pastMeetups.forEach(async meetup => {
-        const url = `${_photoaApiBaseUrl}/photos/${_googlePhotosAlbumId}/${
-          meetup.id
-        }`;
+        const url = `${_photoaApiBaseUrl}/photos/${_googlePhotosAlbumId}/${meetup.id}`;
 
         let photos = await fetch(url)
           .then(photos => photos.json())
@@ -165,8 +219,15 @@ export default {
         }
       });
     },
+
     fetchPhotos(meetupId) {
       this.fetchingPhotos = true;
+      this.stepMessage = fetchPhotosMsg[0];
+
+      setTimeout(() => {
+        if (this.stepMessage !== fetchPhotosMsg[1])
+          this.stepMessage = fetchPhotosMsg[10];
+      }, 10000);
 
       fetch(`${_photoaApiBaseUrl}/photos/${_googlePhotosAlbumId}/${meetupId}`)
         .then(res => res.json())
@@ -194,6 +255,36 @@ export default {
           return promises;
         })
         .then(promises => {
+          if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[1];
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[10];
+          }, 10000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[20];
+          }, 20000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[30];
+          }, 30000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[40];
+          }, 40000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[50];
+          }, 50000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[60];
+          }, 60000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[120];
+          }, 120000);
+
           Promise.all(promises)
             .then(result => {
               this.fetchingPhotos = false;
@@ -202,6 +293,7 @@ export default {
             .catch(e => console.log({ e }));
         });
     },
+
     onDropDownFilterOpen() {
       Array.from(
         document.getElementsByClassName("content-header-with-options")
@@ -222,6 +314,9 @@ export default {
       this.currentMeetup = this.meetupsFilterDropDown.filter(
         x => x.id === id
       )[0];
+
+      this.loadingStep = 1;
+      this.stepMessage = "buscando fotos no servidor";
 
       this.fetchPhotos(id);
     }
@@ -261,6 +356,9 @@ section.gallery {
       object-fit: cover;
       margin: 0.5px;
       cursor: pointer;
+      background-image: url("./ajax-loader.gif");
+      background-size: contain;
+      background-position: center;
 
       &:hover {
         opacity: 0.8;
