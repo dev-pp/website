@@ -6,7 +6,10 @@
         <div>
           <h3>FOTOS</h3>
         </div>
-        <div class="content-btn-group" :class="{ hidden: fetchingFilters }">
+        <div
+          class="content-btn-group"
+          :class="{ 'd-none': fetchingFilters || photos.length === 0 }"
+        >
           <div class="btn-group filter" ref="filter">
             <button
               type="button"
@@ -47,10 +50,10 @@
       </div>
     </div>
 
-    <div v-if="initialState" class="initial-state">
+    <div v-if="emptyState" class="empty-state">
       <p>
-        Por respeito aos seus dados, vamos carregar as fotos do último meetup
-        disponível apenas quando você clicar no botão abaixo
+        Por respeito aos seus dados, vamos carregar as fotos apenas quando você
+        clicar no botão abaixo
       </p>
       <button @click="init" class="btn btn-danger btn-lg">
         Carregar fotos
@@ -58,26 +61,38 @@
     </div>
 
     <template v-else>
-      <div class="container output-msg" v-if="fetchingPhotos">
+      <div
+        class="container output-msg"
+        style="padding-top: 0"
+        v-if="fetchingPhotos"
+      >
         <gallery-loading
           :loadingStep="loadingStep"
           :stepMessage="stepMessage"
         />
       </div>
       <template v-else>
-        <div class="container output-msg" v-if="items.length === 0">
-          😭😭 Nenhuma foto encontrada para essa data
+        <div class="container output-msg" v-if="photos.length === 0">
+          😭😭 Nenhuma foto encontrada para esse meetup
         </div>
 
-        <div v-else class="preview-img-list">
-          <img
-            class="preview-img-item"
-            :key="index"
-            v-for="(item, index) in items"
-            :src="item.src"
-            @click="$photoswipe.open(index, items, { shareEl: true })"
-          />
-        </div>
+        <template v-else>
+          <div class="current-meetup-info">
+            <h4>{{ currentMeetup.name }}</h4>
+            <p>📆 {{ currentMeetup.date }}</p>
+            <p>🚩 {{ currentMeetup.place.name }}</p>
+            <p>Total de fotos: {{ photos.length }}</p>
+          </div>
+          <div class="preview-img-list">
+            <img
+              class="preview-img-item"
+              :key="index"
+              v-for="(item, index) in photos"
+              :src="item.src"
+              @click="$photoswipe.open(index, photos, { shareEl: true })"
+            />
+          </div>
+        </template>
       </template>
     </template>
   </section>
@@ -94,26 +109,23 @@ Vue.use(PhotoSwipe);
 
 const fetchPhotosMsg = [];
 
-fetchPhotosMsg[0] = "recuperando as imagens...";
+fetchPhotosMsg[0] = "recuperando as imagens do servidor...";
 
-fetchPhotosMsg[1] = "quase lá, carregando as fotos...";
+fetchPhotosMsg[1] = "carregando as fotos...";
 
-fetchPhotosMsg[10] = "só mais um pouquinho, estamos trabalhando...";
+fetchPhotosMsg[20] = "só mais um pouquinho, estamos trabalhando...";
 
-fetchPhotosMsg[20] = "a paciência é uma virtude...";
+fetchPhotosMsg[40] = "a paciência é a maior virtude do homem...";
 
-fetchPhotosMsg[30] = "a paciência, na verdade, é a maior virtude do homem...";
+fetchPhotosMsg[60] = "sua conexão está um pouco lenta ⌛⌛";
 
-fetchPhotosMsg[40] =
-  "sua conexão está realmente lenta ⌛⌛, estamos fazendo o possível...";
+fetchPhotosMsg[80] = "tá demorando né, mas calma que tá quase...";
 
-fetchPhotosMsg[50] = "tá demorando né, mas calma que tá quase...";
+fetchPhotosMsg[100] =
+  "Internet lenta é f@%$, eu sei, mas calma que uma hora vai...";
 
-fetchPhotosMsg[60] =
-  "1 minuto!! 😲😲 Internet lenta é f@%$, eu sei, mas calma que uma hora vai...";
-
-fetchPhotosMsg[120] =
-  "Está aí ainda? Realmente você é paciente, estamos esperando pacientemente também...";
+fetchPhotosMsg[130] =
+  "tá aí ainda? Realmente você é paciente, estamos esperando pacientemente também...";
 
 // const _photoaApiBaseUrl = "http://localhost:3000";
 const _photoaApiBaseUrl = "https://devpp-website-api.herokuapp.com";
@@ -126,15 +138,17 @@ export default {
       currentMeetup: {
         id: 0,
         date: "",
+        time: 0,
+        title: "",
         totalPhotos: 0
       },
-      initialState: true,
+      emptyState: true,
       loadingStep: 0,
       stepMessage: "",
       meetupsFilterDropDown: [],
       fetchingFilters: true,
       fetchingPhotos: true,
-      items: []
+      photos: []
     };
   },
   components: {
@@ -142,47 +156,46 @@ export default {
   },
   methods: {
     async init() {
-      this.initialState = false;
+      this.emptyState = false;
       this.loadingStep = 1;
-      this.stepMessage = "aguarde, buscando os dados do último meetup...";
-
-      setTimeout(() => {
-        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[10];
-      }, 10000);
+      this.stepMessage =
+        "aguarde, buscando os dados do último meetup com fotos...";
 
       setTimeout(() => {
         if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[20];
       }, 20000);
 
       setTimeout(() => {
-        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[30];
-      }, 30000);
-
-      setTimeout(() => {
         if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[40];
       }, 40000);
-
-      setTimeout(() => {
-        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[50];
-      }, 50000);
 
       setTimeout(() => {
         if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[60];
       }, 60000);
 
       setTimeout(() => {
-        if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[120];
-      }, 120000);
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[80];
+      }, 80000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[100];
+      }, 100000);
+
+      setTimeout(() => {
+        if (this.loadingStep === 1) this.stepMessage = fetchPhotosMsg[130];
+      }, 130000);
 
       // fetch meetups list with meetup id and date to fill up the dropdown filter
       const res = await meetupApi.getEventsByStatus("past");
       const pastMeetups = res.data.data.map(x => ({
         id: x.id,
         time: x.time,
-        date: moment(x.time).format("D [de] MMMM [de] YYYY")
+        date: moment(x.time).format("D [de] MMMM [de] YYYY"),
+        name: x.name,
+        place: x.venue
       }));
 
-      // fetch photos of each meetup and identify the last one that has photos
+      // fetch photos for each meetup and identify the last one that has photos
       let fetchedMeetupPhotos = 0;
 
       pastMeetups.forEach(async meetup => {
@@ -226,8 +239,8 @@ export default {
 
       setTimeout(() => {
         if (this.stepMessage !== fetchPhotosMsg[1])
-          this.stepMessage = fetchPhotosMsg[10];
-      }, 10000);
+          this.stepMessage = fetchPhotosMsg[20];
+      }, 20000);
 
       fetch(`${_photoaApiBaseUrl}/photos/${_googlePhotosAlbumId}/${meetupId}`)
         .then(res => res.json())
@@ -258,37 +271,33 @@ export default {
           if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[1];
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[10];
-          }, 10000);
-
-          setTimeout(() => {
             if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[20];
           }, 20000);
-
-          setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[30];
-          }, 30000);
 
           setTimeout(() => {
             if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[40];
           }, 40000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[50];
-          }, 50000);
-
-          setTimeout(() => {
             if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[60];
           }, 60000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[120];
-          }, 120000);
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[80];
+          }, 80000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[100];
+          }, 100000);
+
+          setTimeout(() => {
+            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[130];
+          }, 130000);
 
           Promise.all(promises)
             .then(result => {
               this.fetchingPhotos = false;
-              this.items = result;
+              this.photos = result;
             })
             .catch(e => console.log({ e }));
         });
@@ -332,7 +341,9 @@ export default {
 
 <style lang="scss" scoped>
 section.gallery {
-  .initial-state {
+  margin-bottom: 30px;
+
+  .empty-state {
     font-size: 18px;
     margin-bottom: 15px;
     text-align: center;
@@ -346,12 +357,40 @@ section.gallery {
     }
   }
 
+  .current-meetup-info {
+    padding: 29px;
+    padding-top: 0;
+    text-align: center;
+
+    p {
+      margin: 3px;
+    }
+  }
+
   .preview-img-list {
     display: flex;
     flex-wrap: wrap;
 
     img.preview-img-item {
-      height: 200px;
+      height: 66px;
+      @media (min-width: 415px) {
+        height: 79px;
+      }
+      @media (min-width: 494px) {
+        height: 105px;
+      }
+      @media (min-width: 630px) {
+        height: 115px;
+      }
+      @media (min-width: 800px) {
+        height: 139px;
+      }
+      @media (min-width: 1063px) {
+        height: 163px;
+      }
+      @media (min-width: 1190px) {
+        height: 200px;
+      }
       flex-grow: 1;
       object-fit: cover;
       margin: 0.5px;

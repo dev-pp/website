@@ -1,125 +1,129 @@
-.meetup-panel {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
+section.meetups {
+  margin-bottom: 95px;
 
-  .meetup-header {
+  .meetup-panel {
+    margin-bottom: 30px;
     display: flex;
+    flex-direction: column;
 
-    .data {
-      margin-right: 10px;
-
-      .data-info {
-        padding: 5px 15px;
-        border-radius: 6px;
-        background-color: #F6F7F8;
-        border: solid 1px #DEE1E3;
-        display: inline-block;
-        text-align: center;
-        font-weight: 700;
-
-        .day {
-          color: #E81035;
-          font-size: 20px;
-          display: block;
-          text-align: center;
-          margin-bottom: -12px;
-        }
-
-        .month {
-          text-transform: uppercase;
-          font-size: 13px;
-        }
-      }
-    }
-  }
-
-  .small {
-    color: #A8AEB3;
-    font-size: 14px;
-  }
-
-  .info {
-    width: 100%;
-    overflow: hidden;
-
-    .meetup-description {
-      overflow-y: hidden;
-      margin-bottom: 30px;
-
-      &.collapsed {
-        position: relative;
-        margin-bottom: 50px;
-        max-height: 385px;
-
-        &:after {
-          content: "➕ leia mais";
-          color: black;
-          font-size: 23px;
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          height: 171px;
-          width: 100%;
-          background: linear-gradient(180deg, transparent, white);
-          position: absolute;
-          bottom: 0;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .place {
+    .meetup-header {
       display: flex;
 
-      div:nth-child(1) {
+      .data {
         margin-right: 10px;
-      }
 
-      h5 {
-        margin: 0 0 -7px;
-        font-size: 16px;
-        color: #333;
-      }
+        .data-info {
+          padding: 5px 15px;
+          border-radius: 6px;
+          background-color: #F6F7F8;
+          border: solid 1px #DEE1E3;
+          display: inline-block;
+          text-align: center;
+          font-weight: 700;
 
-      address {
-        font-style: normal;
+          .day {
+            color: #E81035;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            margin-bottom: -12px;
+          }
+
+          .month {
+            text-transform: uppercase;
+            font-size: 13px;
+          }
+        }
       }
     }
 
-    a.title {
-      h4 {
-        color: #666;
-      }
-
-      &:hover {
-        text-decoration: none;
-      }
+    .small {
+      color: #A8AEB3;
+      font-size: 14px;
     }
 
-    .btn {
-      margin: 15px 5px 0;
+    .info {
+      width: 100%;
+      overflow: hidden;
+
+      .meetup-description {
+        overflow-y: hidden;
+        margin-bottom: 30px;
+
+        &.collapsed {
+          position: relative;
+          margin-bottom: 50px;
+          max-height: 385px;
+
+          &:after {
+            content: "➕ leia mais";
+            color: black;
+            font-size: 23px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 171px;
+            width: 100%;
+            background: linear-gradient(180deg, transparent, white);
+            position: absolute;
+            bottom: 0;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .place {
+        display: flex;
+
+        div:nth-child(1) {
+          margin-right: 10px;
+        }
+
+        h5 {
+          margin: 0 0 -7px;
+          font-size: 16px;
+          color: #333;
+        }
+
+        address {
+          font-style: normal;
+        }
+      }
+
+      a.title {
+        h4 {
+          color: #666;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .btn {
+        margin: 15px 5px 0;
+      }
     }
   }
-}
 
-a.load-more {
-  border: 2px solid #ccc;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: center;
-
-  text-decoration: none !important;
-
-  span:nth-child(2) {
+  a.load-more {
+    border: 2px solid #ccc;
+    padding: 10px 20px;
     display: flex;
+    justify-content: center;
 
-    span {
-      &:nth-child(2) {
-        margin-top: 3px;
-        margin-left: 4px;
+    text-decoration: none !important;
+
+    span:nth-child(2) {
+      display: flex;
+
+      span {
+        &:nth-child(2) {
+          margin-top: 3px;
+          margin-left: 4px;
+        }
       }
     }
-  }
 
+  }
 }
