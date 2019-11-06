@@ -87,10 +87,33 @@
             <img
               class="preview-img-item"
               :key="index"
-              v-for="(item, index) in photos"
+              v-for="(item, index) in photos.slice(pgFrom, pgTo)"
               :src="item.src"
-              @click="$photoswipe.open(index, photos, { shareEl: true })"
+              @click="
+                $photoswipe.open(index, photos.slice(pgFrom, pgTo), {
+                  shareEl: true
+                })
+              "
+              @load="countImgLoaded"
             />
+          </div>
+          <div v-if="pages" class="pagination">
+            <p>
+              carregado <b>{{ showingPhotos }}</b> de
+              <b>{{ photos.length }}</b> fotos
+            </p>
+            <ul>
+              <li v-for="(page, index) in pages" :key="index">
+                <a
+                  href="#photos"
+                  @click="changePage(page)"
+                  :disabled="page === currentPage + 1"
+                  :class="{ active: page === currentPage + 1 }"
+                >
+                  {{ page }}
+                </a>
+              </li>
+            </ul>
           </div>
         </template>
       </template>
@@ -111,7 +134,7 @@ const fetchPhotosMsg = [];
 
 fetchPhotosMsg[0] = "recuperando as imagens do servidor...";
 
-fetchPhotosMsg[1] = "carregando as fotos...";
+fetchPhotosMsg[1] = "fotos recuperadas, carregando...";
 
 fetchPhotosMsg[20] = "só mais um pouquinho, estamos trabalhando...";
 
@@ -148,11 +171,23 @@ export default {
       meetupsFilterDropDown: [],
       fetchingFilters: true,
       fetchingPhotos: true,
-      photos: []
+      photos: [],
+      photosPerPage: 20,
+      pages: 0,
+      currentPage: 0,
+      showingPhotos: 0
     };
   },
   components: {
     GalleryLoading
+  },
+  computed: {
+    pgFrom() {
+      return this.currentPage * this.photosPerPage;
+    },
+    pgTo() {
+      return this.photosPerPage * (this.currentPage + 1);
+    }
   },
   methods: {
     async init() {
@@ -236,6 +271,7 @@ export default {
     fetchPhotos(meetupId) {
       this.fetchingPhotos = true;
       this.stepMessage = fetchPhotosMsg[0];
+      this.currentPage = 0;
 
       setTimeout(() => {
         if (this.stepMessage !== fetchPhotosMsg[1])
@@ -268,36 +304,62 @@ export default {
           return promises;
         })
         .then(promises => {
-          if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[1];
+          if (this.loadingStep === 2 && this.stepMessage === fetchPhotosMsg[0])
+            this.stepMessage = fetchPhotosMsg[1];
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[20];
+            if (
+              this.loadingStep === 2 &&
+              this.stepMessage === fetchPhotosMsg[1]
+            )
+              this.stepMessage = fetchPhotosMsg[20];
           }, 20000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[40];
+            if (
+              this.loadingStep === 2 &&
+              this.stepMessage === fetchPhotosMsg[20]
+            )
+              this.stepMessage = fetchPhotosMsg[40];
           }, 40000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[60];
+            if (
+              this.loadingStep === 2 &&
+              this.stepMessage === fetchPhotosMsg[40]
+            )
+              this.stepMessage = fetchPhotosMsg[60];
           }, 60000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[80];
+            if (
+              this.loadingStep === 2 &&
+              this.stepMessage === fetchPhotosMsg[60]
+            )
+              this.stepMessage = fetchPhotosMsg[80];
           }, 80000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[100];
+            if (
+              this.loadingStep === 2 &&
+              this.stepMessage === fetchPhotosMsg[80]
+            )
+              this.stepMessage = fetchPhotosMsg[100];
           }, 100000);
 
           setTimeout(() => {
-            if (this.loadingStep === 2) this.stepMessage = fetchPhotosMsg[130];
+            if (
+              this.loadingStep === 2 &&
+              this.stepMessage === fetchPhotosMsg[100]
+            )
+              this.stepMessage = fetchPhotosMsg[130];
           }, 130000);
 
           Promise.all(promises)
             .then(result => {
               this.fetchingPhotos = false;
               this.photos = result;
+              this.pages = Math.ceil(this.photos.length / this.photosPerPage);
             })
             .catch(e => console.log({ e }));
         });
@@ -328,6 +390,26 @@ export default {
       this.stepMessage = "buscando fotos no servidor";
 
       this.fetchPhotos(id);
+    },
+    countImgLoaded() {
+      this.showingPhotos++;
+      console.log("img loaded");
+    },
+    changePage(page) {
+      if (page === this.currentPage + 1) return false;
+
+      this.stepMessage = fetchPhotosMsg[1];
+
+      this.showingPhotos = 0;
+
+      this.currentPage = page - 1;
+      this.fetchingPhotos = true;
+
+      setTimeout(() => {
+        this.fetchingPhotos = false;
+      }, 2000);
+
+      console.log({ curent: this.currentPage });
     }
   },
   watch: {
@@ -398,9 +480,59 @@ section.gallery {
       background-image: url("./ajax-loader.gif");
       background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
 
       &:hover {
         opacity: 0.8;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    @media (min-width: 780px) {
+      flex-direction: row;
+      align-items: unset;
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+
+    p {
+      margin: 5px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      height: 32px;
+
+      li {
+        float: left;
+        list-style: none;
+
+        a {
+          padding: 5px 10px;
+          border: solid 1px #ccc;
+          border-radius: 4px;
+          margin: 2px;
+          text-decoration: none;
+          color: #333;
+
+          &:hover {
+            background: #ddd;
+          }
+
+          &.active {
+            cursor: default;
+            background: #e81035;
+            color: #fff;
+            pointer-events: none;
+          }
+        }
       }
     }
   }
