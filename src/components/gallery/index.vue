@@ -272,6 +272,7 @@ export default {
       this.fetchingPhotos = true;
       this.stepMessage = fetchPhotosMsg[0];
       this.currentPage = 0;
+      this.showingPhotos = 0;
 
       setTimeout(() => {
         if (this.stepMessage !== fetchPhotosMsg[1])
