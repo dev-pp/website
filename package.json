@@ -14,7 +14,7 @@
     "axios": "0.18.0",
     "axios-jsonp": "1.0.1",
     "babel-polyfill": "6.26.0",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "bootstrap-sass": "3.3.7",
     "express": "4.16.2",
     "firestore-parser": "0.8.9",
