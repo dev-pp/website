@@ -32,7 +32,7 @@
           </ul>
           <a
             class="btn btn-md btn-custom pull-right"
-            href="https://meetup.com/dev-pp"
+            href="https://t.me/+Pkvilztk63E4ODA5"
             target="_blank"
             >JUNTE-SE A NÓS</a
           >
