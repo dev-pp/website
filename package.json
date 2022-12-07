@@ -16,7 +16,7 @@
     "babel-polyfill": "6.26.0",
     "bootstrap": "3.3.7",
     "bootstrap-sass": "3.3.7",
-    "express": "4.16.2",
+    "express": "4.17.3",
     "firestore-parser": "0.8.9",
     "jquery": "3.2.1",
     "jquery-placeholder": "2.3.1",
